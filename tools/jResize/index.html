@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<title>jResize, responsive development within one window | toddmotto.com</title>
+	<meta name="author" content="@toddmotto">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/global.css" />
+	<!-- jQuery + JavaScript -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="js/jresize.js"></script>
+	<!-- Demo Script -->
+	<script>
+	"undefined" !== typeof window.jQuery && ($(function() {
+		$.jResize({
+				 viewPortSizes : ['320px', '480px', '540px', '600px', '768px', '960px', '1024px', '1280px'], // ViewPort Widths
+				 backgroundColor : '444', // HEX Code
+				 fontColor : 'FFF' // HEX Code
+			});
+		}));
+	</script>
+</head>
+<body>
+	<div id="showurl"><!-- <iframe src="http://localhost/" style="width:100%;display:block;border:0;height:1000px;"></iframe> --></div>
+	<script>
+/* 	function getUrlVars() {
+ var vars = [], hash;
+ var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+ for(var i = 0; i < hashes.length; i++) {
+ hash = hashes[i].split('=');
+ vars.push(hash[0]);
+ vars[hash[0]] = hash[1];
+ }
+ return vars;
+	}
+	var url = decodeURIComponent(getUrlVars()["url"]) || "";
+	if (url && (/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(url))) {
+		if (!/^(http|https):\/\//.test(url)) {
+			url = "http://" + url;
+		}
+	} else {
+			url = "http://localhost/"
+	}
+	var a = document.getElementById("showurl") || "",
+		b;
+	if (a) {
+		b = document.createElement("iframe");
+		b.setAttribute("src", url);
+		b.setAttribute("style", "width:100%;display:block;border:0;height:1000px;");
+		a.appendChild(b);
+	} */
+	function getUrlVars(){for(var d=[],c,f=window.location.href.slice(window.location.href.indexOf("?")+1).split("&"),e=0;e<f.length;e++)c=f[e].split("="),d.push(c[0]),d[c[0]]=c[1];return d}var url=decodeURIComponent(getUrlVars().url)||""; url&&/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(url)?/^(http|https):\/\//.test(url)|| (url="http://"+url):url="http://localhost/";var a=document.getElementById("showurl")||"",b;a&&(b=document.createElement("iframe"),b.setAttribute("src",url),b.setAttribute("style","width:100%;display:block;border:0;height:1000px;"),a.appendChild(b));
+	</script>
+</body>
+</html>

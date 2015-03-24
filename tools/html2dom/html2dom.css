@@ -1,0 +1,25 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	padding: 5px;
+	font-family: Georgia;
+}
+.result-div {
+	border: solid 1px orange;
+	padding: 20px;
+	margin: 5px 0px 20px 0px;
+}
+.source {
+	width: 100%;
+	height: 200px
+}
+.output-option {
+	border: solid 1px orange;
+	padding: 5px;
+	cursor: pointer;
+}
+.active {
+	background: orange;
+}

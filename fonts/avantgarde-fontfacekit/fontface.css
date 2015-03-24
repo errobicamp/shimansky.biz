@@ -1,0 +1,10 @@
+@font-face {
+	font-family:'AvantGarde';
+	src:url(avantgarde-fontfacekit/itcavantgardestd-demi.eot);
+	src:url(avantgarde-fontfacekit/itcavantgardestd-demi.eot?#iefix) format('embedded-opentype'),
+	url(avantgarde-fontfacekit/itcavantgardestd-demi.svg#svgFontName) format('svg'),
+	url(avantgarde-fontfacekit/itcavantgardestd-demi.woff) format('woff'),
+	url(avantgarde-fontfacekit/itcavantgardestd-demi.ttf) format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}

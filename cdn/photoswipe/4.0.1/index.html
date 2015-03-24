@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#" debug="true">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="utf-8">
+		<title>PhotoSwipe: JavaScript Image Gallery</title>
+		<meta name="description" content="Touch-friendly JavaScript image gallery for mobile and desktop, without dependencies.">
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0">
+		<meta name="author" content="Dmitry Semenov">
+		<link rel="canonical" href="http://photoswipe.com">
+		<meta property="og:url" content="http://photoswipe.com">
+		<meta property="og:title" content="PhotoSwipe: JavaScript Image Gallery">
+		<meta property="og:description" content="Touch-friendly JavaScript image gallery for mobile and desktop, without dependencies.">
+		<meta property="og:image" content="http://photoswipe.com/test/horizontal-swipe.jpg">
+		<link href="https://plus.google.com/102586375605352607718" rel="publisher" />
+		<link rel="icon apple-touch-icon" href="test/apple-touch-icon-144x144.png" sizes="144x144" type="image/png">
+		<link href="../../../cdn/photoswipe/4.0.1/photoswipe.css?v=4.0.1-1.0.2" rel="stylesheet" />
+		<link href="../../../cdn/photoswipe/4.0.1/default-skin/default-skin.css?v=4.0.1-1.0.2" rel="stylesheet" />
+		<script src="../../../cdn/photoswipe/4.0.1/photoswipe.min.js?v=4.0.1-1.0.2-b"></script>
+		<script src="../../../cdn/photoswipe/4.0.1/photoswipe-ui-default.min.js?v=4.0.1-1.0.2"></script>	
+	</head>
+	<body>
+		<div class="section section--head">
+			<div class="row row--heading">
+				<h1>PhotoSwipe<span> 4.0&beta;</span></h1>
+				<p>
+					JavaScript gallery, no dependencies.
+				</p>
+			</div>
+			<div class="row">
+				<div class="demo-gallery">
+					<a href="//farm8.staticflickr.com/7485/15593232503_9c35061d3a_o.jpg" data-size="1440x810" data-med="//farm8.staticflickr.com/7485/15593232503_9c35061d3a_o.jpg" data-med-size="1440x810" data-author="Folkert Gorter"><img src="//farm8.staticflickr.com/7485/15593232503_8fb5729a30_m.jpg" alt="" />
+					<figure>
+						This is dummy caption.
+					</figure> </a>
+					<a href="//farm8.staticflickr.com/7529/16025277010_c8fc98a0c7_o.jpg" data-size="1440x810" data-med="//farm8.staticflickr.com/7529/16025277010_c8fc98a0c7_o.jpg" data-med-size="1440x810" data-author="Folkert Gorter"><img src="//farm8.staticflickr.com/7529/16025277010_8dc1f3c4fa_m.jpg" alt="" />
+					<figure>
+						This is dummy caption.
+					</figure> </a>				
+				</div>
+				<!-- <figure class="demo-gallery__title">Demo gallery &middot; 5 photos</figure> -->
+				<!--	<div class="style-select">
+				<p style="margin:24px 0 12px;color:#444;">Demo gallery style</p>
+				<div class="radio">
+				<input type="radio" name="gallery-style" value="all" id="radio-all-controls" checked />
+				<label for="radio-all-controls">
+				All controls<br/>
+				<span>caption, share and fullscreen buttons, tap to toggle controls</span>
+				</label>
+				</div>
+				<div class="radio">
+				<input type="radio" name="gallery-style" value="minimal" id="radio-minimal-black" />
+				<label for="radio-minimal-black">
+				Minimal<br/>
+				<span>no caption, transparent background, tap to close</span>
+				</label>
+				</div>
+				</div>	-->
+			</div>
+		</div>
+		<div class="navigation">
+			<div class="row row--nav">
+				<a href="documentation/getting-started.html">Documentation</a> &middot; <a href="https://github.com/dimsemenov/photoswipe">GitHub</a> &middot; <a class="feedback-button" href="https://photoswipe.uservoice.com/forums/275302-feature-requests-ideas">Ideas (UserVoice)</a>
+			</div>
+		</div>
+		<div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="pswp__bg"></div>
+			<div class="pswp__scroll-wrap">
+				<div class="pswp__container">
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+				</div>
+				<div class="pswp__ui pswp__ui--hidden">
+					<div class="pswp__top-bar">
+						<div class="pswp__counter"></div>
+						<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+						<button class="pswp__button pswp__button--share" title="Share"></button>
+						<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+						<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+						<div class="pswp__preloader">
+							<div class="pswp__preloader__icn">
+								<div class="pswp__preloader__cut">
+									<div class="pswp__preloader__donut"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="pswp__loading-indicator"><div class="pswp__loading-indicator__line"></div></div> -->
+					<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+						<div class="pswp__share-tooltip">
+							<!-- <a href="#" class="pswp__share--facebook"></a>
+							<a href="#" class="pswp__share--twitter"></a>
+							<a href="#" class="pswp__share--pinterest"></a>
+							<a href="#" download class="pswp__share--download"></a> -->
+						</div>
+					</div>
+					<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+					<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+					<div class="pswp__caption">
+						<div class="pswp__caption__center"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			(function(){(function(k){var p=function(l){for(var a=l.childNodes,b=a.length,e=[],c,g,d,f=0;f<b;f++)if(l=a[f],1===l.nodeType){c=l.children;g=l.getAttribute("data-size").split("x");d={src:l.getAttribute("href"),w:parseInt(g[0],10),h:parseInt(g[1],10),author:l.getAttribute("data-author")};d.el=l;0<c.length&&(d.msrc=c[0].getAttribute("src"),1<c.length&&(d.title=c[1].innerHTML));if(c=l.getAttribute("data-med"))g=l.getAttribute("data-med-size").split("x"),d.m={src:c,w:parseInt(g[0],10),h:parseInt(g[1], 10)};d.o={src:d.src,w:d.w,h:d.h};e.push(d)}return e},q=function a(b,e){return b&&(e(b)?b:a(b.parentNode,e))},h=function(a){a=a||window.event;a.preventDefault?a.preventDefault():a.returnValue=!1;if(a=q(a.target||a.srcElement,function(a){return"A"===a.tagName})){for(var b=a.parentNode,e=a.parentNode.childNodes,c=e.length,g=0,d,f=0;f<c;f++)if(1===e[f].nodeType){if(e[f]===a){d=g;break}g++}0<=d&&n(d,b);return!1}},n=function(a,b,e){e=document.querySelectorAll(".pswp")[0];var c,g;g=p(b);a={index:a,galleryUID:b.getAttribute("data-pswp-uid"), getThumbBoundsFn:function(a){var b=window.pageYOffset||document.documentElement.scrollTop;a=g[a].el.children[0].getBoundingClientRect();return{x:a.left,y:a.top+b,w:a.width}},addCaptionHTMLFn:function(a,b,c){if(!a.title)return b.children[0].innerText="",!1;b.children[0].innerHTML=a.title+"<br/><small>Photo: "+a.author+"</small>";return!0}};c=new PhotoSwipe(e,PhotoSwipeUI_Default,g,a);var d,f=!1,k=!0,h;c.listen("beforeResize",function(){var a=window.devicePixelRatio?window.devicePixelRatio:1,a=Math.min(a, 2.5);d=c.viewportSize.x*a;1200<=d||!c.likelyTouchDevice&&800<d||1200<screen.width?f||(h=f=!0):f&&(f=!1,h=!0);h&&!k&&c.invalidateCurrItems();k&&(k=!1);h=!1});c.listen("gettingData",function(a,b){f?(b.src=b.o.src,b.w=b.o.w,b.h=b.o.h):(b.src=b.m.src,b.w=b.m.w,b.h=b.m.h)});c.init()};k=document.querySelectorAll(k);for(var m=0,r=k.length;m<r;m++)k[m].setAttribute("data-pswp-uid",m+1),k[m].onclick=h;h=function(){var a=window.location.hash.substring(1),b={};if(5>a.length)return b;for(var a=a.split("&"),e= 0;e<a.length;e++)if(a[e]){var c=a[e].split("=");2>c.length||(b[c[0]]=c[1])}b.gid&&(b.gid=parseInt(b.gid,10));if(!b.hasOwnProperty("pid"))return b;b.pid=parseInt(b.pid,10);return b}();0<h.pid&&0<h.gid&&n(h.pid-1,k[h.gid-1],!0)})(".demo-gallery")})();
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<POLICIES xmlns="http://www.w3.org/2002/01/P3Pv1">
+<!-- Expiry information for this policy -->
+<EXPIRY max-age="604800"/>
+<POLICY
+name="public"
+discuri="http://shimansky.biz/pages/about.html"
+xml:lang="ru">
+<!-- Description of the entity making this policy statement -->
+<ENTITY>
+<DATA-GROUP>
+<DATA ref="#business.name">shimansky.biz</DATA>
+<DATA ref="#business.contact-info.postal.city">Moscow</DATA>
+<DATA ref="#business.contact-info.postal.country">RUSSIA</DATA>
+<DATA ref="#business.contact-info.online.email">englishextra@mail.ru</DATA>
+<DATA ref="#business.contact-info.online.uri">http://shimansky.biz/</DATA>
+</DATA-GROUP>
+</ENTITY>
+<!-- Disclosure -->
+<ACCESS><nonident/></ACCESS>
+<!-- Disputes -->
+<DISPUTES-GROUP>
+<DISPUTES resolution-type="service" service="http://reformal.shimansky.biz/" short-description="http://reformal.shimansky.biz/">
+<LONG-DESCRIPTION>The Webmaster and Founder and Editor-in-Chief will carefully consider the input and correct errors. If You discover privacy invasive behavior, please don't hesitate to contact us.
+</LONG-DESCRIPTION>
+<IMG src="/favicon.png" width="48" height="48" alt="shimansky.biz"/>
+<REMEDIES><correct/></REMEDIES>
+</DISPUTES>
+</DISPUTES-GROUP>
+<!-- Statement for group Group #1 -->
+<STATEMENT>
+<!-- Consequence -->
+<CONSEQUENCE>
+We collect normal Web-Logs. They are used for Server administration, Web protocol research, Statistics of usage and security. Those logs are anonymized after one month.
+</CONSEQUENCE>
+<!-- Use (purpose) -->
+<PURPOSE><admin/><current/><develop/></PURPOSE>
+<!-- Recipients -->
+<RECIPIENT><ours/></RECIPIENT>
+<!-- Retention -->
+<RETENTION><business-practices/></RETENTION>
+<!-- Base dataschema elements -->
+<DATA-GROUP>
+<DATA ref="#dynamic.clickstream"/>
+<DATA ref="#dynamic.http.useragent"/>
+<DATA ref="#dynamic.http.referer"/>
+</DATA-GROUP>
+</STATEMENT>
+<!-- End of policy -->
+</POLICY>
+</POLICIES>

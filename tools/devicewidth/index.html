@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="oldie no-js" lang=en-US><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="js" lang="en-US"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+ <meta charset="utf-8">
+ <link rel="dns-prefetch" href="http://ajax.googleapis.com/">
+ <!-- dns-prefetch docs: github.com/h5bp/html5-boilerplate/blob/master/doc/extend.md --> 
+
+ <title>Device and Viewport Size In JavaScript</title>
+ 
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <meta name="author" content="Ryan Van Etten"> 
+ <meta name="description" content="Live comparison of how to get current viewport size and device dimensions in JavaScript and jQuery."> 
+ <meta name="keywords" content="viewport size,jquery viewport,viewport in javascript,device width,device height,device dimensions">
+
+ <style>
+		article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0;font-size:1em;line-height:1.4}body,button,input,select,textarea{font-family:sans-serif;color:#222}::-moz-selection{background:#28d;color:#eed;text-shadow:none}::selection{background:#28d;color:#eed;text-shadow:none}a:focus{outline:thin dotted}a:hover,a:active{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}ins{background:#ff9;color:#000;text-decoration:none}mark{background:#ff0;color:#000;font-style:italic;font-weight:bold}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:"";content:none}small{font-size:85%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}ul,ol{margin:1em 0;padding:0 0 0 40px}dd{margin:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none;margin:0;padding:0}img{border:0;-ms-interpolation-mode:bicubic;vertical-align:middle}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:0;margin:0;padding:0}label{cursor:pointer}legend{border:0;*margin-left:-7px;padding:0}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top;resize:vertical}input:valid,textarea:valid{}input:invalid,textarea:invalid{background-color:#f0dddd}table{border-collapse:collapse;border-spacing:0}td{vertical-align:top} audio,canvas,img,math,svg,video{width:inherit;max-width:100%;height:auto}embed,iframe,object{max-width:100%}@media screen and (max-width:319px){table,thead,tbody,th,td,tr{display:block}tr{margin-bottom:.5em}}h1{font-size:200%;margin:.36em 0}article header>h1,h2,h3{font-size:138%}h5,h6{font-size:80%}p,h5,h6,ul,ol,dl{margin:1em 0}p,ul,ol,dl{line-height:1.4}dd+dt{margin-top:1em}@media screen and (min-width:320px) {h1{font-size:262%}article header>h1,h2{font-size:162%}}h1+h2,h2+h3,h3+h4,h4+h5,h5+h6,hgroup h1{margin:0}a{color:#28d;font-weight:bold;text-decoration:none}a:hover{color:#d38}.oldie a{font-weight:inherit}code{word-wrap:break-word}.codex{margin:1em 0 1.6em}.codex >.h{border-bottom:1px solid #000;padding:.6em 1em .6em 0;margin:1em 0 0}.codex >.h,.codex >.h a{color:#678 !important}.codex >.h a:hover{color:#c41 !important}.codex >.h strong{color:#c41}.codex >.h a:hover strong{color:#678}code abbr[title]{border-bottom:0}pre,table.docblock{background:#ffe;color:#678;padding:1.6em 1em 1.6em 1.6em;margin:0}table.docblock+pre{padding-top:0}pre a{color:#d38;font-weight:bold}code a{color:inherit;font-weight:inherit}a.hashtag{color:#b90}code a:hover,a.hashtag:hover{color:#28d}.codex .docblock{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}.docblock tr{margin:.5em 0}.docblock td{padding:.5em 1.5em .5em}a.docblock-tag,.docblock-tag a,a.docblock-type,.docblock-type a{color:inherit;font-weight:inherit}.docblock-desc a{color:#899}.docblock-desc a:hover{color:#c41}.freeform a:hover{color:#67c}.docblock-tag,a.docblock-tag{color:#28d}.docblock-type,a.docblock-type{color:#b90}.docblock-code{color:#899}.line-comment{color:#899}.block-comment{color:#678}.math-symbol{color:#c41}.tagmark{color:#d32;font-weight:bold}.sbrack,.cbrack,.paren{color:#678;font-weight:bold}.squote,.dquote{color:#678}code .element,.fname{color:#d38;font-weight:bold}code .attribute{color:#28d;font-weight:normal}.language-mixed .attribute{color:#d32}code .property,.docblock .property{color:#c41}.language-css .property{color:#2a9}code .value,.value .squote,.value .dquote,c.value .tagmark{font-weight:bold;color:#678}code .operator{font-weight:normal}.inner_text{color:#b90}.esc_char{color:#2a9}.language-json{color:#899;font-weight:bold}.language-json .cbrack{color:#678}.language-json .dquote,.language-json .sbrack{color:#678}.cutoff,.cutoff .squote,.cutoff .dquote{color:#c41}.linex strong{color:#890}.codex .shape{color:#678}.warning:before{color:#b90;content:"[ ! ] "}br,.indent,.unfold{display:none}br.always,br+br{display:inline}.indent-this:before,.indent-next+:before{display:none}@media screen and (min-width:641px) {.unfold,.indent,br{display:inline}.indent-this:before,.indent-next+:before{content:" ";display:inline;white-space:pre-wrap}}@media screen and (min-width:961px) {.unfold{display:none}}html{background:#ffe}body{background:#ffe;color:#678; font:normal 94% sans-serif; width:98%;max-width:960px;padding:0 1%;margin:0 auto}p code{color:#890}table code{font-family:sans-serif}table{margin:0 0 1.4em}.recommended:hover{color:#2a9}.notwhatyouwant:hover{color:#b90}.dark{background:#034}.dark body,.dark pre,.dark table.docblock{background:#034}.dark ::-moz-selection{background:#d38;color:#eed}.dark ::selection{background:#d38;color:#eed}[data-taos-style],#flip{display:none} th{padding:.5em;background:#eed;color:#d32;border-right:1px solid #ffe}td{padding:.2em .5em;border-right:1px solid #ffe}.dark th,.dark td{border-right:1px solid #034}@media screen and (min-width:320px) {body{font-size:105%}}@media screen and (min-width:500px) {body{font-size:120%}}@media screen and (min-width:481px){.js [data-taos-style],.js #flip{display:block;cursor:pointer;position:fixed;right:0;bottom:0;padding:2px 6px;background:#ee3;color:#678}.js [data-taos-style]:hover,.js #flip:hover{background:#d32;color:#034}}.mixedcase{text-transform:none}.normal{font-weight:normal !important}.debug{display:none}abbr.obvious{border-bottom:0}.labs-title,#nav >.h,#main>.h,aside>.h,.sub>h3,#overview >.h{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px}.ir:before{content:"";display:block;width:0;height:100%} .hidden{display:none!important;visibility:hidden}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.invisible{visibility:hidden}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}@media print{ *{color:black!important;background:transparent!important;box-shadow:none!important;text-shadow:none!important;filter:none!important;-ms-filter:none!important}a[href]:after{content:" (" attr(href) ")";font-weight:normal}header a:after,footer a:after,nav a:after,figure>a:after,a[rel="tag"]:after,h1 a:after,h2 a:after,h3 a:after,h4 a:after,h5 a:after,h6 a:after,.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""!important}thead{display:table-header-group}audio,video,img,pre,tr,blockquote{page-break-inside:avoid}audio,video,img{max-width:100%!important}h2,h3,p{orphans:3;widows:3;}h2,h3{page-break-after:avoid}}
+	</style>
+ <link rel="canonical" href="http://responsejs.com/labs/dimensions/"> 
+ 
+ <style>
+ /* html { overflow:hidden } */
+ </style>
+
+ <!-- developers.facebook.com/docs/opengraph/ -->
+ <meta property="og:title" content="Device and Viewport Size In JavaScript">
+ <meta property="og:type" content="article">
+ <meta property="og:url" content="http://responsejs.com/labs/dimensions/">
+ <meta property="og:image" content="http://cdn.airve.com/response/logo/screen/response-logo-00_09c-300.png">
+ 
+ <!-- Other scripts load from bottom of page. -->
+ <!-- Use shim instead since 2012-10-16 <script src="http://cdn.airve.com/scripts/libs/modernizr/modernizr.20111026.js"></script> -->
+ <!--[if lt IE 9]>
+ <script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
+ <![endif]--> 
+</head>
+
+<body id="start">
+
+ <header id="header">
+ <nav>
+ <ul>
+ <li><a rel="home" accesskey="1" href="http://responsejs.com/"><span class="shapre">◄</span> HOME</a></li>
+ </ul>
+ </nav>
+ <h1 class="labs-title">Dimensions</h1>
+ </header>
+
+ <article itemscope="" itemtype="http://schema.org/Article">
+
+ <header class="article-header">
+ <h1 class="article-headline">
+ <a itemprop="url name" href="http://responsejs.com/labs/dimensions/" title="Permalink">
+ Device and Viewport Size In JavaScript
+ </a>
+ </h1>
+ <div class="article-byline">
+ <span>By </span><a itemprop="author" rel="author" href="http://ryanvanetten.com/">Ryan Van Etten</a>
+ <span> | </span><time itemprop="datePublished" datetime="2012-01-15" title="published 2012-01-15">2012</time>
+ <span> | </span><time itemprop="dateModified" datetime="2013-01-26" title="updated 2013-01-26">2013</time>
+ </div>
+ </header>
+
+ <h1 id="viewport">
+ <a href="#viewport" title="#viewport">viewport</a>
+ </h1>
+
+ <p>How to get the viewport size: jQuery's <code class="language-javascript">$(window).width()</code> is highly <a href="http://stackoverflow.com/questions/3044573/using-jquery-to-get-size-of-viewport">regarded</a> as cross-browser compatible. JavaScript's <code class="language-javascript">document.documentElement.clientWidth</code> is <a href="http://jsperf.com/viewport-width-pure-js-vs-jquery/3" title="speed test">faster</a> and is <span title="document.documentElement.clientWidth = $(window).width() in all major modern browsers and IE8, not sure about IE7 or 6">cross-browser compatible</span>. Look in the <a href="http://bit.ly/jqsource" title="Use Ctrl+F for docElemProp to find it.">jQuery source</a>: they use <code>document.documentElement.clientWidth</code>. The tables below compare these live against the less consistent inner/outer methods. <b>Update:</b> <code>correctedViewportW</code> is a custom function that further normalizes browser <a href="https://github.com/ryanve/response.js/issues/17">difference</a>, and is now the technique used in <a href="http://verge.airve.com/">verge</a> and <a href="http://responsejs.com/">Response</a>.</p>
+ 
+ <noscript>
+ To experience full functionality of this page, you need to enable JavaScript. All outputs will
+ appear undefined when JavaScript is off. Click <a href="http://enable-javascript.com">here to learn how to enable JavaScript</a>.
+ </noscript>
+
+ <table id="viewport-width">
+ <tbody><tr><th scope="col"><a href="#viewport-width" title="#">width methods</a></th><th scope="col"><span title="Viewport dimensions are dynamic. Resize or rotate this page and these will change accordingly.">live output</span></th></tr>
+ <tr><td><a class="recommended" href="http://api.jquery.com/width/" title="jQuery docs says that this &quot;returns width of browser viewport.&quot; (widely used, used by&#160;jQuery Mobile)"><code class="language-javascript">$(window).width()</code></a></td> <td id="o1">1339</td></tr>
+ <tr><td><a class="recommended" href="http://developer.mozilla.org/en/DOM/element.clientWidth" title="Pure JavaScript equivalent to $(window).width()"><code class="language-javascript">document.documentElement.clientWidth</code></a></td><td id="o2">1339</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/window.innerWidth" title="Inconsistent."><code class="language-javascript">window.innerWidth</code></a></td><td id="o3">1360</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/window.outerWidth" title="Inconsistent."><code class="language-javascript">window.outerWidth</code></a></td><td id="o4">1376</td></tr>
+ <tr><td><a class="match-media" href="http://developer.mozilla.org/en-US/docs/DOM/window.matchMedia" title="highest pixel value for which a `min-width` media query returns true (detected via .matchMedia/.msMatchMedia)">@media breakpoint</a></td><td id="o27">1360</td></tr>
+ <tr><td><a href="https://github.com/ryanve/response.js/issues/17" title="Corresponds to @media breakpoint (see the page source)">correctedViewportW()</a></td><td id="o31">1360</td></tr>
+ </tbody></table>
+ <table id="viewport-height">
+ <tbody><tr><th scope="col"><a href="#viewport-height" title="#">height methods</a></th><th scope="col"><span title="Viewport dimensions are dynamic. Resize or rotate this page and these will change accordingly.">live output</span></th></tr>
+ <tr><td><a class="recommended" href="http://api.jquery.com/height/" title="jQuery docs says that this &quot;returns height of browser viewport.&quot; (widely used, used by&#160;jQuery Mobile)"><code class="language-javascript">$(window).height()</code></a></td> <td id="o6">942</td></tr>
+ <tr><td><a class="recommended" href="http://developer.mozilla.org/en/DOM/element.clientHeight" title="Pure JavaScript equivalent to $(window).height()"><code class="language-javascript">document.documentElement.clientHeight</code></a></td><td id="o7">942</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/window.innerHeight" title="Inconsistent."><code class="language-javascript">window.innerHeight</code></a></td><td id="o8">942</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/window.outerHeight" title="Inconsistent."><code class="language-javascript">window.outerHeight</code></a></td><td id="o9">1102</td></tr>
+ <tr><td><a class="match-media" href="http://developer.mozilla.org/en-US/docs/DOM/window.matchMedia" title="highest pixel value for which a `min-height` media query returns true (detected via .matchMedia/.msMatchMedia)">@media breakpoint</a></td><td id="o28">942</td></tr>
+ <tr><td><a href="https://github.com/ryanve/response.js/issues/17" title="Corresponds to @media breakpoint (see the page source)">correctedViewportH()</a></td><td id="o32">942</td></tr>
+ </tbody></table>
+
+ <h1 id="device">
+ <a href="#device" title="#device">device</a>
+ </h1>
+ 
+ <p>How to get the device size: It's simple. Use <code class="language-javascript">window.screen.width</code> for device width and <code class="language-javascript">window.screen.height</code> for device height. The <code class="language-javascript">.availWidth</code>/<code class="language-javascript">.availHeight</code> methods give you the device size minus UI taskbars (try on an iPhone) and are <a href="http://jsperf.com/window-screen-width-vs-window-screen-availwidth">slower</a> outside of Webkit. Device size is static and does not change when the page is resized or rotated.</p>
+
+ <table id="device-width">
+ <tbody><tr><th scope="col"><a href="#device-width" title="#">width methods</a></th><th scope="col"><span title="Device size is static—these do not change when the page is resized or rotated.">live output</span></th></tr>
+ <tr><td><a class="recommended" href="http://developer.mozilla.org/en/DOM/window.screen.width" title="MDN: &quot;Returns the width of the screen in pixels.&quot;"><code class="language-javascript">window.screen.width</code></a></td><td id="o11">1920</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/window.screen.availWidth" title="MDN: &quot;Returns the amount of horizontal space in pixels available to the window.&quot;"><code class="language-javascript">window.screen.availWidth</code></a></td><td id="o12">1920</td></tr>
+ <tr><td><a class="match-media" href="http://developer.mozilla.org/en-US/docs/DOM/window.matchMedia" title="highest pixel value for which a `min-device-width` media query returns true (detected via .matchMedia/.msMatchMedia)">@media breakpoint</a></td><td id="o29">1920</td></tr>
+ </tbody></table>
+
+ <table id="device-height">
+ <tbody><tr><th scope="col"><a href="#device-height" title="#">height methods</a></th><th scope="col"><span title="Device size is static—these do not change when the page is resized or rotated.">live output</span></th></tr>
+ <tr><td><a class="recommended" href="http://developer.mozilla.org/en/DOM/window.screen.height" title="MDN: &quot;Returns the height of the screen in pixels.&quot;"><code class="language-javascript">window.screen.height</code></a></td><td id="o13">1080</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/window.screen.availHeight" title="MDN: &quot;Returns the amount of vertical space in pixels available to the window.&quot;"><code class="language-javascript">window.screen.availHeight</code></a></td><td id="o14">1046</td></tr>
+ <tr><td><a class="match-media" href="http://developer.mozilla.org/en-US/docs/DOM/window.matchMedia" title="highest pixel value for which a `min-device-height` media query returns true (detected via .matchMedia/.msMatchMedia)">@media breakpoint</a></td><td id="o30">1080</td></tr>
+ </tbody></table>
+ 
+ <h1 id="document">
+ <a href="#document" title="#document">document</a>
+ </h1>
+ 
+ <p>For further comparison, here are document size methods (not 
+usually needed for responsive design but useful in other regards such as
+ scrolling apps). Note the difference between <code class="language-javascript">$(document).width()</code> and some of the others (especially when the window is wider than the max-width of the body). jQuery uses the <a href="http://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Math/max">Math.max</a> of 5 numbers to calculate this: the last 4 in these blocks and the docElem's <a href="#viewport" title="document.documentElement.clientWidth / clientHeight">clientWidth / clientHeight</a>. For decent cross-browser support I think the <code class="language-javascript">Math.max</code> of the last 3 in these blocks is sufficient rather than the 5 jQuery uses.</p>
+ 
+ <table id="document-width">
+ <tbody><tr><th scope="col"><a href="#document-width" title="#">width methods</a></th><th scope="col">live output</th></tr>
+ <tr><td><a class="recommended" href="http://api.jquery.com/width/" title="jQuery docs says that this &quot;returns width of HTML document&quot;"><code class="language-javascript">$(document).width()</code></a></td><td id="o5">1339</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/element.clientWidth" title="MDN's recommended alternative to the now obsolete document.width - but NOT always what you want"><code class="language-javascript">document.body.clientWidth</code></a></td><td id="o15">987</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.offsetWidth" title="MDN"><code class="language-javascript">document.body.offsetWidth</code></a></td><td id="o22">987</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.scrollWidth" title="MDN"><code class="language-javascript">document.body.scrollWidth</code></a></td><td id="o18">987</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.clientWidth" title="MDN"><code class="language-javascript">document.documentElement.clientWidth</code></a></td><td id="o25">1339</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.offsetWidth" title="MDN"><code class="language-javascript">document.documentElement.offsetWidth</code></a></td><td id="o21">1339</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.scrollWidth" title="MDN"><code class="language-javascript">document.documentElement.scrollWidth</code></a></td><td id="o17">1339</td></tr>
+ </tbody></table>
+
+ <table id="document-height">
+ <tbody><tr><th scope="col"><a href="#document-height" title="#">height methods</a></th><th scope="col">live output</th></tr>
+ <tr><td><a class="recommended" href="http://api.jquery.com/height/" title="jQuery docs says that this &quot;returns height of HTML document&quot;"><code class="language-javascript">$(document).height()</code></a></td> <td id="o10">2295</td></tr>
+ <tr><td><a class="notwhatyouwant" href="http://developer.mozilla.org/en/DOM/element.clientHeight" title="MDN's recommended alternative to the now obsolete document.height - but NOT always what you want"><code class="language-javascript">document.body.clientHeight</code></a></td><td id="o16">2295</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.offsetWidth" title="MDN"><code class="language-javascript">document.body.offsetHeight</code></a></td><td id="o24">2295</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.scrollHeight" title="MDN"><code class="language-javascript">document.body.scrollHeight</code></a></td><td id="o20">2295</td></tr>
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.clientHeight" title="MDN"><code class="language-javascript">document.documentElement.clientHeight</code></a></td><td id="o26">942</td></tr> 
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.offsetWidth" title="MDN"><code class="language-javascript">document.documentElement.offsetHeight</code></a></td><td id="o23">2295</td></tr> 
+ <tr><td><a class="maybewhatyouwant" href="http://developer.mozilla.org/en/DOM/element.scrollHeight" title="MDN"><code class="language-javascript">document.documentElement.scrollHeight</code></a></td><td id="o19">2295</td></tr>
+ </tbody></table>
+ 
+ </article>
+
+ <!-- toggle style - see script @ bottom -->
+ <a id="flip" title="Toggle styles" accesskey="2">
+ <span class="shape">◑</span>
+ </a>
+
+ <footer id="end">
+ <a href="#start" accesskey="a"><span class="shape">▲</span> top</a>
+ <a class="visuallyhidden" href="#end" accesskey="z"><span class="shape">▼</span> bottom</a>
+ </footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>this.jQuery||document.write("<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js\"><\/script>")</script>
+<script>window.Modernizr||jQuery('html').removeClass('no-js').addClass('js')</script>
+
+<script>
+(function (window, document, $) {// Generate the test results:
+ $(function ($) {
+
+ // Cache selectors to reduce DOM traversal:
+ var $win = $(window)
+ , $doc = $(this)
+ , $o = [ null ] // start @ index 1
+ , i = 1
+ , temp = 1
+ , mM = window['matchMedia'] || window['msMatchMedia'] || Object;
+
+ function mMBreakPt ( prop, unit ) {
+ var n = 0, result = true;
+ unit = unit || 'px';
+ while ( true == result ) {
+ result = mM( '(' + prop + ':' + ++n + unit + ')' )['matches'];
+ }
+ if ( --n ) {
+ return n;
+ }
+ }
+ 
+ if ( mM === window['msMatchMedia'] )
+ $('a.match-media').attr('href', 'http://msdn.microsoft.com/en-us/library/ie/hh673551(v=vs.85).aspx');
+
+ // Make an array of jQuery objects that correspond to 
+ // the test output html ids:
+ while ( temp ) {
+ temp = $('#o' + i++);
+ temp = temp.length && $o.push(temp);
+ }
+ 
+ var correctedViewportW = (function (win, docElem) {
+
+ var mM = win['matchMedia'] || win['msMatchMedia']
+ , client = docElem['clientWidth']
+ , inner = win['innerWidth']
+
+ return mM && client < inner && true === mM('(min-width:' + inner + 'px)')['matches']
+ ? function () { return win['innerWidth'] }
+ : function () { return docElem['clientWidth'] }
+
+ }(window, document.documentElement));
+ 
+ var correctedViewportH = (function (win, docElem) {
+
+ var mM = win['matchMedia'] || win['msMatchMedia']
+ , client = docElem['clientHeight']
+ , inner = win['innerHeight']
+
+ return mM && client < inner && true === mM('(min-height:' + inner + 'px)')['matches']
+ ? function () { return win['innerHeight'] }
+ : function () { return docElem['clientHeight'] }
+
+ }(window, document.documentElement));
+
+ function update () {// event handler
+ 
+ var viewportWidth = document.documentElement.clientWidth
+ , viewportHeight = document.documentElement.clientHeight;
+
+ // Send the current values:
+ $o[1].html($win.width());
+ $o[2].html(viewportWidth);
+ $o[3].html(window.innerWidth);
+ $o[4].html(window.outerWidth);
+ 
+ $o[6].html($win.height());
+ $o[7].html(viewportHeight);
+ $o[8].html(window.innerHeight);
+ $o[9].html(window.outerHeight);
+ 
+ // these 4 are constant
+ $o[11].html(window.screen.width);
+ $o[12].html(window.screen.availWidth);
+ $o[13].html(window.screen.height);
+ $o[14].html(window.screen.availHeight);
+ 
+ $o[27].html('' + mMBreakPt('min-width'));
+ $o[28].html('' + mMBreakPt('min-height'));
+ $o[29].html('' + mMBreakPt('min-device-width'));
+ $o[30].html('' + mMBreakPt('min-device-height'));
+ $o[31].html('' + correctedViewportW());
+ $o[32].html('' + correctedViewportH());
+ 
+ 
+ $o[5].html($doc.width());
+ $o[15].html(document.body.clientWidth);
+ $o[10].html($doc.height());
+ $o[16].html(document.body.clientHeight);
+ $o[17].html(document.documentElement.scrollWidth);
+ $o[18].html(document.body.scrollWidth);
+ $o[19].html(document.documentElement.scrollHeight);
+ $o[20].html(document.body.scrollHeight);
+ $o[21].html(document.documentElement.offsetWidth);
+ $o[22].html(document.body.offsetWidth);
+ $o[23].html(document.documentElement.offsetHeight);
+ $o[24].html(document.body.offsetHeight);
+ $o[25].html(viewportWidth);
+ $o[26].html(viewportHeight);
+ }
+ 
+ update(); // call when the DOM is ready
+ 
+ // Call when the viewport resizes:
+ $win.on('resize', update);
+ 
+ });
+}(this, document, jQuery));
+
+(function($, control, target, className){// toggle styles
+ var clicked = false; // for lazy first click
+ $(control).click(function () {
+ clicked = clicked || !!(target = $(target));
+ target.toggleClass(className);
+ });
+}(jQuery, '#flip', 'html', 'dark'));
+
+</script>
+
+</body></html>

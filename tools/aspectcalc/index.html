@@ -1,0 +1,4848 @@
+<!DOCTYPE html>
+<html id="html-no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="480" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="robots" content="index,follow" />
+		<meta name="author" content="Hscripts.com" />
+		<meta name="keywords" content="aspect,ratio,calculator,калькулятор,соотношения,сторон"/>
+		<meta name="description" content="Aspect Ratio Calculator / Калькулятор соотношения сторон" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,700|Ubuntu+Mono:400,400italic,700&amp;subset=latin,cyrillic" /><link rel="stylesheet" href="/tools/phpmyedit/phpmyedit.css" />
+		<title>   &#45;&#1080;&#1085;&#1089;&#1090;&#1088;&#1091;&#1084;&#1077;&#1085;&#1090;&#1099; - Aspect Ratio Calculator / Калькулятор соотношения сторон</title>
+		<script><!--//--><![CDATA[//><!--
+function aspect_ratio(){var b=document.getElementById("x1").value,c=document.getElementById("y1").value,a=calc(b,c);b/=a;c/=a;document.getElementById("res").value=b+":"+c;var a=document.getElementById("x2").value,d=document.getElementById("y2").value;if(a=="")b*=d/c,document.getElementById("x2").value=b.toFixed(2);else if(d=="")b=c*(a/b),document.getElementById("y2").value=b.toFixed(2)}function calc(b,c){var a,d;b<c?(a=b,d=c):(a=c,d=b);for(var e=d%a;e>0;)d=a,a=e,e=d%a;return a} function reset(){document.getElementById("x1").value="";document.getElementById("y1").value="";document.getElementById("x2").value="";document.getElementById("y2").value=""}function isInteger(b,c){var a,b=b.toString();for(a=0;a<b.length;a++){var d;b.charAt(a)!="."&&(d=b.charAt(a));if(isNaN(d))return alert("Given value is not a number"),document.getElementById(c).value="",!1}return!0} function ctck(){document.getElementById("dum")==null&&alert("You are using a free package.\n You are not allowed to remove the tag.\n");document.getElementById("dumdiv")==null&&alert("You are using a free package.\n You are not allowed to remove the tag.\n")}document.onload="ctck()";
+//--><!]]></script>
+		<!--[if lt IE 9]>
+		<script src="//cdn.jsdelivr.net/css3-mediaqueries/0.1/css3-mediaqueries.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="wrapper">
+			<h1>Aspect Ratio Calculator / Калькулятор соотношения сторон</h1>
+			<p>
+				Enter values on the left side of the equation and one of the two values on the right side then click
+				<strong>
+					calculate
+				</strong>
+			</p>
+			<table class="strict">
+				<tr>
+					<td>
+						<table>
+								<tr>
+								<td>
+									Enter the x1 value:
+								</td>
+								<td>
+									<input type="text" id="x1" onkeyup="isInteger(this.value,this.id);" />
+								</td>
+							</tr>
+								<tr>
+								<td colspan="2">
+									<hr />
+								</td>
+							</tr>
+								<tr>
+								<td>
+									Enter the y1 value:
+								</td>
+								<td>
+									<input type="text" id="y1" onkeyup="isInteger(this.value,this.id);" />
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td style="text-align:center;">
+						=
+					</td>
+					<td>
+						<table>
+								<tr>
+								<td>
+									Enter the x2 value:
+								</td>
+								<td>
+									<input type="text" id="x2" onkeyup="isInteger(this.value,this.id);" />
+								</td>
+							</tr>
+								<tr>
+								<td colspan="2">
+									<hr />
+								</td>
+							</tr>
+								<tr>
+								<td>
+									Enter the y2 value:
+								</td>
+								<td>
+									<input type="text" id="y2" onkeyup="isInteger(this.value,this.id);" />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="text-align:center;">
+						Ratio:
+						<input type="text" id="res" readonly />
+						<input type="button" value="calculate" onclick="aspect_ratio()" />
+						<input type="button" value="Reset" onclick="reset()" />
+					</td>
+				</tr>
+			</table>
+			<h2>
+				Computer graphics
+			</h2>
+			<p>
+				For the table below, storage aspect ratio (SAR) is based solely on pixel count. It does not take into account
+				<a href="http://en.wikipedia.org/wiki/Pixel_aspect_ratio">pixel aspect ratio</a>
+				(pixels may be non-square) and thus the
+				<a href="http://en.wikipedia.org/wiki/Display_aspect_ratio">display aspect ratio</a>
+				(the aspect ratio of the actual image that is displayed) may differ.
+			</p>
+			<table class="strict">
+				<caption>
+					Computer and handheld screens
+				</caption>
+				<tr>
+					<th>
+						Standard
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						Width
+					</th>
+					<th>
+						&#160;
+					</th>
+					<th>
+						Height
+					</th>
+					<th>
+						SAR
+					</th>
+					<th>
+						SAR
+					</th>
+					<th>
+						Pixels
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Microvision">Microvision</a>
+					</td>
+					<td>
+						16
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						16
+					</td>
+					<td>
+						1:1
+					</td>
+					<td>
+						1.0
+					</td>
+					<td>
+						256
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/PocketStation">PocketStation</a>
+					</td>
+					<td>
+						32
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						32
+					</td>
+					<td>
+						1:1
+					</td>
+					<td>
+						1.0
+					</td>
+					<td>
+						1,024
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Etch_A_Sketch_Animator">Etch A Sketch Animator</a>
+					</td>
+					<td>
+						40
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						30
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						1,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/GameKing#GameKing_I_.28GM-218.29">GameKing I (GM-218)</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/VMU">VMU</a>
+					</td>
+					<td>
+						48
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						32
+					</td>
+					<td>
+						3:2
+					</td>
+					<td>
+						1.5
+					</td>
+					<td>
+						1,536
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Hartung_Game_Master">Hartung Game Master</a>
+					</td>
+					<td>
+						64
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						64
+					</td>
+					<td>
+						1:1
+					</td>
+					<td>
+						1.0
+					</td>
+					<td>
+						4,096
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Epoch_Game_Pocket_Computer">Epoch Game Pocket Computer</a>
+					</td>
+					<td>
+						75
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						64
+					</td>
+					<td>
+						75:64
+					</td>
+					<td>
+						1.172
+					</td>
+					<td>
+						4,800
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Entex_Adventure_Vision">Entex Adventure Vision</a>
+					</td>
+					<td>
+						150
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						40
+					</td>
+					<td>
+						15:4
+					</td>
+					<td>
+						3.75
+					</td>
+					<td>
+						6,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Pok%C3%A9mon_mini">Pokйmon mini</a>
+					</td>
+					<td>
+						96
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						64
+					</td>
+					<td>
+						3:2
+					</td>
+					<td>
+						1.5
+					</td>
+					<td>
+						6,144
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Ruputer">Ruputer</a>
+					</td>
+					<td>
+						102
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						64
+					</td>
+					<td>
+						51:32
+					</td>
+					<td>
+						0.627
+					</td>
+					<td>
+						6,528
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Atari_Portfolio">Atari Portfolio</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/TRS-80_Model_100">TRS-80 Model 100</a>
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						64
+					</td>
+					<td>
+						15:4
+					</td>
+					<td>
+						3.75
+					</td>
+					<td>
+						15,360
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Atari_Lynx">Atari Lynx</a>
+					</td>
+					<td>
+						160
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						102
+					</td>
+					<td>
+						80:51
+					</td>
+					<td>
+						1.569
+					</td>
+					<td>
+						16,320
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/QQVGA">QQVGA</a>
+					</td>
+					<td>
+						160
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						120
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						19,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/QQVGA">QQVGA</a>
+						(portrait mode)
+					</td>
+					<td>
+						120
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						160
+					</td>
+					<td>
+						3:4
+					</td>
+					<td>
+						0.750
+					</td>
+					<td>
+						19,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Nintendo
+						<a href="http://en.wikipedia.org/wiki/Game_Boy">Game Boy</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Game_Boy_Color">Game Boy Color</a>
+					</td>
+					<td>
+						160
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						144
+					</td>
+					<td>
+						10:9
+					</td>
+					<td>
+						1.111
+					</td>
+					<td>
+						23,040
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Neo_Geo_Pocket_Color">Neo Geo Pocket Color</a>
+					</td>
+					<td>
+						160
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						152
+					</td>
+					<td>
+						20:19
+					</td>
+					<td>
+						1.053
+					</td>
+					<td>
+						24,320
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Palm_%28PDA%29">Palm (PDA)</a>
+						LoRES
+					</td>
+					<td>
+						160
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						160
+					</td>
+					<td>
+						1:1
+					</td>
+					<td>
+						1.0
+					</td>
+					<td>
+						25,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Apple_II">Apple II</a>
+						HiRes (6 color) and
+						<a href="http://en.wikipedia.org/wiki/Apple_IIe">Apple IIe</a>
+						Double HiRes (16 color), grouping subpixels
+					</td>
+					<td>
+						140
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						192
+					</td>
+					<td>
+						35:48
+					</td>
+					<td>
+						0.729
+					</td>
+					<td>
+						26,880
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/MOS_Technology_VIC-II">VIC-II</a>
+						multicolor,
+						<a href="http://en.wikipedia.org/wiki/IBM_PCjr">IBM PCjr</a>
+						16-color,
+						<a href="http://en.wikipedia.org/wiki/Amstrad_CPC">Amstrad CPC</a>
+					</td>
+					<td>
+						160
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						200
+					</td>
+					<td>
+						4:5
+					</td>
+					<td>
+						0.8
+					</td>
+					<td>
+						32,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WonderSwan">WonderSwan</a>
+					</td>
+					<td>
+						224
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						144
+					</td>
+					<td>
+						14:9
+					</td>
+					<td>
+						1.555
+					</td>
+					<td>
+						32,256
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Nokia
+						<a href="http://en.wikipedia.org/wiki/Series_60">Series 60</a>
+						<a href="http://en.wikipedia.org/wiki/Smartphone">smartphones</a>
+						(
+						<a href="http://en.wikipedia.org/wiki/Nokia_7650">Nokia 7650</a>
+						, plus First and Second Edition models only)
+					</td>
+					<td>
+						176
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						208
+					</td>
+					<td>
+						11:13
+					</td>
+					<td>
+						0.846
+					</td>
+					<td>
+						36,608
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/HQVGA">HQVGA</a>
+						, Nintendo
+						<a href="http://en.wikipedia.org/wiki/Game_Boy_Advance">Game Boy Advance</a>
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						160
+					</td>
+					<td>
+						3:2
+					</td>
+					<td>
+						1.5
+					</td>
+					<td>
+						38,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/HQVGA">HQVGA</a>
+						(portrait mode)
+					</td>
+					<td>
+						160
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						2:3
+					</td>
+					<td>
+						0.667
+					</td>
+					<td>
+						38,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Older Java
+						<a href="http://en.wikipedia.org/wiki/MIDP">MIDP</a>
+						devices like
+						<a href="http://en.wikipedia.org/wiki/Sony_Ericsson_K600">Sony Ericsson K600</a>
+					</td>
+					<td>
+						176
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						220
+					</td>
+					<td>
+						4:5
+					</td>
+					<td>
+						0.8
+					</td>
+					<td>
+						38,720
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/BBC_Micro">Acorn BBC</a>
+						20 column modes
+					</td>
+					<td>
+						160
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						256
+					</td>
+					<td>
+						5:8
+					</td>
+					<td>
+						0.625
+					</td>
+					<td>
+						40,960
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Nokia_5500_Sport">Nokia 5500 Sport</a>
+					</td>
+					<td>
+						208
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						208
+					</td>
+					<td>
+						1:1
+					</td>
+					<td>
+						1.0
+					</td>
+					<td>
+						43,264
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/TMS9918">TMS9918</a>
+						Modes 1 (e.g.
+						<a href="http://en.wikipedia.org/wiki/Texas_Instruments_TI-99/4A">TI-99/4a</a>
+						) and 2,
+						<a href="http://en.wikipedia.org/wiki/ZX_Spectrum">ZX Spectrum</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/MSX">MSX</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Nintendo_DS">Nintendo DS</a>
+						(each screen)
+					</td>
+					<td>
+						256
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						192
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						49,152
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Apple_II">Apple II</a>
+						HiRes (1 bit per pixel)
+					</td>
+					<td>
+						280
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						192
+					</td>
+					<td>
+						35:24
+					</td>
+					<td>
+						1.458
+					</td>
+					<td>
+						53,760
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Apple
+						<a href="http://en.wikipedia.org/wiki/IPod_Nano">iPod Nano</a>
+						6G
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						1:1
+					</td>
+					<td>
+						1.0
+					</td>
+					<td>
+						57,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Atari_8-bit_family">Atari 400/800</a>
+					</td>
+					<td>
+						320
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						192
+					</td>
+					<td>
+						5:3
+					</td>
+					<td>
+						1.667
+					</td>
+					<td>
+						61,440
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Color_Graphics_Adapter">CGA</a>
+						4-color,
+						<a href="http://en.wikipedia.org/wiki/Atari_ST">Atari ST</a>
+						16 color,
+						<a href="http://en.wikipedia.org/wiki/Commodore_64">Commodore 64</a>
+						<a href="http://en.wikipedia.org/wiki/MOS_Technology_VIC-II">VIC-II</a>
+						Hires,
+						<a href="http://en.wikipedia.org/wiki/Amiga_Original_chipset">Amiga OCS</a>
+						NTSC Lowres,
+						<a href="http://en.wikipedia.org/wiki/Apple_IIGS">Apple IIGS</a>
+						LoRes,
+						<a href="http://en.wikipedia.org/wiki/IBM_Multicolor_Graphics_Adapter">MCGA</a>
+					</td>
+					<td>
+						320
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						200
+					</td>
+					<td>
+						8:5
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						64,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Elektronika_BK">Elektronika BK</a>
+					</td>
+					<td>
+						256
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						256
+					</td>
+					<td>
+						1:1
+					</td>
+					<td>
+						1.0
+					</td>
+					<td>
+						65,536
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/UIQ">UIQ</a>
+						2.x based
+						<a href="http://en.wikipedia.org/wiki/Smartphone">smartphones</a>
+					</td>
+					<td>
+						208
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						320
+					</td>
+					<td>
+						13:20
+					</td>
+					<td>
+						0.65
+					</td>
+					<td>
+						66,560
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Sega_Nomad">Sega Nomad</a>
+					</td>
+					<td>
+						320
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						224
+					</td>
+					<td>
+						10:7
+					</td>
+					<td>
+						1.429
+					</td>
+					<td>
+						71,680
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/QVGA">QVGA</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Mega_Drive">Mega Drive</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Nintendo_3DS">Nintendo 3DS</a>
+						(lower screen)
+					</td>
+					<td>
+						320
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						76,800
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/QVGA">QVGA</a>
+						(portrait mode)
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						320
+					</td>
+					<td>
+						3:4
+					</td>
+					<td>
+						0.75
+					</td>
+					<td>
+						76,800
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/BBC_Micro">Acorn BBC</a>
+						40 column modes,
+						<a href="http://en.wikipedia.org/wiki/Amiga_Original_chipset">Amiga OCS</a>
+						PAL Lowres
+					</td>
+					<td>
+						320
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						256
+					</td>
+					<td>
+						5:4
+					</td>
+					<td>
+						1.25
+					</td>
+					<td>
+						81,920
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WQVGA">WQVGA</a>
+						(common on
+						<a href="http://en.wikipedia.org/wiki/Windows_Mobile_6">Windows Mobile 6</a>
+						handsets)
+					</td>
+					<td>
+						400
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						5:3
+					</td>
+					<td>
+						1.667
+					</td>
+					<td>
+						96,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Palm_%28PDA%29">Palm (PDA)</a>
+						HiRES
+					</td>
+					<td>
+						320
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						320
+					</td>
+					<td>
+						1:1
+					</td>
+					<td>
+						1.0
+					</td>
+					<td>
+						102,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WQVGA">WQVGA</a>
+					</td>
+					<td>
+						432
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						9:5
+					</td>
+					<td>
+						1.8
+					</td>
+					<td>
+						103,680
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Apple_IIe">Apple IIe</a>
+						Double Hires (1 bit per pixel)
+					</td>
+					<td>
+						560
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						192
+					</td>
+					<td>
+						35:12
+					</td>
+					<td>
+						2.917
+					</td>
+					<td>
+						107,520
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/TurboExpress">TurboExpress</a>
+					</td>
+					<td>
+						400
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						270
+					</td>
+					<td>
+						40:27
+					</td>
+					<td>
+						1.481
+					</td>
+					<td>
+						108,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						A WQVGA variant, used commonly for
+						<a href="http://en.wikipedia.org/wiki/Portable_DVD_Player">Portable DVD Players</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Digital_photo_frame">Digital photo frames</a>
+						, GPS receivers and devices such as the
+						<a href="http://en.wikipedia.org/wiki/Kenwood_DNX-5120">Kenwood DNX-5120</a>
+						, and
+						<a href="http://en.wikipedia.org/wiki/Glospace_SGK-70">Glospace SGK-70</a>
+						. Often falsely marketed as "16:9"
+					</td>
+					<td>
+						480
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						234
+					</td>
+					<td>
+						80:39
+					</td>
+					<td>
+						2.051
+					</td>
+					<td>
+						112,320
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Teletext">Teletext</a>
+						and
+						<a href="http://en.wikipedia.org/wiki/Viewdata">Viewdata</a>
+						40Ч25 character screens (PAL non-interlaced)
+					</td>
+					<td>
+						480
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						250
+					</td>
+					<td>
+						48:25
+					</td>
+					<td>
+						1.92
+					</td>
+					<td>
+						120,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Quarter SVGA (no official name, selectable in some PC shooters)
+					</td>
+					<td>
+						400
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						300
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						120,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Apple
+						<a href="http://en.wikipedia.org/wiki/IPod_Nano">iPod Nano</a>
+						5G (portrait mode)
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						376
+					</td>
+					<td>
+						16:25
+					</td>
+					<td>
+						0.64
+					</td>
+					<td>
+						120,320
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Atari_ST">Atari ST</a>
+						4 color,
+						<a href="http://en.wikipedia.org/wiki/Color_Graphics_Adapter">CGA</a>
+						mono,
+						<a href="http://en.wikipedia.org/wiki/Amiga_Original_chipset">Amiga OCS</a>
+						NTSC Hires,
+						<a href="http://en.wikipedia.org/wiki/Apple_IIGS">Apple IIGS</a>
+						HiRes,
+						<a href="http://en.wikipedia.org/wiki/Nokia">Nokia</a>
+						<a href="http://en.wikipedia.org/wiki/Series_80">Series 80</a>
+						<a href="http://en.wikipedia.org/wiki/Smartphone">smartphones</a>
+					</td>
+					<td>
+						640
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						200
+					</td>
+					<td>
+						16:5
+					</td>
+					<td>
+						3.2
+					</td>
+					<td>
+						128,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Sony
+						<a href="http://en.wikipedia.org/wiki/PlayStation_Portable">PlayStation Portable</a>
+						(note: When playing video files created by&#160;user, the max. resolution is restricted to 368x208(16:9) or 320x240(4:3)),
+						<a href="http://en.wikipedia.org/wiki/Zune_HD">Zune HD</a>
+					</td>
+					<td>
+						480
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						272
+					</td>
+					<td>
+						30:17
+					</td>
+					<td>
+						1.765
+					</td>
+					<td>
+						130,560
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Elektronika_BK">Elektronika BK</a>
+					</td>
+					<td>
+						512
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						256
+					</td>
+					<td>
+						2:1
+					</td>
+					<td>
+						2.0
+					</td>
+					<td>
+						131,072
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Nokia
+						<a href="http://en.wikipedia.org/wiki/Series_60">Series 60</a>
+						<a href="http://en.wikipedia.org/wiki/Smartphones">smartphones</a>
+						(
+						<a href="http://en.wikipedia.org/wiki/Nokia_E60">E60</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Nokia_E70">E70</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Nokia_N80">N80</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Nokia_N90">N90</a>
+						)
+					</td>
+					<td>
+						352
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						416
+					</td>
+					<td>
+						11:13
+					</td>
+					<td>
+						0.846
+					</td>
+					<td>
+						146,432
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/HVGA">HVGA</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Handheld_PC">Handheld PC</a>
+					</td>
+					<td>
+						640
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						8:3
+					</td>
+					<td>
+						2.667
+					</td>
+					<td>
+						153,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/HVGA">HVGA</a>
+						, Palm Tungsten T3
+						<a href="http://en.wikipedia.org/wiki/IPhone">Apple iPhone, 3G, &amp; 3GS</a>
+					</td>
+					<td>
+						480
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						320
+					</td>
+					<td>
+						3:2
+					</td>
+					<td>
+						1.5
+					</td>
+					<td>
+						153,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/HVGA">HVGA</a>
+						(portrait),
+						<a href="http://en.wikipedia.org/wiki/Palm_%28PDA%29">Palm (PDA)</a>
+						HiRES+
+					</td>
+					<td>
+						320
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						480
+					</td>
+					<td>
+						2:3
+					</td>
+					<td>
+						0.667
+					</td>
+					<td>
+						153,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/HVGA">HVGA</a>
+						(portrait mode)
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						640
+					</td>
+					<td>
+						3:8
+					</td>
+					<td>
+						0.375
+					</td>
+					<td>
+						153,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/BBC_Micro">Acorn BBC</a>
+						80 column modes,
+						<a href="http://en.wikipedia.org/wiki/Amiga_Original_chipset">Amiga OCS</a>
+						PAL Hires
+					</td>
+					<td>
+						640
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						256
+					</td>
+					<td>
+						5:2
+					</td>
+					<td>
+						2.5
+					</td>
+					<td>
+						163,840
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Apple_Macintosh">Black &amp; white Macintosh (9")</a>
+					</td>
+					<td>
+						512
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						342
+					</td>
+					<td>
+						3:2
+					</td>
+					<td>
+						1.5
+					</td>
+					<td>
+						175,104
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Nintendo_3DS">Nintendo 3DS</a>
+						(upper screen in 3D mode) (2x 400x240, one for each eye)
+					</td>
+					<td>
+						800
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						240
+					</td>
+					<td>
+						10:3
+					</td>
+					<td>
+						3.333
+					</td>
+					<td>
+						192,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Macintosh_LC">Macintosh LC</a>
+						(12")/
+						<a href="http://en.wikipedia.org/wiki/Macintosh_Color_Classic">Color Classic</a>
+						(also selectable in many PC shooters)
+					</td>
+					<td>
+						512
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						384
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						196,608
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Nokia
+						<a href="http://en.wikipedia.org/wiki/Series_90">Series 90</a>
+						<a href="http://en.wikipedia.org/wiki/Smartphone">smartphones</a>
+						(
+						<a href="http://en.wikipedia.org/wiki/Nokia_7700">7700</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Nokia_7710">7710</a>
+						)
+					</td>
+					<td>
+						640
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						320
+					</td>
+					<td>
+						2:1
+					</td>
+					<td>
+						2.0
+					</td>
+					<td>
+						204,800
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Enhanced_Graphics_Adapter">EGA</a>
+					</td>
+					<td>
+						640
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						350
+					</td>
+					<td>
+						64:35
+					</td>
+					<td>
+						1.829
+					</td>
+					<td>
+						224,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/NHD">nHD</a>
+						, used by
+						<a href="http://en.wikipedia.org/wiki/Nokia_5800">Nokia 5800</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Nokia_5530">Nokia 5530</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Nokia_X6">Nokia X6</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Nokia_N97">Nokia N97</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Nokia_N8">Nokia N8</a>
+					</td>
+					<td>
+						640
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						360
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						1.778
+					</td>
+					<td>
+						230,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Teletext">Teletext</a>
+						and
+						<a href="http://en.wikipedia.org/wiki/Viewdata">Viewdata</a>
+						40Ч25 character screens (PAL interlaced)
+					</td>
+					<td>
+						480
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						500
+					</td>
+					<td>
+						24:25
+					</td>
+					<td>
+						0.96
+					</td>
+					<td>
+						240,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Hercules_Graphics_Card">HGC</a>
+					</td>
+					<td>
+						720
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						348
+					</td>
+					<td>
+						60:29
+					</td>
+					<td>
+						2.069
+					</td>
+					<td>
+						250,560
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Monochrome_Display_Adapter">MDA</a>
+					</td>
+					<td>
+						720
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						350
+					</td>
+					<td>
+						72:35
+					</td>
+					<td>
+						2.057
+					</td>
+					<td>
+						252,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Atari_ST">Atari ST</a>
+						mono,
+						<a href="http://en.wikipedia.org/wiki/Amiga_Original_chipset">Amiga OCS</a>
+						NTSC Hires interlaced
+					</td>
+					<td>
+						640
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						400
+					</td>
+					<td>
+						8:5
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						256,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Apple_Lisa">Apple Lisa</a>
+					</td>
+					<td>
+						720
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						364
+					</td>
+					<td>
+						180:91
+					</td>
+					<td>
+						1.978
+					</td>
+					<td>
+						262,080
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Nokia_E90_Communicator">Nokia E90 Communicator</a>
+					</td>
+					<td>
+						800
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						352
+					</td>
+					<td>
+						25:11
+					</td>
+					<td>
+						2.273
+					</td>
+					<td>
+						281,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(unnamed)
+					</td>
+					<td>
+						600
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						480
+					</td>
+					<td>
+						5:4
+					</td>
+					<td>
+						1.25
+					</td>
+					<td>
+						288,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/VGA">VGA</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Multicolor_Graphics_Adapter">MCGA</a>
+						(in monochome),
+						<a href="http://en.wikipedia.org/wiki/Sun-1">Sun-1</a>
+						color
+					</td>
+					<td>
+						640
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						480
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						307,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Amiga_Original_chipset">Amiga OCS</a>
+						PAL Hires interlaced
+					</td>
+					<td>
+						640
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						512
+					</td>
+					<td>
+						5:4
+					</td>
+					<td>
+						1.25
+					</td>
+					<td>
+						327,680
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Wide_VGA">WVGA</a>
+					</td>
+					<td>
+						768
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						480
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						368,640
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Wide_VGA">WVGA</a>
+						or WGA,
+						<a href="http://en.wikipedia.org/wiki/List_of_mobile_phones_with_WVGA_display">List of mobile phones with WVGA display</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Nokia_770_Internet_Tablet">Nokia 770</a>
+						/
+						<a href="http://en.wikipedia.org/wiki/Nokia_N800">800N</a>
+						/
+						<a href="http://en.wikipedia.org/wiki/Nokia_N810">N810</a>
+						/
+						<a href="http://en.wikipedia.org/wiki/Nokia_N900">N900</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Asus_Eee_PC">Asus Eee PC 700 and 701 series</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Pandora_%28console%29">Pandora</a>
+					</td>
+					<td>
+						800
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						480
+					</td>
+					<td>
+						5:3
+					</td>
+					<td>
+						1.667
+					</td>
+					<td>
+						384,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Graphic_display_resolutions#FWVGA_.28854.C3.97480.29">FWVGA</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/List_of_mobile_phones_with_FWVGA_display">List of mobile phones with FWVGA display</a>
+					</td>
+					<td>
+						854
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						480
+					</td>
+					<td>
+						~16:9
+					</td>
+					<td>
+						1.783
+					</td>
+					<td>
+						410,880
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/SVGA">SVGA</a>
+					</td>
+					<td>
+						800
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						600
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						480,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/QHD">QHD</a>
+						, Quarter FHD (
+						<a href="http://en.wikipedia.org/wiki/Image_Constraint_Token">AACS ICT</a>
+						),
+						<a href="http://en.wikipedia.org/wiki/HRHD">HRHD</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Motorola_Atrix_4G">Motorola Atrix 4G</a>
+					</td>
+					<td>
+						960
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						540
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						1.778
+					</td>
+					<td>
+						518,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Apple
+						<a href="http://en.wikipedia.org/wiki/Macintosh">Macintosh</a>
+						Half Megapixel
+					</td>
+					<td>
+						832
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						624
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						519,168
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/PlayStation_Vita">PlayStation Vita</a>
+					</td>
+					<td>
+						960
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						544
+					</td>
+					<td>
+						30:17
+					</td>
+					<td>
+						1.765
+					</td>
+					<td>
+						522,240
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WSVGA">WSVGA</a>
+					</td>
+					<td>
+						1024
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						576
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						1.778
+					</td>
+					<td>
+						589,824
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Used in many
+						<a href="http://en.wikipedia.org/wiki/Netbook">netbooks</a>
+					</td>
+					<td>
+						1024
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						600
+					</td>
+					<td>
+						128:75
+					</td>
+					<td>
+						1.707
+					</td>
+					<td>
+						614,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/DVGA">DVGA</a>
+						, Apple
+						<a href="http://en.wikipedia.org/wiki/IPhone_4">iPhone 4</a>
+						,4th Generation
+						<a href="http://en.wikipedia.org/wiki/IPod_Touch">iPod Touch</a>
+					</td>
+					<td>
+						960
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						640
+					</td>
+					<td>
+						3:2
+					</td>
+					<td>
+						1.5
+					</td>
+					<td>
+						614,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(
+						<em>
+							Norm. Laptops
+						</em>
+						)
+					</td>
+					<td>
+						1024
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						640
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						655,360
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Panasonic DVCPRO100 for 50/60Hz over 720p - SMPTE Resolution
+					</td>
+					<td>
+						960
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						720
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						691,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/XGA">XGA</a>
+						, Apple
+						<a href="http://en.wikipedia.org/wiki/IPad">iPad</a>
+					</td>
+					<td>
+						1024
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						768
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						786,432
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Sun-1">Sun-1</a>
+						monochrome
+					</td>
+					<td>
+						1024
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						800
+					</td>
+					<td>
+						32:25
+					</td>
+					<td>
+						1.28
+					</td>
+					<td>
+						819,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(unnamed)
+					</td>
+					<td>
+						1152
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						720
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						829,440
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Apple
+						<a href="http://en.wikipedia.org/wiki/PowerBook_G4">PowerBook G4</a>
+						(original Titanium version)
+					</td>
+					<td>
+						1152
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						768
+					</td>
+					<td>
+						3:2
+					</td>
+					<td>
+						1.5
+					</td>
+					<td>
+						884,736
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/720p">720p</a>
+						(
+						<a href="http://en.wikipedia.org/w/index.php?title=WXGA-H&amp;action=edit&amp;redlink=1">WXGA-H</a>
+						, min.)
+					</td>
+					<td>
+						1280
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						720
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						1.778
+					</td>
+					<td>
+						921,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/NeXT_MegaPixel_Display">NeXT MegaPixel Display</a>
+					</td>
+					<td>
+						1120
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						832
+					</td>
+					<td>
+						35:26
+					</td>
+					<td>
+						1.346
+					</td>
+					<td>
+						931,840
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WXGA_%28graphics%29">WXGA</a>
+						, avg.,
+						<a href="http://en.wikipedia.org/wiki/BrightView">BrightView</a>
+					</td>
+					<td>
+						1280
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						768
+					</td>
+					<td>
+						5:3
+					</td>
+					<td>
+						1.667
+					</td>
+					<td>
+						983,040
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/XGA%2B">XGA+</a>
+					</td>
+					<td>
+						1152
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						864
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						995,328
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WXGA_%28graphics%29">WXGA</a>
+						, avg.
+					</td>
+					<td>
+						1280
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						800
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						1,024,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Sun-2">Sun-2</a>
+						Prime Monochrome or Color Video, also common in
+						<a href="http://en.wikipedia.org/wiki/Sun-3">Sun-3</a>
+						and
+						<a href="http://en.wikipedia.org/wiki/Sun-4">Sun-4</a>
+						workstations
+					</td>
+					<td>
+						1152
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						900
+					</td>
+					<td>
+						32:25
+					</td>
+					<td>
+						1.28
+					</td>
+					<td>
+						1,036,800
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Network_Computing_Devices">Network Computing Devices</a>
+					</td>
+					<td>
+						1024
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1024
+					</td>
+					<td>
+						1:1
+					</td>
+					<td>
+						1.0
+					</td>
+					<td>
+						1,048,576
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WXGA_%28graphics%29">WXGA</a>
+						, max. (standardized
+						<a href="http://en.wikipedia.org/wiki/HDTV">HDTV 720p/1080i</a>
+						displays)
+					</td>
+					<td>
+						1366
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						768
+					</td>
+					<td>
+						~16:9
+					</td>
+					<td>
+						1.779
+					</td>
+					<td>
+						1,049,088
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Apple
+						<a href="http://en.wikipedia.org/wiki/PowerBook_G4">PowerBook G4</a>
+					</td>
+					<td>
+						1280
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						854
+					</td>
+					<td>
+						~3:2
+					</td>
+					<td>
+						1.499
+					</td>
+					<td>
+						1,093,120
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Sony VAIO P series
+					</td>
+					<td>
+						1600
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						768
+					</td>
+					<td>
+						25:12
+					</td>
+					<td>
+						2.083
+					</td>
+					<td>
+						1,228,800
+					</td>
+				</tr>
+				<tr>
+					<td>
+						SXGA-
+					</td>
+					<td>
+						1280
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						960
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						1,228,800
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WSXGA_Wide_XGA%2B">WXGA+</a>
+					</td>
+					<td>
+						1440
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						900
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						1,296,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/SXGA">SXGA</a>
+					</td>
+					<td>
+						1280
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1024
+					</td>
+					<td>
+						5:4
+					</td>
+					<td>
+						1.25
+					</td>
+					<td>
+						1,310,720
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Apple
+						<a href="http://en.wikipedia.org/wiki/PowerBook_G4">PowerBook G4</a>
+					</td>
+					<td>
+						1440
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						960
+					</td>
+					<td>
+						3:2
+					</td>
+					<td>
+						1.5
+					</td>
+					<td>
+						1,382,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/900p">900p</a>
+					</td>
+					<td>
+						1600
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						900
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						1.778
+					</td>
+					<td>
+						1,440,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/SXGA%2B">SXGA+</a>
+					</td>
+					<td>
+						1400
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1050
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						1,470,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(unnamed, similar to A4 paper format)
+					</td>
+					<td>
+						1440
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1024
+					</td>
+					<td>
+						45:32
+					</td>
+					<td>
+						1.406
+					</td>
+					<td>
+						1,474,560
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/HDV">HDV</a>
+						1080i
+					</td>
+					<td>
+						1440
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1080
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						1,555,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WSXGA">WSXGA</a>
+						(
+						<a href="http://en.wikipedia.org/wiki/SGI_1600SW">SGI 1600SW</a>
+						)
+					</td>
+					<td>
+						1600
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1024
+					</td>
+					<td>
+						25:16
+					</td>
+					<td>
+						1.5625
+					</td>
+					<td>
+						1,638,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WSXGA%2B">WSXGA+</a>
+					</td>
+					<td>
+						1680
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1050
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						1,764,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/UXGA">UXGA</a>
+					</td>
+					<td>
+						1600
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1200
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						1,920,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						HD 1080 (
+						<a href="http://en.wikipedia.org/wiki/1080i">1080i</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/1080p">1080p</a>
+						)
+					</td>
+					<td>
+						1920
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1080
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						1.778
+					</td>
+					<td>
+						2,073,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WUXGA">WUXGA</a>
+					</td>
+					<td>
+						1920
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1200
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						2,304,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						QWXGA,
+						<a href="http://en.wikipedia.org/wiki/2K_resolution">2K</a>
+					</td>
+					<td>
+						2048
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1152
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						1.778
+					</td>
+					<td>
+						2,359,296
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(unnamed; supported by&#160;some GPUs, monitors, and games)
+					</td>
+					<td>
+						1792
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1344
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						2,408,448
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(unnamed; supported by&#160;some GPUs, monitors, and games)
+					</td>
+					<td>
+						1856
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1392
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						2,583,552
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/NEC_Display_Solutions">NEC</a>
+						CRV43, Ostendo CRVD,
+						<a href="http://en.wikipedia.org/wiki/Alienware">Alienware</a>
+						Curved Display
+					</td>
+					<td>
+						2880
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						900
+					</td>
+					<td>
+						16:5
+					</td>
+					<td>
+						3.2
+					</td>
+					<td>
+						2,592,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(unnamed; supported by&#160;some GPUs, monitors, and games)
+					</td>
+					<td>
+						1800
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1440
+					</td>
+					<td>
+						5:4
+					</td>
+					<td>
+						1.25
+					</td>
+					<td>
+						2,592,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(unnamed)
+					</td>
+					<td>
+						2048
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1280
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						2,621,440
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/TXGA">TXGA</a>
+					</td>
+					<td>
+						1920
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1400
+					</td>
+					<td>
+						48:35
+					</td>
+					<td>
+						1.371
+					</td>
+					<td>
+						2,688,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Avielo Optix SuperWide 235 projector
+					</td>
+					<td>
+						2538
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1080
+					</td>
+					<td>
+						47:20
+					</td>
+					<td>
+						2.350
+					</td>
+					<td>
+						2,741,040
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Philips_Cinema_21:9_TV">Cinema TV</a>
+						from Philips and
+						<a href="http://en.wikipedia.org/wiki/Vizio">Vizio</a>
+						, falsely marketed as "21:9"
+					</td>
+					<td>
+						2560
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1080
+					</td>
+					<td>
+						64:27
+					</td>
+					<td>
+						2.370
+					</td>
+					<td>
+						2,764,800
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(unnamed; supported by&#160;some GPUs, monitors, and games)
+					</td>
+					<td>
+						1920
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1440
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						2,764,800
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/QXGA">QXGA</a>
+					</td>
+					<td>
+						2048
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1536
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						3,145,728
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(unnamed; maximum resolution of the Sony GDM-FW900 and Hewlett Packard A7217A)
+					</td>
+					<td>
+						2304
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1440
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						3,317,760
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WQHD">WQHD</a>
+						(
+						<a href="http://en.wikipedia.org/wiki/Dell">Dell</a>
+						UltraSharp U2711, Apple
+						<a href="http://en.wikipedia.org/wiki/IMac">iMac</a>
+						)
+					</td>
+					<td>
+						2560
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1440
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						1.778
+					</td>
+					<td>
+						3,686,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(unnamed; selectable on some displays and graphics cards)
+					</td>
+					<td>
+						2304
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1728
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						3,981,312
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WQXGA">WQXGA</a>
+					</td>
+					<td>
+						2560
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1600
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						4,096,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(unnamed; the maximum 4:3 resolution of CRT displays. Supported by&#160;the Viewsonic P225f and some graphics cards)
+					</td>
+					<td>
+						2560
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						1920
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						4,915,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/QSXGA">QSXGA</a>
+					</td>
+					<td>
+						2560
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						2048
+					</td>
+					<td>
+						5:4
+					</td>
+					<td>
+						1.25
+					</td>
+					<td>
+						5,242,880
+					</td>
+				</tr>
+				<tr>
+					<td>
+						QSXGA+
+					</td>
+					<td>
+						2800
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						2100
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						5,880,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/QXGA#WQSXGA">WQSXGA</a>
+					</td>
+					<td>
+						3200
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						2048
+					</td>
+					<td>
+						25:16
+					</td>
+					<td>
+						1.5625
+					</td>
+					<td>
+						6,553,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/QUXGA">QUXGA</a>
+					</td>
+					<td>
+						3200
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						2400
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						7,680,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/QFHD">QFHD</a>
+					</td>
+					<td>
+						3840
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						2160
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						1.778
+					</td>
+					<td>
+						8,294,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WQUXGA">WQUXGA</a>
+					</td>
+					<td>
+						3840
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						2400
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						9,216,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/4K_resolution">4K</a>
+					</td>
+					<td>
+						4096
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						2304
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						1.778
+					</td>
+					<td>
+						9,437,184
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/HXGA">HXGA</a>
+					</td>
+					<td>
+						4096
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						3072
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						12,582,912
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WHXGA">WHXGA</a>
+					</td>
+					<td>
+						5120
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						3200
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						16,384,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/HSXGA">HSXGA</a>
+					</td>
+					<td>
+						5120
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						4096
+					</td>
+					<td>
+						5:4
+					</td>
+					<td>
+						1.25
+					</td>
+					<td>
+						20,971,520
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/WHSXGA">WHSXGA</a>
+					</td>
+					<td>
+						6400
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						4096
+					</td>
+					<td>
+						25:16
+					</td>
+					<td>
+						1.5625
+					</td>
+					<td>
+						26,214,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/HUXGA">HUXGA</a>
+					</td>
+					<td>
+						6400
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						4800
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1.333
+					</td>
+					<td>
+						30,720,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Ultra_High_Definition_Television">UHDTV</a>
+					</td>
+					<td>
+						7680
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						4320
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						1.778
+					</td>
+					<td>
+						33,177,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/8K_Video_Format">8K</a>
+					</td>
+					<td>
+						8192
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						4320
+					</td>
+					<td>
+						256:135
+					</td>
+					<td>
+						1.896
+					</td>
+					<td>
+						35,389,440
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Graphic_display_resolutions#WHUXGA_.287680.C3.974800.29">WHUXGA</a>
+					</td>
+					<td>
+						7680
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						4800
+					</td>
+					<td>
+						16:10
+					</td>
+					<td>
+						1.6
+					</td>
+					<td>
+						36,864,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Red_Digital_Cinema_Camera_Company#Epic">Red Epic 617</a>
+					</td>
+					<td>
+						28000
+					</td>
+					<td>
+						x
+					</td>
+					<td>
+						9334
+					</td>
+					<td>
+						3:1
+					</td>
+					<td>
+						3.0
+					</td>
+					<td>
+						261,352,000
+					</td>
+				</tr>
+			</table>
+			<h2>
+				Television
+			</h2>
+			<p>
+				For television, the display aspect ratio (DAR) is shown, not the storage aspect ratio (SAR); analog television does not have well-defined pixels, while several digital television standards have non-square
+				pixels.
+			</p>
+			<table class="strict">
+				<caption>
+					Analog
+					<a href="http://en.wikipedia.org/wiki/Broadcast_television_systems">broadcast television systems</a>
+				</caption>
+				<tr>
+					<th>
+						Standard
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						Resolution
+						<br />
+						(dots x lines)
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						DAR
+						<br />
+						(H:V)
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						Pixels
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/PAL">PAL</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/SECAM">SECAM</a>
+					</td>
+					<td>
+						576 x ~520
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						~300,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/PALplus">PALplus</a>
+					</td>
+					<td>
+						576 x ~520
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						~300,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Undecoded
+						<a href="http://en.wikipedia.org/wiki/PALplus">PALplus</a>
+					</td>
+					<td>
+						432 x ~520
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						~220,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/NTSC">NTSC</a>
+					</td>
+					<td>
+						486 x ~440
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						~210,000
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<a href="http://en.wikipedia.org/wiki/Laserdisc">Laserdisc</a>
+					</td>
+					<td>
+						480 x ~580 (NTSC)
+					</td>
+					<td rowspan="2">
+						4:3
+					</td>
+					<td>
+						~268,800
+					</td>
+				</tr>
+				<tr>
+					<td>
+						576 x ~570 (PAL/SECAM)
+					</td>
+					<td>
+						~322,560
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<a href="http://en.wikipedia.org/wiki/Betamax">Betamax</a>
+					</td>
+					<td>
+						480 x ~320 (NTSC)
+					</td>
+					<td rowspan="2">
+						4:3
+					</td>
+					<td>
+						~120,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						576 x ~310 (PAL/SECAM)
+					</td>
+					<td>
+						~144,000
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<a href="http://en.wikipedia.org/wiki/Betamax">Betamax</a>
+						Superbeta
+					</td>
+					<td>
+						480 x ~380 (NTSC)
+					</td>
+					<td rowspan="2">
+						4:3
+					</td>
+					<td>
+						~136,800
+					</td>
+				</tr>
+				<tr>
+					<td>
+						576 x ~370 (PAL/SECAM)
+					</td>
+					<td>
+						~164,160
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<a href="http://en.wikipedia.org/wiki/VHS">VHS</a>
+					</td>
+					<td>
+						480 x ~320 (NTSC)
+					</td>
+					<td rowspan="2">
+						4:3
+					</td>
+					<td>
+						~115,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						576 x ~310 (PAL/SECAM)
+					</td>
+					<td>
+						~138,240
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<a href="http://en.wikipedia.org/wiki/S-VHS">S-VHS</a>
+					</td>
+					<td>
+						480 x ~530 (NTSC)
+					</td>
+					<td rowspan="2">
+						4:3
+					</td>
+					<td>
+						~192,000
+					</td>
+				</tr>
+				<tr>
+					<td>
+						576 x ~520 (PAL/SECAM)
+					</td>
+					<td>
+						~230,400
+					</td>
+				</tr>
+			</table>
+			<p>
+				&#160;
+			</p>
+			<table class="strict">
+				<caption>
+					Digital television standards
+				</caption>
+				<tr>
+					<th>
+						Standard
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						Resolution
+						<br />
+						(dots x lines)
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						DAR
+						<br />
+						(H:V)
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						Pixels
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/PixelVision">PixelVision</a>
+					</td>
+					<td>
+						120 x 90
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						10,800
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<a href="http://en.wikipedia.org/wiki/Video_CD">Video CD</a>
+					</td>
+					<td>
+						352 x 240 (NTSC)
+					</td>
+					<td rowspan="2">
+						4:3 (non-square pixels)
+					</td>
+					<td>
+						84,480
+					</td>
+				</tr>
+				<tr>
+					<td>
+						352 x 288 (PAL)
+					</td>
+					<td>
+						101,376
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Universal_Media_Disc">UMD</a>
+					</td>
+					<td>
+						480 x 272
+					</td>
+					<td>
+						~16:9
+					</td>
+					<td>
+						130,560
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<a href="http://en.wikipedia.org/wiki/China_Video_Disc">China Video Disc</a>
+					</td>
+					<td>
+						352 x 480 (NTSC)
+					</td>
+					<td rowspan="2">
+						4:3 (non-square pixels)
+					</td>
+					<td>
+						168,960
+					</td>
+				</tr>
+				<tr>
+					<td>
+						352 x 576 (PAL)
+					</td>
+					<td>
+						202,725
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<a href="http://en.wikipedia.org/wiki/SVCD">SVCD</a>
+					</td>
+					<td>
+						480 x 480 (NTSC)
+					</td>
+					<td rowspan="2">
+						4:3 (non-square pixels)
+					</td>
+					<td>
+						230,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						480 x 576 (PAL)
+					</td>
+					<td>
+						276,480
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="3">
+						<a href="http://en.wikipedia.org/wiki/SDTV">SDTV</a>
+						<a href="http://en.wikipedia.org/wiki/480i">480i</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/EDTV">EDTV</a>
+						<a href="http://en.wikipedia.org/wiki/480p">480p</a>
+					</td>
+					<td>
+						640 x 480
+					</td>
+					<td rowspan="3">
+						4:3 or 16:9
+					</td>
+					<td>
+						307,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						704 x 480
+					</td>
+					<td>
+						337,920
+					</td>
+				</tr>
+				<tr>
+					<td>
+						852 x 480
+					</td>
+					<td>
+						408,960
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<a href="http://en.wikipedia.org/wiki/DVD">DVD</a>
+					</td>
+					<td>
+						720 x 480 (NTSC)
+					</td>
+					<td rowspan="2">
+						4:3 or 16:9 (non-square pixels)
+					</td>
+					<td>
+						345,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						720 x 576 (PAL)
+					</td>
+					<td>
+						414,720
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/720p">720p</a>
+						(
+						<a href="http://en.wikipedia.org/wiki/High-definition_television">HDTV</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Blu-ray">Blu-ray</a>
+						)
+					</td>
+					<td>
+						1280 x 720
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						921,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/1080i">1080i</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/1080p">1080p</a>
+						(
+						<a href="http://en.wikipedia.org/wiki/High-definition_television">HDTV</a>
+						,
+						<a href="http://en.wikipedia.org/wiki/Blu-ray">Blu-ray</a>
+						)
+					</td>
+					<td>
+						1920 x 1080
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						2,073,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Ultra_High_Definition_Television">4320p (UHDTV)</a>
+					</td>
+					<td>
+						7680 x 4320
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						33,177,600
+					</td>
+				</tr>
+			</table>
+			<h2>
+				Films
+			</h2>
+			<table class="strict">
+				<caption>
+					Digital film standards
+				</caption>
+				<tr>
+					<th>
+						Standard
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						Resolution
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						DAR
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						Pixels
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Digital Cinema 2K
+					</td>
+					<td>
+						2048 x 858
+					</td>
+					<td>
+						2.39:1
+					</td>
+					<td>
+						1,757,184
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Digital Cinema 2K
+					</td>
+					<td>
+						1998 x 1080
+					</td>
+					<td>
+						1.85:1
+					</td>
+					<td>
+						2,157,840
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Academy 2K
+					</td>
+					<td>
+						1828 x 1332
+					</td>
+					<td>
+						1.37:1
+					</td>
+					<td>
+						2,434,896
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Full Aperture Native 2K
+					</td>
+					<td>
+						2048 x 1556
+					</td>
+					<td>
+						1.32:1
+					</td>
+					<td>
+						3,186,688
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Digital_cinema">Digital cinema</a>
+						4K
+					</td>
+					<td>
+						4096 x 1714
+					</td>
+					<td>
+						2.39:1
+					</td>
+					<td>
+						7,020,544
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Digital_cinema">Digital cinema</a>
+						4K
+					</td>
+					<td>
+						3996 x 2160
+					</td>
+					<td>
+						1.85:1
+					</td>
+					<td>
+						8,631,360
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Academy_ratio">Academy</a>
+						4K
+					</td>
+					<td>
+						3656 x 2664
+					</td>
+					<td>
+						1.37:1
+					</td>
+					<td>
+						9,739,584
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Full Aperture 4K
+					</td>
+					<td>
+						4096 x 3112
+					</td>
+					<td>
+						1.32:1
+					</td>
+					<td>
+						12,746,752
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/IMAX">IMAX</a>
+						Digital
+					</td>
+					<td>
+						5616 x 4096
+					</td>
+					<td>
+						1.37:1
+					</td>
+					<td>
+						23,003,136
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Red_Digital_Cinema_Camera_Company#Epic">Red Epic 617</a>
+					</td>
+					<td>
+						28000 x 9334
+					</td>
+					<td>
+						3:1
+					</td>
+					<td>
+						261,352,000
+					</td>
+				</tr>
+			</table>
+			<p>
+				The below distinguish SAR (aspect ratio of pixel dimensions), DAR (aspect ratio of displayed image dimensions), and the corresponding PAR (aspect ratio of individual pixels), though it currently contains
+				some errors (inconsistencies), as flagged.
+			</p>
+			<table class="strict">
+				<caption>
+					Post-production digital working resolutions
+				</caption>
+				<tr>
+					<th>
+						Standard
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						Resolution
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						SAR
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						DAR
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						PAR
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						Pixels
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/DV">DV</a>
+						<a href="http://en.wikipedia.org/wiki/NTSC">NTSC</a>
+					</td>
+					<td>
+						720 x 480
+					</td>
+					<td>
+						3:2
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						10:11
+					</td>
+					<td>
+						345,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/D-1_%28Sony%29">D1</a>
+						<a href="http://en.wikipedia.org/wiki/NTSC">NTSC</a>
+					</td>
+					<td>
+						720 x 486
+					</td>
+					<td>
+						40:27
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						9:10
+					</td>
+					<td>
+						349,920
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/DV">DV</a>
+						<a href="http://en.wikipedia.org/wiki/PAL">PAL</a>
+					</td>
+					<td>
+						720 x 576
+					</td>
+					<td>
+						5:4
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						12:11
+					</td>
+					<td>
+						414,720
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/D-1_%28Sony%29">D1</a>
+						<a href="http://en.wikipedia.org/wiki/PAL">PAL</a>
+					</td>
+					<td>
+						720 x 576
+					</td>
+					<td>
+						5:4
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						16:15
+					</td>
+					<td>
+						414,720
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Panasonic
+						<a href="http://en.wikipedia.org/wiki/DV#DVCPRO">DVCPRO</a>
+						HD 720p
+					</td>
+					<td>
+						960 x 720
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						691,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Panasonic
+						<a href="http://en.wikipedia.org/wiki/DV#DVCPRO">DVCPRO</a>
+						HD 1080, 59.94i
+					</td>
+					<td>
+						1280 x 1080
+					</td>
+					<td>
+						32:27
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						3:2
+					</td>
+					<td>
+						1,382,400
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Panasonic
+						<a href="http://en.wikipedia.org/wiki/DV#DVCPRO">DVCPRO</a>
+						HD 1080, 50i
+					</td>
+					<td>
+						1440 x 1080
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						3:2
+					</td>
+					<td>
+						1,555,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/HDV">HDV</a>
+						<a href="http://en.wikipedia.org/wiki/1080i">1080i</a>
+						/
+						<a href="http://en.wikipedia.org/wiki/1080p">1080p</a>
+					</td>
+					<td>
+						1440 x 1080
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						1,555,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Sony
+						<a href="http://en.wikipedia.org/wiki/HDCAM">HDCAM</a>
+						(1080)
+					</td>
+					<td>
+						1440 x 1080
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						3:2
+					</td>
+					<td>
+						1,555,200
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Sony
+						<a href="http://en.wikipedia.org/wiki/HDCAM">HDCAM</a>
+						SR (1080)
+					</td>
+					<td>
+						1920 x 1080
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						16:9
+					</td>
+					<td>
+						1:1
+					</td>
+					<td>
+						2,073,600
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Academy 2K
+					</td>
+					<td>
+						1828 x 1332
+					</td>
+					<td>
+						1.37:1
+					</td>
+					<td>
+						1.37:1
+					</td>
+					<td>
+						1:1
+					</td>
+					<td>
+						2,434,896
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Full Aperture Native 2K
+					</td>
+					<td>
+						2048 x 1556
+					</td>
+					<td>
+						1.316
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						~1:1
+					</td>
+					<td>
+						3,186,688
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Academy_ratio">Academy</a>
+						4K
+					</td>
+					<td>
+						3656 x 2664
+					</td>
+					<td>
+						1.37:1
+					</td>
+					<td>
+						1.37:1
+					</td>
+					<td>
+						1:1
+					</td>
+					<td>
+						9,739,584
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Full Aperture 4K
+					</td>
+					<td>
+						4096 x 3112
+					</td>
+					<td>
+						1.316
+					</td>
+					<td>
+						4:3
+					</td>
+					<td>
+						~1:1
+					</td>
+					<td>
+						12,746,752
+					</td>
+				</tr>
+			</table>
+			<h2>
+				Video conferencing
+			</h2>
+			<table class="strict">
+				<caption>
+					Video conferencing standards
+				</caption>
+				<tr>
+					<th>
+						Standard
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						Resolution
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						SAR
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+					<th>
+						Pixels
+						<a href="http://en.wikipedia.org/wiki/List_of_common_resolutions#"></a>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						SQCIF (Sub Quarter
+						<a href="http://en.wikipedia.org/wiki/Common_Intermediate_Format">CIF</a>
+						)
+					</td>
+					<td>
+						128 x 96
+					</td>
+					<td>
+						1.33:1
+					</td>
+					<td>
+						12,288
+					</td>
+				</tr>
+				<tr>
+					<td>
+						QCIF (Quarter
+						<a href="http://en.wikipedia.org/wiki/Common_Intermediate_Format">CIF</a>
+						)
+					</td>
+					<td>
+						176 x 144
+					</td>
+					<td>
+						1.22:1
+					</td>
+					<td>
+						25,344
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://en.wikipedia.org/wiki/Common_Intermediate_Format">CIF</a>
+						(or FCIF)
+					</td>
+					<td>
+						352 x 288
+					</td>
+					<td>
+						1.22:1
+					</td>
+					<td>
+						101,376
+					</td>
+				</tr>
+				<tr>
+					<td>
+						4CIF (4 *
+						<a href="http://en.wikipedia.org/wiki/Common_Intermediate_Format">CIF</a>
+						)
+					</td>
+					<td>
+						704 x 576
+					</td>
+					<td>
+						1.22:1
+					</td>
+					<td>
+						405,504
+					</td>
+				</tr>
+				<tr>
+					<td>
+						16CIF (16 *
+						<a href="http://en.wikipedia.org/wiki/Common_Intermediate_Format">CIF</a>
+						)
+					</td>
+					<td>
+						1408 x 1152
+					</td>
+					<td>
+						1.22:1
+					</td>
+					<td>
+						1,622,016
+					</td>
+				</tr>
+			</table>
+			<p>
+				&#160;
+			</p>
+			<table class="strict">
+				<caption>
+					Digital video resolutions
+				</caption>
+				<tr>
+					<td>
+						Designation
+					</td>
+					<td>
+						<div>
+						<table>
+									<tr>
+									<th rowspan="2" style="width:25%;">
+										Usage Examples
+									</th>
+									<th rowspan="2" style="width:25%;">
+										Definition (lines)
+									</th>
+									<th colspan="2">
+										Rate (Hz)
+									</th>
+								</tr>
+									<tr>
+									<th style="width:25%;">
+										Interlaced (fields)
+									</th>
+									<th style="width:25%;">
+										Progressive (frames)
+									</th>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Low,
+						<br />
+						<a href="http://en.wikipedia.org/wiki/MPEG-2">MP@LL</a>
+					</td>
+					<td>
+						<div>
+						<table>
+									<tr>
+									<td style="width:25%;">
+										<a href="http://en.wikipedia.org/wiki/Low-definition_television">LDTV</a>
+										,
+										<a href="http://en.wikipedia.org/wiki/Video_CD">VCD</a>
+										,
+										<a href="http://en.wikipedia.org/wiki/Mobile_television">HTV</a>
+									</td>
+									<td style="width:25%;">
+										240, 288 (
+										<a href="http://en.wikipedia.org/wiki/Source_Input_Format">SIF</a>
+										)
+									</td>
+									<td style="width:25%;">
+										 
+									</td>
+									<td style="width:25%;">
+										<a href="http://en.wikipedia.org/wiki/Low-definition_television">24, 30; 25</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Standard,
+						<br />
+						MP@ML
+					</td>
+					<td>
+						<div>
+						<table>
+									<tr>
+									<td style="width:25%;">
+										<a href="http://en.wikipedia.org/wiki/Standard-definition_television">SDTV</a>
+										,
+										<a href="http://en.wikipedia.org/wiki/Super_Video_CD">SVCD</a>
+										,
+										<a href="http://en.wikipedia.org/wiki/DVD">DVD</a>
+										,
+										<a href="http://en.wikipedia.org/wiki/DV">DV</a>
+									</td>
+									<td style="width:25%;">
+										480 (
+										<a href="http://en.wikipedia.org/wiki/NTSC">NTSC</a>
+										), 576 (
+										<a href="http://en.wikipedia.org/wiki/PAL">PAL</a>
+										)
+									</td>
+									<td style="width:25%;">
+										<a href="http://en.wikipedia.org/wiki/480i">60</a>
+										,
+										<a href="http://en.wikipedia.org/wiki/576i">50</a>
+									</td>
+									<td style="width:25%;">
+										<a href="http://en.wikipedia.org/wiki/480p">24, 30</a>
+										;
+										<a href="http://en.wikipedia.org/wiki/576p">25</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Enhanced
+					</td>
+					<td>
+						<div>
+						<table>
+									<tr>
+									<td style="width:25%;">
+										<a href="http://en.wikipedia.org/wiki/Enhanced-definition_television">EDTV</a>
+									</td>
+									<td style="width:25%;">
+										480, 576
+									</td>
+									<td style="width:25%;">
+										 
+									</td>
+									<td style="width:25%;">
+										<a href="http://en.wikipedia.org/wiki/480p">60</a>
+										,
+										<a href="http://en.wikipedia.org/wiki/576p">50</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						High,
+						<br />
+						MP@HL
+					</td>
+					<td>
+						<div>
+						<table>
+									<tr>
+									<td rowspan="2" style="width:25%;">
+										<a href="http://en.wikipedia.org/wiki/High-definition_television">HDTV</a>
+										,
+										<a href="http://en.wikipedia.org/wiki/Blu-ray_Disc">BD</a>
+										,
+										<a href="http://en.wikipedia.org/wiki/HD_DVD">HD DVD</a>
+										,
+										<a href="http://en.wikipedia.org/wiki/HDV">HDV</a>
+									</td>
+									<td style="width:25%;">
+										720
+									</td>
+									<td style="width:25%;">
+										 
+									</td>
+									<td style="width:25%;">
+										<a href="http://en.wikipedia.org/wiki/720p">24, 30, 60; 25, 50</a>
+									</td>
+								</tr>
+									<tr>
+									<td>
+										1080
+									</td>
+									<td>
+										<a href="http://en.wikipedia.org/wiki/1080i">50, 60</a>
+									</td>
+									<td>
+										<a href="http://en.wikipedia.org/wiki/1080p">24, 30; 25</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Ultra High
+					</td>
+					<td>
+						<div>
+						<table>
+									<tr>
+									<td style="width:25%;">
+										<a href="http://en.wikipedia.org/wiki/Ultra_High_Definition_Television">UHDTV</a>
+									</td>
+									<td style="width:25%;">
+										4320
+									</td>
+									<td style="width:25%;">
+										 
+									</td>
+									<td style="width:25%;">
+										<a href="http://en.wikipedia.org/wiki/Ultra_High_Definition_Television">60</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<p>
+				&#160;
+			</p>
+			<address>
+				&#169; From Wikipedia, the free encyclopedia:
+				<a href="http://en.wikipedia.org/wiki/Display_resolution">&#171;Display resolution&#187;</a>
+				,
+				<a href="http://en.wikipedia.org/wiki/Computer_display_standard">&#171;Computer display standard&#187;</a>
+			</address>
+			<address>
+				&#169;
+				Hscripts.com
+			</address>
+		</div>
+		
+	</body>
+</html>

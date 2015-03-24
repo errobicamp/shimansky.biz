@@ -1,0 +1,41 @@
+/* TEAM */
+
+	Editor: 
+		Serguei Shimansky
+		
+	Site:
+		https://englishextra.github.io/
+		
+	Location:
+		Europe/Moscow 
+
+/* SITE */ 
+
+	Content: 
+
+		Business English Pod
+			http://businessenglishpod.com
+		Cambridge University Press
+			http://cambridge.org
+		DailyDoseOfEnglish
+			http://youtube.com/user/DailyDoseOfEnglish
+		Effortless English LLC
+			http://effortlessenglishclub.com
+		English Department International Institute in Spain
+			http://iie.es
+		Intense.ru
+			http://intense.ru
+		Irregular Verbs EN-RU Screensaver
+			http://sourceforge.net/projects/iv-scr-en-ru
+		Linguaspectrum
+			http://youtube.com/user/Linguaspectrum
+		Living Language
+			http://livinglanguage.com
+		London Pictures Screensaver
+			http://sourceforge.net/projects/londonpictures
+		Praxis Language Ltd.
+			http://blog.praxislanguage.com
+		QA International
+			http://qa-international.com
+
+			

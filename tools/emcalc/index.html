@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>   &#45;&#1080;&#1085;&#1089;&#1090;&#1088;&#1091;&#1084;&#1077;&#1085;&#1090;&#1099; - Em Calculator</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="./style.css" /><!--[if lte IE 6]>
+				<link rel="stylesheet" href="iehacks.css" />
+		<![endif]-->
+	<script src="./jquery.js">
+</script>
+	<script src="./jquery.plugins.js">
+</script>
+	<script src="./emcalc.js">
+</script>
+	<meta http-equiv="Description" content=
+	"Em Calculator is a small JavaScript tool which helps making scalable and accessible CSS design. It converts size in pixels to relative em units, which are based on a text size." />
+	<meta http-equiv="Keywords" content=
+	"em calculator calc pixel unit tool css design javascript jquery" />
+	<style>
+/*<![CDATA[*/
+	div.c2 {display: none;}
+	form.c1 {display: none;}
+	/*]]>*/
+	</style>
+</head>
+<body>
+	<div id="static">
+		<div class="top">
+			<h1>Em Calculator</h1>
+			<p>ver 2.2</p>
+		</div>
+		<div id="panel">
+			<!--?xml version="1.0" encoding="UTF-8"?-->
+			<div id="options">
+				<ul id="tabs">
+					<li class="active"><a href="#sessions">Sessions</a></li>
+					<li><a href="#settings">Settings</a></li>
+				</ul>
+				<form action="" id="sessions">
+					<fieldset>
+						<h2>Sessions</h2>
+						<ul id="sessionActions">
+							<li><input id="sessionSave" value="Save" type="submit" /></li>
+							<!--<li><input id="sessionRename" type="submit" value="Rename" /></li>-->
+							<li><input id="sessionDelete" value="Delete" type="submit" /></li>
+						</ul>
+						<div id="sessionList">
+							<select disabled="disabled" size="5">
+								<option class="new" selected="selected">
+									New session
+								</option>
+							</select>
+							<p>Buggy on Opera &amp; Safari (work in progress)</p>
+						</div>
+					</fieldset>
+				</form>
+				<form class="c1" action="" id="settings">
+					<fieldset>
+						<h2>Settings</h2>
+						<dl>
+							<dt><label for="fontSize">Default font size</label></dt>
+							<dd><input id="fontSize" size="2" maxlength="2" value="16" autocomplete="off" type=
+							"text" />px</dd>
+							<dd>
+								<div class="cl"></div>
+							</dd>
+							<dt><label for="decimalPlaces">Decimal places</label></dt>
+							<dd><input id="decimalPlaces" size="2" maxlength="2" value="3" autocomplete="off"
+							type="text" /></dd>
+							<dd>
+								<div class="cl"></div>
+							</dd>
+							<dd class="alone"><label for="askNodeNames"><input id="askNodeNames" type=
+							"checkbox" /> Ask for node names</label></dd>
+							<dd>
+								<div class="cl"></div>
+							</dd>
+							<dd class="alone"><input id="saveSettings" value="Save" type="submit" /></dd>
+							<dd>
+								<div class="cl"></div>
+							</dd>
+						</dl>
+					</fieldset>
+				</form>
+			</div>
+			<div id="about">
+
+			</div>
+			<div id="buzz">
+
+			</div>
+		</div>
+		<div class="fix" id="toggle">
+			Toggle
+		</div>
+	</div>
+	<div id="ems">
+		<ul id="body">
+			<li class="lv1">
+				<form>
+					<fieldset>
+						<span class="nodeName" title="Double click to edit">body</span> <span>{</span>
+						<span class="nodePxs"><input class="text" type="text" /></span> <span>px =</span>
+						<span class="nodeEms"><input class="text readonly" readonly="readonly" type=
+						"text" /></span> <span>}</span><span class="nodeActs"><a class="nodeChild" href="#"
+						title="Add child">[Add child]</a></span>
+					</fieldset>
+				</form>
+			</li>
+		</ul>
+	</div>
+<div style="clear:both;"></div>
+		<address>&#169; <a href="http://riddle.pl/">Piotr Petrus</a></address>
+</body>
+</html>

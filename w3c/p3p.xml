@@ -1,0 +1,8 @@
+<META xmlns="http://www.w3.org/2001/09/P3Pv1">
+<POLICY-REFERENCES>
+<POLICY-REF about="http://shimansky.biz/w3c/policy.xml#public">
+<INCLUDE>/*</INCLUDE>
+<COOKIE-INCLUDE name="*" value="*" domain="*" path="*"/>
+</POLICY-REF>
+</POLICY-REFERENCES>
+</META>

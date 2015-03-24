@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+<g>
+	<g id="BG_main_1">
+		<g>
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="#99B7AD" d="M183.871,67.742h-16.129H25.807h-9.678
+				C7.22,67.742,0,74.962,0,83.871v100C0,192.779,7.22,200,16.129,200h167.742c8.908,0,16.129-7.221,16.129-16.129v-100
+				C200,74.962,192.779,67.742,183.871,67.742z"/>
+		</g>
+	</g>
+	<g id="BG_main_2">
+		<g>
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="#89A69C" d="M154.839,0H45.161c-8.909,0-16.129,7.22-16.129,16.129v51.613
+				h16.129h3.226h103.226h3.226h16.129V16.129C170.968,7.22,163.747,0,154.839,0z"/>
+		</g>
+	</g>
+	<g id="Paper_2_">
+		<g>
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="#F2EDE1" d="M141.936,29.032H58.064c-7.125,0-12.903,5.777-12.903,12.903
+				v25.807h109.678V41.936C154.839,34.81,149.062,29.032,141.936,29.032z"/>
+		</g>
+	</g>
+	<g id="Shadow_5_" opacity="0.0706">
+		<g>
+			<rect x="29.032" y="58.064" fill-rule="evenodd" clip-rule="evenodd" width="141.936" height="9.678"/>
+		</g>
+	</g>
+	<g id="Out">
+		<g>
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="#6F8880" d="M167.742,158.064H32.258c-5.346,0-9.677,4.332-9.677,9.678
+				s4.332,9.677,9.677,9.677h135.484c5.346,0,9.677-4.331,9.677-9.677S173.088,158.064,167.742,158.064z"/>
+		</g>
+	</g>
+	<g id="Paper_out">
+		<g>
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M151.613,161.29H48.387c-1.783,0-3.226,1.443-3.226,3.226
+				c0,1.783,1.443,3.227,3.226,3.227h103.226c1.782,0,3.226-1.443,3.226-3.227C154.839,162.733,153.396,161.29,151.613,161.29z"/>
+		</g>
+	</g>
+	<g id="Out_shadow" opacity="0.1608">
+		<g>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M167.742,158.064H32.258c-5.346,0-9.677,4.332-9.677,9.678
+				c0,1.134,0.205,2.215,0.561,3.226c1.333-3.755,4.905-6.452,9.116-6.452h135.484c4.212,0,7.784,2.697,9.113,6.452
+				c0.359-1.011,0.563-2.092,0.563-3.226C177.419,162.396,173.088,158.064,167.742,158.064z"/>
+		</g>
+	</g>
+	<g id="BG_under_bulbs">
+		<g>
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="#728A82" d="M32.258,119.354c-5.346,0-9.677,4.332-9.677,9.678
+				s4.332,9.678,9.677,9.678c5.346,0,9.678-4.332,9.678-9.678S37.604,119.354,32.258,119.354z M58.064,119.354
+				c-5.346,0-9.677,4.332-9.677,9.678s4.332,9.678,9.677,9.678s9.678-4.332,9.678-9.678S63.41,119.354,58.064,119.354z"/>
+		</g>
+	</g>
+	<g id="Bulb_green">
+		<g>
+			<circle fill-rule="evenodd" clip-rule="evenodd" fill="#81D35E" cx="32.258" cy="129.033" r="6.452"/>
+		</g>
+	</g>
+	<g id="Bulb_red">
+		<g>
+			<circle fill-rule="evenodd" clip-rule="evenodd" fill="#FF8D8D" cx="58.064" cy="129.033" r="6.452"/>
+		</g>
+	</g>
+</g>
+</svg>

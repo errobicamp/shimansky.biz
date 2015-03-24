@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title>The Responsinator</title>
+		<link rel="stylesheet" href="./css/tomorrow-night-eighties.min.css">
+		<link rel="stylesheet" href="./css/responsinator.min.css">
+		<!--[if lt IE 9]>
+		<script src="//cdn.jsdelivr.net/css3-mediaqueries/0.1/css3-mediaqueries.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="tools">
+			<form action="./index.html" method="get">
+				<label for="url" class="url_label">Enter your site</label>
+				<input id="url" name="url" type="text" placeholder="" value="">
+				<input type="submit" value="GO" id="go" class="go_btn">
+			</form>
+			<div class="logo">
+				<a href="http://www.springload.co.nz/"><img src="./img/logo-springload.png" width="170" height="45" alt="Springload"></a>
+			</div>
+		</div>
+		<section id="devices">
+			<div class="deviceWrap iphone-portrait">
+				<div class="device" style="width: 320px; height: 416px; padding-top: 20px;padding-bottom: 44px;">
+					<div class="flashingTop" style="height: 20px; width: 320px">
+						<span class="time">8:18 <span>PM</span></span>
+					</div>
+					<div class="flashingBottom" style="height: 44px"></div>
+					<iframe src="about:blank" id="iphone-portrait"></iframe>
+				</div><!-- /device -->
+			</div><!-- /deviceWrap -->
+			<div class="deviceTitle">
+				<em>iPhone 3+4 portrait</em> 320 x 480
+			</div>
+				<pre class="prettyprint languague-css"><code>@media screen and (max-device-width: 320px) { }</code></pre>
+			<div class="deviceWrap iphone-landscape">
+				<div class="device" style="width: 480px; height: 268px; padding-top: 20px;padding-bottom: 32px;">
+					<div class="flashingTop" style="height: 20px; width: 480px">
+						<span class="time">8:18 <span>PM</span></span>
+					</div>
+					<div class="flashingBottom" style="height: 32px"></div>
+					<iframe src="about:blank" id="iphone-landscape"></iframe>
+				</div><!-- /device -->
+			</div><!-- /deviceWrap -->
+			<div class="deviceTitle">
+				<em>iPhone 3+4 landscape</em> 480 x 320
+				<pre class="prettyprint languague-css"><code>@media screen and (max-device-width: 480px) { }</code></pre>
+			</div>
+			<div class="deviceWrap iphone-5-portrait">
+				<div class="device" style="width: 320px; height: 504px; padding-top: 20px;padding-bottom: 44px;">
+					<div class="flashingTop" style="height: 20px; width: 320px">
+						<span class="time">8:18 <span>PM</span></span>
+					</div>
+					<div class="flashingBottom" style="height: 44px"></div>
+					<iframe src="about:blank" id="iphone-5-portrait"></iframe>
+				</div><!-- /device -->
+			</div><!-- /deviceWrap -->
+			<div class="deviceTitle">
+				<em>iPhone 5 portrait</em> 320 x 568
+				<pre class="prettyprint languague-css"><code>@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) { }
+/*or*/
+@media screen and (device-aspect-ratio: 40/71) { }</code></pre>
+			</div>
+			<div class="deviceWrap iphone-5-landscape">
+				<div class="device" style="width: 568px; height: 268px; padding-top: 20px;padding-bottom: 32px;">
+					<div class="flashingTop" style="height: 20px; width: 568px">
+						<span class="time">8:18 <span>PM</span></span>
+					</div>
+					<div class="flashingBottom" style="height: 32px"></div>
+					<iframe src="about:blank" id="iphone-5-landscape"></iframe>
+				</div><!-- /device -->
+			</div><!-- /deviceWrap -->
+			<div class="deviceTitle">
+				<em>iPhone 5 landscape</em> 568 x 320
+				<pre class="prettyprint languague-css"><code>@media screen and (device-width: 568px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 2) { }
+/*or*/
+@media screen and (device-aspect-ratio: 40/71) { }</code></pre>
+			</div>
+			<div class="deviceWrap android-240x320-portrait">
+				<div class="device" style="width: 240px; height: 300px; padding-top: 20px;">
+					<div class="flashingTop" style="height: 20px; width: 240px">
+						<span class="time">8:18 <span>PM</span></span>
+					</div>
+					<iframe src="about:blank" id="android-240x320-portrait"></iframe>
+				</div><!-- /device -->
+			</div><!-- /deviceWrap -->
+			<div class="deviceTitle">
+				<em>Low-end Android portrait</em> 240 x 320
+				<pre class="prettyprint languague-css"><code>@media screen and (max-device-width: 240px) { }</code></pre>
+			</div>
+			<div class="deviceWrap android-240x320-landscape">
+				<div class="device" style="width: 320px; height: 220px; padding-top: 20px;">
+					<div class="flashingTop" style="height: 20px; width: 320px">
+						<span class="time">8:18 <span>PM</span></span>
+					</div>
+					<iframe src="about:blank" id="android-240x320-landscape"></iframe>
+				</div><!-- /device -->
+			</div><!-- /deviceWrap -->
+			<div class="deviceTitle">
+				<em>Low-end Android landscape</em> 320 x 240
+				<pre class="prettyprint languague-css"><code>@media screen and (max-device-width: 320px) { }</code></pre>
+			</div>
+			<div class="deviceWrap android-380x685-portrait">
+				<div class="device" style="width: 380px; height: 665px; padding-top: 20px;">
+					<div class="flashingTop" style="height: 20px; width: 380px">
+						<span class="time">8:18 <span>PM</span></span>
+					</div>
+					<iframe src="about:blank" id="android-380x685-portrait"></iframe>
+				</div><!-- /device -->
+			</div><!-- /deviceWrap -->
+			<div class="deviceTitle">
+				<em>Android (Samsung Galaxy) portrait</em> 380 by&#160;685 <em style="color: #aaa;">(equivalent desktop resolution)</em>
+				<pre class="prettyprint languague-css"><code>@media screen and (device-width: 320px) and (device-height: 533px) and (-webkit-device-pixel-ratio: 1.5) { }</code></pre>
+			</div>
+			<div class="deviceWrap android-685x380-landscape">
+				<div class="device" style="width: 685px; height: 360px; padding-top: 20px;">
+					<div class="flashingTop" style="height: 20px; width: 685px">
+						<span class="time">8:18 <span>PM</span></span>
+					</div>
+					<iframe src="about:blank" id="android-685x380-landscape"></iframe>
+				</div><!-- /device -->
+			</div><!-- /deviceWrap -->
+			<div class="deviceTitle">
+				<em>Android (Samsung Galaxy) landscape</em> 685 by&#160;380 <em style="color: #aaa;">(equivalent desktop resolution)</em>
+				<pre class="prettyprint languague-css"><code>@media screen and (device-width: 320px) and (device-height: 533px) and (-webkit-device-pixel-ratio: 1.5) { }</code></pre>
+			</div>
+			<div class="deviceWrap ipad-portrait">
+				<div class="device" style="width: 768px; height: 900px; padding-top: 124px;">
+					<div class="flashingTop" style="height: 124px; width: 768px">
+						<span class="time">8:18 <span>PM</span></span>
+					</div>
+					<iframe src="about:blank" id="ipad-portrait"></iframe>
+				</div><!-- /device -->
+			</div><!-- /deviceWrap -->
+			<div class="deviceTitle">
+				<em>iPad portrait</em> 768 x 1024
+				<pre class="prettyprint languague-css"><code>@media (max-device-width: 768px) and (orientation: portrait) { }</code></pre>
+			</div>
+			<div class="deviceWrap ipad-landscape">
+				<div class="device" style="width: 1024px; height: 645px; padding-top: 123px;">
+					<div class="flashingTop" style="height: 123px; width: 1024px">
+						<span class="time">8:18 <span>PM</span></span>
+					</div>
+					<iframe src="about:blank" id="ipad-landscape"></iframe>
+				</div><!-- /device -->
+			</div><!-- /deviceWrap -->
+			<div class="deviceTitle">
+				<em>iPad landscape</em> 1024 x 768
+				<pre class="prettyprint languague-css"><code>@media (max-device-width: 1024px) and (orientation: landscape) { }</code></pre>
+			</div>
+			<div class="deviceWrap kindle-portrait">
+				<div class="device" style="width: 600px; height: 820px; padding-top: 144px;padding-bottom: 60px;">
+					<div class="flashingTop" style="height: 144px; width: 600px">
+						<span class="time">8:18 <span>PM</span></span>
+					</div>
+					<div class="flashingBottom" style="height: 60px"></div>
+					<iframe src="about:blank" id="kindle-portrait"></iframe>
+				</div><!-- /device -->
+			</div><!-- /deviceWrap -->
+			<div class="deviceTitle">
+				<em>Kindle portrait</em> 600 x 1024
+				<pre class="prettyprint languague-css"><code>@media only screen and (min-width: 595px) and (max-width: 610px) { }</code></pre>
+			</div>
+			<div class="deviceWrap kindle-landscape">
+				<div class="device" style="width: 1024px; height: 396px; padding-top: 144px;padding-bottom: 60px;">
+					<div class="flashingTop" style="height: 144px; width: 1024px">
+						<span class="time">8:18 <span>PM</span></span>
+					</div>
+					<div class="flashingBottom" style="height: 60px"></div>
+					<iframe src="about:blank" id="kindle-landscape"></iframe>
+				</div><!-- /device -->
+			</div><!-- /deviceWrap -->
+			<div class="deviceTitle">
+				<em>Kindle landscape</em> 1024 x 600
+				<pre class="prettyprint languague-css"><code>@media only screen and (min-width: 1000px) and (max-width: 1030px) { }</code></pre>
+			</div>
+		</section>
+		<script src="./js/prettify.js"></script>
+		<script src="./js/lang-css.js"></script>
+		<script src="./js/responsinator.min.js"></script>
+	</body>
+</html>

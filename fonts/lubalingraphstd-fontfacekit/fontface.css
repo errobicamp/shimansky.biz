@@ -1,0 +1,10 @@
+@font-face {
+	font-family:'LubalinGraph';
+	src:url(lubalingraphstd-fontfacekit/lubalingraphstd-demi.eot);
+	src:url(lubalingraphstd-fontfacekit/lubalingraphstd-demi.eot?#iefix) format('embedded-opentype'),
+	url(lubalingraphstd-fontfacekit/lubalingraphstd-demi.svg#svgFontName) format('svg'),
+	url(lubalingraphstd-fontfacekit/lubalingraphstd-demi.woff) format('woff'),
+	url(lubalingraphstd-fontfacekit/lubalingraphstd-demi.ttf) format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}

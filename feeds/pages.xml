@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2enclosuresfull.xsl"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+	xmlns:media="http://search.yahoo.com/mrss/"
+	version="2.0" xml:lang="ru-RU">
+<channel>
+	<title>Страницы localhost</title>
+	<link>http://localhost/</link>
+	<description>Страницы localhost</description>
+	<image>
+		<url>http://localhost/apple-touch-icon-114x114.png</url>
+		<title>Страницы localhost</title>
+		<link>http://localhost/</link>
+		<width>114</width>
+		<height>114</height>
+	</image>
+	<lastBuildDate>Fri, 06 Mar 2015 21:08:36 +0400</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>daily</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>Страницы localhost</generator>
+<itunes:subtitle>Страницы localhost</itunes:subtitle>
+<itunes:author>Страницы localhost</itunes:author>
+<itunes:summary>Страницы localhost</itunes:summary>
+<itunes:owner>
+	<itunes:name>Страницы localhost</itunes:name>
+	<itunes:email>serguei@shimansky.biz</itunes:email>
+</itunes:owner>
+<itunes:image href="http://localhost/iTunesArtwork.jpg" />
+<itunes:category text="Education" />
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://localhost/feeds/pages.xml" />
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" />
+	<media:thumbnail url="http://localhost/apple-touch-icon-1400x1400.jpg" />
+	<media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Education</media:category>
+	<itunes:explicit>no</itunes:explicit>
+	<item><title>Английский без регистрации</title><description>Английский без регистрации</description><link>http://localhost/home.html</link><guid isPermaLink="false">bec9c256e09f16c687a3267b99306070</guid></item>
+<item><title>Английский без регистрации</title><description>Английский без регистрации</description><link>http://localhost/index.html</link><guid isPermaLink="false">758bcef4c2262091eca810a6022c73c1</guid></item>
+<item><title>О сайте Английский без регистрации</title><description>О сайте &#171;Английский без регистрации&#187;</description><link>http://localhost/pages/_about.html</link><guid isPermaLink="false">9581afac1337cf578cc646f9c63b74b6</guid></item>
+<item><title>Содержание</title><description>Содержание</description><link>http://localhost/pages/_contents.html</link><guid isPermaLink="false">4ea1d2deb9c463d20b5795288e777a9c</guid></item>
+<item><title>О сайте &#171;Английский без регистрации&#187;</title><description>О сайте &#171;Английский без регистрации&#187;</description><link>http://localhost/pages/about.html</link><guid isPermaLink="false">394795c284aa8333dff6d47b73936c33</guid></item>
+<item><title>Отзывы</title><description>Отзывы</description><link>http://localhost/pages/comments.html</link><guid isPermaLink="false">caa21f1d054fe955aa08c9f844400a2f</guid></item>
+<item><title>Содержание</title><description>Содержание</description><link>http://localhost/pages/contents.html</link><guid isPermaLink="false">081a45671952ead4d114327613b05aaa</guid></item>
+<item><title>Обзор содержания</title><description>Обзор содержания</description><link>http://localhost/pages/index.html</link><guid isPermaLink="false">3c34ab6bc6f4c9643c66cdcf43cfa0d8</guid></item>
+<item><title>Ничего не найдено</title><description>Ничего не найдено</description><link>http://localhost/pages/notfound.html</link><guid isPermaLink="false">d00755e55e3ed0e9c51a2661c81babfd</guid></item>
+<item><title>Пособия &#8211; Топики на английском</title><description>Топики на английском</description><link>http://localhost/pages/aids/_aids_topics.html</link><guid isPermaLink="false">0fbff98f9f71426b8dccf9ece75187d3</guid></item>
+<item><title>Пособия &#8211; Топики на английском</title><description>Топики на английском</description><link>http://localhost/pages/aids/aids_topics.html</link><guid isPermaLink="false">979603336dde4faeaff0320c6eed50cb</guid></item>
+<item><title>Статьи &#8211; Правила чтения в английском языке</title><description>Правила чтения в английском языке</description><link>http://localhost/pages/articles/articles_reading_rules_utf.html</link><guid isPermaLink="false">d00e80c10c2ca7f297d852f7de122d70</guid></item>
+<item><title>Блог &#8211; Web Designer s Online Tools</title><description>Web Designer&#8217;s Online Tools</description><link>http://localhost/pages/blog/blog_web_designer_s_online_tools.html</link><guid isPermaLink="false">912b2c6791410222748a6e9b77bccd29</guid></item>
+<item><title>Грамматика &#8211; all / the whole / the entire</title><description>all / the whole / the entire</description><link>http://localhost/pages/grammar/grammar_all_whole_entire.html</link><guid isPermaLink="false">f899186a8bea6f02faef8f297417fc9f</guid></item>
+<item><title>Грамматика &#8211; Порядок определений</title><description>Порядок определений</description><link>http://localhost/pages/grammar/grammar_attributes_order.html</link><guid isPermaLink="false">5d843ac5a59c5f953d61daed404f9f38</guid></item>
+<item><title>Грамматика &#8211; can / could / be able to</title><description>can / could / be able to</description><link>http://localhost/pages/grammar/grammar_can_could_be_able_to.html</link><guid isPermaLink="false">78e5f36f4b518c8692d10c65b933a989</guid></item>
+<item><title>Грамматика &#8211; с большой или с маленькой</title><description>С большой или с маленькой</description><link>http://localhost/pages/grammar/grammar_capital_letters.html</link><guid isPermaLink="false">60b7ea6a6702b644a5f6a0daac2e6e62</guid></item>
+<item><title>Грамматика &#8211; Who / which / that и запятые</title><description>Who / which / that и запятые</description><link>http://localhost/pages/grammar/grammar_comma_before_who_which_that.html</link><guid isPermaLink="false">0ae33837f8dbe4e6f693946e1f5c4fb8</guid></item>
+<item><title>Грамматика &#8211; Нарицательное / собственное</title><description>Нарицательное / собственное</description><link>http://localhost/pages/grammar/grammar_common_and_proper_nouns.html</link><guid isPermaLink="false">983b40e91cad327f3a70c61039b8db46</guid></item>
+<item><title>Грамматика &#8211; Согласование времен</title><description>Согласование времен</description><link>http://localhost/pages/grammar/grammar_conditionals.html</link><guid isPermaLink="false">af699a178fad87995c4ff3ca9e25b31a</guid></item>
+<item><title>Грамматика &#8211; Степени сравнения</title><description>Степени сравнения</description><link>http://localhost/pages/grammar/grammar_degrees_of_comparison.html</link><guid isPermaLink="false">710ab7062e98ebcbb0f09ad122bc4306</guid></item>
+<item><title>Грамматика &#8211; Заимствованные слова</title><description>Заимствованные слова</description><link>http://localhost/pages/grammar/grammar_foreign_words.html</link><guid isPermaLink="false">40405a9f9cff7d9e3cae140a785451cb</guid></item>
+<item><title>Грамматика &#8211; Quick and Dirty Grammar</title><description>Quick and Dirty Grammar</description><link>http://localhost/pages/grammar/grammar_grammar_girl_s_quick_and_dirty_grammar_at_a_glance.html</link><guid isPermaLink="false">2416c8848e0d4eb95abb8071f8049806</guid></item>
+<item><title>Грамматика &#8211; In / at / on</title><description>In / at / on</description><link>http://localhost/pages/grammar/grammar_in_at_on.html</link><guid isPermaLink="false">503113e5c865accf2954e198f6c0689a</guid></item>
+<item><title>Грамматика &#8211; In hospital / at work etc.</title><description>In hospital / at work etc.</description><link>http://localhost/pages/grammar/grammar_in_hospital_at_work.html</link><guid isPermaLink="false">d93440daeca4b52febf099554efbfec8</guid></item>
+<item><title>Грамматика &#8211; Неправильные глаголы: слайды</title><description>Неправильные глаголы: слайды</description><link>http://localhost/pages/grammar/grammar_irregular_verbs.html</link><guid isPermaLink="false">f263520f1ee2a3d7251bea1d004ecf7d</guid></item>
+<item><title>Грамматика &#8211; may / might / be allowed to</title><description>may / might / be allowed to</description><link>http://localhost/pages/grammar/grammar_may_might_be_allowed_to.html</link><guid isPermaLink="false">9e823548a46fb987353bcc4e98a63bad</guid></item>
+<item><title>Грамматика &#8211; Модальные глаголы</title><description>Модальные глаголы</description><link>http://localhost/pages/grammar/grammar_modal_verbs.html</link><guid isPermaLink="false">de31c383d5d56986ac6c7baa99b88883</guid></item>
+<item><title>Грамматика &#8211; much / many / little / few</title><description>much / many / little / few</description><link>http://localhost/pages/grammar/grammar_much_many_little_few.html</link><guid isPermaLink="false">b14c2675e0e3d684613f5e6cd5e7953d</guid></item>
+<item><title>Грамматика &#8211; or / nor / neither</title><description>or / nor / neither</description><link>http://localhost/pages/grammar/grammar_or_nor_neither.html</link><guid isPermaLink="false">562199060b958153385be74ea7e7423a</guid></item>
+<item><title>Грамматика &#8211; Фразовые глаголы</title><description>Фразовые глаголы</description><link>http://localhost/pages/grammar/grammar_phrasal_verbs.html</link><guid isPermaLink="false">3874e9cc001b7cdd5c7c62a44ad5ebbd</guid></item>
+<item><title>Грамматика &#8211; Косвенная речь</title><description>Косвенная речь</description><link>http://localhost/pages/grammar/grammar_reported_speech.html</link><guid isPermaLink="false">2e9483a9ec2cec989209b640ee69ca7d</guid></item>
+<item><title>Грамматика &#8211; Числа по&#8211;английски</title><description>Числа по&#8211;английски</description><link>http://localhost/pages/grammar/grammar_saying_numbers.html</link><guid isPermaLink="false">0bf45a1e785c2af61d7be4e40d52f4a3</guid></item>
+<item><title>Грамматика &#8211; Серийная запятая</title><description>Серийная запятая</description><link>http://localhost/pages/grammar/grammar_the_listing_comma.html</link><guid isPermaLink="false">85f4696297b3c5280e71708c3a68eb1d</guid></item>
+<item><title>Грамматика &#8211; too / enough и so / such</title><description>too / enough и so / such</description><link>http://localhost/pages/grammar/grammar_too_enough_so_such.html</link><guid isPermaLink="false">9cb9070dca970528dc19290a6d61fa33</guid></item>
+<item><title>Грамматика &#8211; Перевод причастий и деепричастий</title><description>Перевод причастий и деепричастий</description><link>http://localhost/pages/grammar/grammar_translating_participles.html</link><guid isPermaLink="false">28f048d9c73668ee405ba2c31257ce57</guid></item>
+<item><title>Грамматика &#8211; Артикли a / an и the</title><description>Артикли a / an и the</description><link>http://localhost/pages/grammar/grammar_usage_of_articles_a_the.html</link><guid isPermaLink="false">630a7750ea7fd3ec99088e00521c2b42</guid></item>
+<item><title>Грамматика &#8211; Расстановка дефисов</title><description>Расстановка дефисов</description><link>http://localhost/pages/grammar/grammar_usage_of_hyphens.html</link><guid isPermaLink="false">521a3bc73d1e195313162ed8b9d2f335</guid></item>
+<item><title>Грамматика &#8211; Употребление английских времен</title><description>Употребление английских времен</description><link>http://localhost/pages/grammar/grammar_usage_of_tenses.html</link><guid isPermaLink="false">258410a020619da328c1a52202fdf094</guid></item>
+<item><title>Грамматика &#8211; Когда must = должно быть</title><description>Когда must = &#171;должно быть&#187;</description><link>http://localhost/pages/grammar/grammar_when_must_means_probably.html</link><guid isPermaLink="false">b3ef10f716a5b666b7495b976a5020c1</guid></item>
+<item><title>Грамматика &#8211; Порядок слов в предложении</title><description>Порядок слов в предложении</description><link>http://localhost/pages/grammar/grammar_word_order.html</link><guid isPermaLink="false">811167be86a6aaa95a6fbbb7976ed40e</guid></item>
+<item><title>Грамматика &#8211; World Capitals</title><description>World Capitals</description><link>http://localhost/pages/grammar/grammar_world_capitals.html</link><guid isPermaLink="false">b6d2f51db1c820b1dacdc3b3470dc99c</guid></item>
+<item><title>Еще! &#8211; Неправильные глаголы: скачать</title><description>Неправильные глаголы: скачать</description><link>http://localhost/pages/more/more_irregular_verbs.html</link><guid isPermaLink="false">dc0ab5775125dfbfa59d7e6d3b35d36b</guid></item>
+<item><title>Еще! &#8211; Бесплатный английский в сети</title><description>Бесплатный английский в сети</description><link>http://localhost/pages/more/more_newsletter_can_get_english_for_free.html</link><guid isPermaLink="false">3b8ab0de6e1bace6575efeeda0c699b7</guid></item>
+<item><title>Еще! &#8211; Пишем резюме на английском</title><description>Пишем резюме на английском</description><link>http://localhost/pages/more/more_resume_writing.html</link><guid isPermaLink="false">1b9ebb2a0f930676441b905bbfea9cea</guid></item>
+<item><title>Еще! &#8211; Подсказки по грамматике</title><description>Подсказки по грамматике</description><link>http://localhost/pages/more/more_rough_and_ready_grammar_tips.html</link><guid isPermaLink="false">5dae83a402e0b1d041badd3a7065280b</guid></item>
+<item><title>Чтение &#8211; The Man with the Scar / Человек со шрамом</title><description>The Man with the Scar</description><link>http://localhost/pages/reading/reading_the_man_with_the_scar.html</link><guid isPermaLink="false">b078dc210897b70f3cca3e3e74c503f6</guid></item>
+<item><title>Тесты &#8211; Тесты по грамматике английского</title><description>Тесты по грамматике английского</description><link>http://localhost/pages/tests/_tests_grammar_tests_with_answers.html</link><guid isPermaLink="false">1da70f0580ba69f02adf93454954100f</guid></item>
+<item><title>Тесты &#8211; Advanced Grammar in Use Level Test</title><description>Advanced Grammar in Use Level Test</description><link>http://localhost/pages/tests/tests_advanced_grammar_in_use_level_test.html</link><guid isPermaLink="false">ecacbcb352f27828249900c02b920d59</guid></item>
+<item><title>Тесты &#8211; Демо&#8211;вариант ЕГЭ&#8211;11 АЯ</title><description>Демо&#8211;вариант ЕГЭ&#8211;11 АЯ</description><link>http://localhost/pages/tests/tests_ege_english_test_sample.html</link><guid isPermaLink="false">0d1e023f12aed2d20613c574dc2e3ec5</guid></item>
+<item><title>Тесты &#8211; Демо&#8211;вариант ЕГЭ&#8211;11 АЯ 2013</title><description>Демо&#8211;вариант ЕГЭ&#8211;11 АЯ 2013</description><link>http://localhost/pages/tests/tests_ege_english_test_sample_2013.html</link><guid isPermaLink="false">006e329ca8015d45fde7fb98ab084cba</guid></item>
+<item><title>Тесты &#8211; ЕГЭ&#8211;11 АЯ &#8211; Процедура (инфографика)</title><description>ЕГЭ&#8211;11 АЯ &#8211; Процедура (инфографика)</description><link>http://localhost/pages/tests/tests_ege_infographics.html</link><guid isPermaLink="false">bd898b76f016b6f66c13ec99322ebd79</guid></item>
+<item><title>Тесты &#8211; Информация о ЕГЭ</title><description>Информация о ЕГЭ</description><link>http://localhost/pages/tests/tests_ege_news.html</link><guid isPermaLink="false">23a3ecd9028f7e2e29f733382916b38d</guid></item>
+<item><title>Тесты &#8211; ЕГЭ по русскому языку</title><description>ЕГЭ по русскому языку</description><link>http://localhost/pages/tests/tests_ege_russian.html</link><guid isPermaLink="false">8ba5ceb132372808b5ad995db8da9a45</guid></item>
+<item><title>Тесты &#8211; XIV Олимпиада по английскому</title><description>XIV Олимпиада по английскому</description><link>http://localhost/pages/tests/tests_english_allrussian_olympiad_regional_stage_2013.html</link><guid isPermaLink="false">76b80899de7fcbec233f756e4c6f9498</guid></item>
+<item><title>Тесты &#8211; English Grammar in Use Level Test</title><description>English Grammar in Use Level Test</description><link>http://localhost/pages/tests/tests_english_grammar_in_use_level_test.html</link><guid isPermaLink="false">8f1fa5617fab2a3818b30d0a7025408c</guid></item>
+<item><title>Тесты &#8211; Essential Grammar in Use Level Test</title><description>Essential Grammar in Use Level Test</description><link>http://localhost/pages/tests/tests_essential_grammar_in_use_level_test.html</link><guid isPermaLink="false">136ea70a4efce01c7acbe59a5f70d9eb</guid></item>
+<item><title>Тесты &#8211; Примеры заданий Письмо C1 и C2</title><description>Примеры заданий &#171;Письмо&#187; C1 и C2</description><link>http://localhost/pages/tests/tests_gia_ege_letter_sample.html</link><guid isPermaLink="false">3df56fd082fe6b11ec98dd1306b2b6bc</guid></item>
+<item><title>Тесты &#8211; Демо&#8211;вариант ГИА&#8211;9 (ОГЭ) АЯ</title><description>Демо&#8211;вариант ГИА&#8211;9 (ОГЭ) АЯ</description><link>http://localhost/pages/tests/tests_gia_english_test_sample.html</link><guid isPermaLink="false">14727fb004558857284c3477688394ac</guid></item>
+<item><title>Тесты &#8211; Тесты по грамматике английского</title><description>Тесты по грамматике английского</description><link>http://localhost/pages/tests/tests_grammar_tests_with_answers.html</link><guid isPermaLink="false">521d12157c014d1dd05f6d3b6cd65332</guid></item>
+<item><title>Тесты &#8211; Тест по английскому online</title><description>Тест по английскому online</description><link>http://localhost/pages/tests/tests_languagelink_online_test.html</link><guid isPermaLink="false">f8395c682e34a6974692e20c180d2a88</guid></item>
+<item><title>Тесты &#8211; Тестирование в формате ЕГЭ&#8211;11 АЯ 2013</title><description>Тестирование в формате ЕГЭ&#8211;11 АЯ 2013</description><link>http://localhost/pages/tests/tests_macmillan_ege_english_test_sample_2013.html</link><guid isPermaLink="false">4e4e26f2fda0a03144e3460a465439bf</guid></item>
+<item><title>Тесты &#8211; Тестирование в формате ГИА&#8211;9 (ОГЭ) АЯ 2013</title><description>Тестирование в формате ГИА&#8211;9 (ОГЭ) АЯ 2013</description><link>http://localhost/pages/tests/tests_macmillan_gia_english_test_sample_2013.html</link><guid isPermaLink="false">a44c0015b7a1687b303bd3c59be14815</guid></item>
+<item><title>Тесты &#8211; Macmillan Practice Tests. Test 20</title><description>Macmillan Practice Tests. Test 20</description><link>http://localhost/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_2nd_test_20.html</link><guid isPermaLink="false">be7118351f9968577e1e6a5912db5f3f</guid></item>
+<item><title>Тесты &#8211; Ответы к Macmillan Practice Tests (1&#8211;е изд.)</title><description>Ответы к Macmillan Practice Tests (1&#8211;е изд.)</description><link>http://localhost/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_keys.html</link><guid isPermaLink="false">9b9eb0618c128048558ceeed342f4d9c</guid></item>
+<item><title>Тесты &#8211; Ответы к Macmillan Practice Tests (2&#8211;е изд.)</title><description>Ответы к Macmillan Practice Tests (2&#8211;е изд.)</description><link>http://localhost/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_keys_2nd.html</link><guid isPermaLink="false">298e06ac18687bde20d51a7bebe48163</guid></item>
+<item><title>Тесты &#8211; Тексты к Macmillan Practice Tests</title><description>Тексты к Macmillan Practice Tests</description><link>http://localhost/pages/tests/tests_macmillan_practice_tests_for_the_russian_state_exam_transcripts_2nd.html</link><guid isPermaLink="false">775ee3defdc85eed3bfe3dfdf279a386</guid></item>
+<item><title>Транскрипты &#8211; All train compartments smell vaguely of shit</title><description>All train compartments smell vaguely of shit</description><link>http://localhost/pages/transcripts/transcripts_episode_all_train_compartments_smell_vaguely_of_shit.html</link><guid isPermaLink="false">13334188ed3fca38a847cd4506e3fd53</guid></item>
+<item><title>Транскрипты &#8211; Cousins?</title><description>Cousins?</description><link>http://localhost/pages/transcripts/transcripts_episode_cousins_question_mark.html</link><guid isPermaLink="false">e7590365cf17d76d6048c68f5bc2347b</guid></item>
+<item><title>Транскрипты &#8211; Stop swinging the bat</title><description>Stop swinging the bat</description><link>http://localhost/pages/transcripts/transcripts_episode_stop_swinging_the_bat.html</link><guid isPermaLink="false">7a9e3f4ddf80ca7d601405db27bb968f</guid></item>
+<item><title>Транскрипты &#8211; 44 Most Often Misspelled Words</title><description>44 Most Often Misspelled Words</description><link>http://localhost/pages/transcripts/transcripts_linguaspectrum_spell.html</link><guid isPermaLink="false">0efc74b689b8f3bd07a46b4775772bce</guid></item>
+<item><title>Транскрипты &#8211; English Vocabulary for Business</title><description>English Vocabulary for Business</description><link>http://localhost/pages/transcripts/transcripts_video_vocab_transcripts.html</link><guid isPermaLink="false">059326c240ba8ee1771e30fdffdf5e3c</guid></item>
+
+	<media:credit role="author">Страницы localhost</media:credit>
+	<media:rating>nonadult</media:rating>
+	<media:description type="plain">Страницы localhost</media:description>
+	</channel>
+	</rss>

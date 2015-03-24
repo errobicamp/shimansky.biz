@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="ResponsiveTest">
+	<head>
+		<!--
+		/**
+		* ResponsiveTest
+		*
+		* @link https://github.com/nghuuphuoc/responsivetest
+		* @author Nguyen Huu Phuoc <huuphuoc.me>
+		* @copyright (c) 2013 Nguyen Huu Phuoc
+		*/
+		-->
+		<meta charset="utf-8">
+		<title>Testing responsive web design in various resolutions | ResponsiveTest</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Testing responsive web design in various resolutions">
+		<meta name="keywords" content="test responsive web design, responsive web design, responsive design testing, responsive web design testing, Responsive Web Design Tools">
+		<meta name="author" content="Nguyen Huu Phuoc (@nghuuphuoc)">
+		<meta name="copyright" content="APL Solutions">
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/bundle.fixed.min.css" />
+	</head>
+	<body ng-controller="IndexController" ng-init="init()">
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".rt-navbar-collapse">
+						<span class="sr-only">Toggle</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/"><img src="./img/logo.png" alt="Responsive Test" /></a>
+				</div>
+				<div class="nav-collapse rt-navbar-collapse rt-navbar">
+					<form class="navbar-form navbar-left">
+						<input type="text" class="form-control" ng-model="url" name="url" style="width: 250px; margin-right: 20px;" ng-model="url" placeholder="Enter the URL" rt-keyup="onKeyup" />
+						<input type="text" class="form-control" ng-model="w" name="w" style="width: 60px;" placeholder="w" />
+						<span style="color: #777;">x</span>
+						<input type="text" class="form-control" ng-model="h" name="h" style="width: 60px;" placeholder="h" />
+						<button type="button" class="btn btn-success" ng-click="rotate()">
+							<i class="fa fa-retweet"></i> Rotate
+						</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown" ng-repeat="device in SUPPORTED_DEVICES" id="{{ device.type }}">
+							<a href="#{{ device.type }}" class="dropdown-toggle" data-toggle="dropdown" title="{{ device.title }}"><i class="fa {{ device.icon }} fa-2x"></i></a>
+							<rt-device brands="device.brands"></rt-device>
+						</li>
+						<li>
+							<a data-toggle="modal" href="#about"><i class="fa fa-info-circle fa-2x"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="rt-ruler"></div>
+		<div class="rt-iframe" ng-style="{ width: w / pxd + 15 + 'px', height: h / pxd + 'px' }" rt-resizable ng-show="!loading" id="iframe">
+			<iframe ng-src="{{ frameSrc }}" rt-frame-loading></iframe>
+		</div>
+		<div class="modal fade" id="about">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+						<h4 class="modal-title">About Responsive Test</h4>
+					</div>
+					<div class="modal-body text-center">
+						<p>
+							v1.2.2
+							<br />
+							Created by&#160;<a href="https://twitter.com/nghuuphuoc">Nguyen Huu Phuoc</a>
+							<br />
+							&copy; 2013 <a href="http://apl.vn">APL Solutions</a>
+						</p>
+						<p>
+							<small> Powered by&#160;<a href="http://getbootstrap.com">Bootstrap 3</a>, <a href="http://angularjs.org">AngularJs</a>, <a href="http://jquery.com">jQuery</a> and <a href="http://jqueryui.com">jQuery UI</a>
+								<br />
+								Icons are provided by&#160;<a href="http://fontawesome.io">Font Awesome</a> </small>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/bundle.fixed.min.js"></script>
+		<script>
+			"undefined"!==typeof window.jQuery&&$(document).ready(function(){var a=$(".rt-ruler").css("z-index");$("#iframe").on("mouseover",function(){$(this).css("z-index",a+10)}).on("mouseout",function(){$(this).css("z-index",a-10)})});
+		</script>
+	</body>
+</html>
