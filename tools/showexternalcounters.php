@@ -201,7 +201,7 @@ if ($event == 'clear') {
 		<meta name="msapplication-square150x150logo" content="/mstile-150x150.png" />
 		<meta name="msapplication-wide310x150logo" content="/mstile-310x150.png" />
 		<meta name="msapplication-square310x310logo" content="/mstile-310x310.png" />
-		<meta property="og:image" content="http://farm8.staticflickr.com/7610/16635493810_ea01d1400b_o.jpg" />
+		<meta property="og:image" content="http://farm9.staticflickr.com/8727/16342892814_ba25f2a7fa_o.jpg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="robots" content="index,follow" />
 		<meta name="author" content="Serguei Shimansky englishextra@yandex.ru" />
@@ -224,7 +224,7 @@ if ($event == 'clear') {
 		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
 		<link rel="manifest" href="/manifest.json" />
 		<link rel="yandex-tableau-widget" href="/yandex-tableau.json" />
-		<link rel="image_src" href="http://farm8.staticflickr.com/7610/16635493810_ea01d1400b_o.jpg" type="image/jpeg" title="Английский без&#160;регистрации" />
+		<link rel="image_src" href="http://farm9.staticflickr.com/8727/16342892814_ba25f2a7fa_o.jpg" type="image/jpeg" title="Английский без&#160;регистрации" />
 		<link rel="me" type="text/html" href="https://www.youtube.com/user/shimanskybiz" />
 		<link rel="me" type="text/html" href="https://github.com/englishextra" />
 		<link rel="me" type="text/html" href="https://vimeo.com/user20994901" />
