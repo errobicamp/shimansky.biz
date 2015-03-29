@@ -1073,6 +1073,11 @@ pre.prettyprint {
 	.col .blockquote {
 		margin-left: 16.0pt;
 	}
+	.address,
+	.col .address {
+		font-size: 10.0pt;
+		text-align: right;
+	}	
 	.highlight,
 	.col .highlight,
 	.main .col .highlight {

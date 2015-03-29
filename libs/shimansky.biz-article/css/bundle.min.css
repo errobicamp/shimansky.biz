@@ -318,7 +318,7 @@ pre.prettyprint {
 .col .address {
 	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
 	font-weight: 400;
-	font-size: 0.857rem;
+	font-size: 9.0pt;
 	font-style: italic;
 	text-align: right;
 }
@@ -1268,6 +1268,11 @@ html > body > .ui-pnotify {
 	.col .blockquote {
 		margin-left: 16.0pt;
 	}
+	.address,
+	.col .address {
+		font-size: 10.0pt;
+		text-align: right;
+	}	
 	.highlight,
 	.col .highlight,
 	.main .col .highlight {

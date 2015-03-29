@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta property="og:title" content="CSS3 Playground" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://css3.mikeplate.com/" />
+<meta property="og:image" content="http://www.facebook.com/photo.php?pid=414550&amp;id=148212521870878&amp;ref=fbx_album" />
+<title>CSS3 Playground by Mike Plate</title>
+<link rel="stylesheet" href="style.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js" type="text/javascript"></script>
+<script type="text/javascript" src="zeroclipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="box-settings.js"></script>
+<script type="text/javascript" src="touch-helpers.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dijit/themes/tundra/tundra.css" />
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojox/layout/resources/ResizeHandle.css" />
+<meta property="fb:admins" content="621738122" />
+<script type="text/javascript">
+var allBoxes = new Array();
+var styleSource = "";
+var runningOpacityAnimation = false;
+var current = null;
+var settings = new Object();
+
+dojo.require("dojo.parser");
+dojo.require("dijit.layout.ContentPane");
+dojo.require("dijit.layout.BorderContainer");
+dojo.require("dijit.layout.AccordionContainer");
+dojo.require("dijit.form.Slider");
+dojo.require("dijit.form.ComboBox");
+dojo.require("dijit.ColorPalette");
+dojo.require("dojo.dnd.move");
+dojo.require("dojox.layout.ResizeHandle");
+
+dojo.addOnLoad(function () {
+	window.setTimeout("EnsureVisible();", 1200);
+	dojo.parser.parse();
+	dojo.animateProperty({ node: "container", properties: { opacity: 1.0 }, duration: 1000 }).play();
+	
+	if (TouchHelpers.IsSupported) {
+		// Apply a TouchProxy object to some elements with the specified class names. This will translate touch events to mouse events.
+		new TouchProxy(document, ["box", "dijitSplitter", "dijitSlider", "dijitComboBox"]);
+
+		// Use TouchScroller class to make all panels scrollable by touch-n-drag, but exclude some elements with the specified class
+		// names since they need to respond to touch/mouse events in order to do work.
+		var scrollDivs = [ "RadiusPanel", "TextShadowPanel", "TransformPanel", "ColumnPanel", "BorderPanel", "GradientPanel",
+			"BackgroundPanel", "ContentPanel", "AboutPanel", "htmlSourceSet", "htmlSource" ];
+		var excludeClassNames = [ "dijitPaletteImg" ];
+		for (var i = 0; i < scrollDivs.length; i++) {
+			new TouchScroller(dojo.byId(scrollDivs[i]), excludeClassNames);
+		}
+		
+		// No scrollbars on touch devices, so change overflow style and use the TouchScroller class instead
+		dojo.byId("SourcePanel").style.overflowY = "hidden";
+		new TouchScroller(dojo.byId("SourcePanel"));
+		
+		dojo.byId("contentText").value = "Drag me around and use the controls to the left to change my appearance. You can scroll the left and bottom panels by dragging the background. Add more of me with + button in upper right corner.";
+	}
+	
+	// Show a button for copying the styles to the clipboard, but only if the browser supports flash since it is a flash plugin
+	// inside the ZeroClipboard component that performs that function.
+	if (navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"]) {
+		ZeroClipboard.setMoviePath("zeroclipboard/ZeroClipboard.swf");
+		var clip = new ZeroClipboard.Client();
+		clip.addEventListener("mouseDown", function(client) { 
+		    clip.setText(styleSource);
+	    });
+		clip.glue("CopyToClipboard");
+		dojo.connect(window, "onresize", function() { 
+			clip.reposition();
+		});
+		var clipFlash = dojo.byId("ZeroClipboardMovie_1");
+		if (clipFlash) {
+			if (clipFlash.parentNode) {
+				clipFlash.parentNode.setAttribute("title", dojo.byId("CopyToClipboard").title);
+			}
+		}
+	}
+	else {
+		dojo.byId("CopyToClipboard").style.display = "none";
+	}
+
+	// Create all objects that handle the controls and setting of box styles from those controls
+	settings["border-radius"] = new BorderRadiusSetting("borderRadius", GetCurrent, OutputSource);
+	settings["box-shadow"] = new BoxShadowSetting("boxShadow", GetCurrent, OutputSource);
+	settings["text-shadow"] = new TextShadowSetting("textShadow", GetCurrent, OutputSource);
+	settings["transform"] = new TransformSetting("transform", GetCurrent, OutputSource);
+	settings["gradient-bkgnd"] = new GradientBackgroundSetting("bkgnd", GetCurrent, OutputSource);
+	settings["border"] = new BorderSetting("border", GetCurrent, OutputSource);
+	settings["background"] = new BackgroundSetting("background", GetCurrent, OutputSource);
+	settings["padding"] = new SingleNumberSetting("padding", 0, 50, "px", "padding", GetCurrent, OutputSource);
+	settings["z-index"] = new SingleNumberSetting("z-index", -10, 10, null, "zIndex", GetCurrent, OutputSource);
+	settings["opacity"] = new OpacitySetting("opacity", GetCurrent, OutputSource);
+	settings["text"] = new TextSetting("text", GetCurrent, OutputSource);
+	settings["content"] = new ContentSetting("content", GetCurrent, OutputSource);
+	settings["outline"] = new OutlineSetting("outline", GetCurrent, OutputSource);
+	settings["columns"] = new ColumnSetting("column", GetCurrent, OutputSource);
+
+	AddBox();
+	RefreshButtons();
+});
+
+function GetCurrent() {
+	return current;
+}
+
+function OutputSource() {
+	OutputBrowserStyle();
+	styleSource = "";
+	
+	for (var setting in settings) {
+		styleSource += settings[setting].ToStyle(current);
+	}
+	
+	var styleHtml = styleSource;
+	styleHtml = "<p>" + styleHtml.replace(/\r\n/g, "</p><p>") + "</p>";
+	dojo.byId("htmlSourceSet").innerHTML = styleHtml;
+}
+
+function OutputBrowserStyle() {
+	if (!runningOpacityAnimation) {
+		var str = current.Element.getAttribute("style");
+		if (str.replace)
+			str = str.replace(/; */g, ";<br />");
+		dojo.byId("htmlSource").innerHTML = str;
+	}
+}
+
+function AddBox() {
+	current = new Box();
+	allBoxes.push(current);
+	
+	UpdatePreview();
+	RefreshButtons();
+}
+
+function UpdatePreview() {
+	for (var setting in settings) {
+		settings[setting].Update(true);
+	}
+	OutputSource();
+}
+
+function DeleteBox() {
+	if (allBoxes.length==1)
+		return;
+	
+	current.Element.parentNode.removeChild(current.Element);
+	for (var pos = 0; pos < allBoxes.length && allBoxes[pos]!=current; pos++) ;
+	allBoxes.splice(pos, 1);
+	if (pos == allBoxes.length)
+		pos = allBoxes.length - 1;
+	current = allBoxes[pos];
+	SetControls(current);
+	RefreshButtons();
+	Flash(current);
+}
+
+function SetControls(box) {
+	for (var setting in settings) {
+		settings[setting].Set(box);
+	}
+	OutputSource();
+}
+
+function RefreshButtons() {
+	var btn = dojo.byId("deleteButton");
+	if (allBoxes.length<=1) {
+		btn.disabled = true;
+		btn.style.opacity = 0.5;
+	}
+	else {
+		btn.disabled = false;
+		btn.style.opacity = 1.0;
+	}
+}
+
+function Flash(box) {
+	var el = box.Element;
+	var currentOpacity = parseFloat(box.Opacity);
+	runningOpacityAnimation = true;
+	if (currentOpacity==1.0) {
+		el.style.opacity = 0.5;
+		dojo.animateProperty({ node: el, properties: { opacity: 1.0 }, duration: 500, 
+			onEnd: function() { runningOpacityAnimation = false; el.style.opacity = null; } }).play();
+	}
+	else if (currentOpacity < 0.5) {
+		el.style.opacity = 1.0;
+		dojo.animateProperty({ node: el, properties: { opacity: currentOpacity }, duration: 500, 
+			onEnd: function() { runningOpacityAnimation = false; } }).play();
+	}
+	else {
+		el.style.opacity = 0.0;
+		dojo.animateProperty({ node: el, properties: { opacity: currentOpacity }, duration: 500, 
+			onEnd: function() { runningOpacityAnimation = false; } }).play();
+	}
+}
+
+function EnsureVisible() {
+	var el = dojo.byId("container");
+	el.style.opacity = 1;
+}
+
+function SetLongText() {
+	var content = dojo.byId("contentText");
+	content.value = "<p>Lorem ipsum malorum prompta voluptaria ne has, cum choro corrumpit ex. In delenit laoreet voluptatum sea. Cetero saperet percipit mei ad, eu diam eirmod eum.</p>\r\n";
+	content.value += "<p>Mucius sapientem sea ad, ei brute nemore deseruisse pri. Sed cu elit fierent. Pri in sapientem abhorreant, mea magna latine consequat at, nam choro delicatissimi ex. Curabitur in quam ac mauris lobortis commodo id nec dolor.</p>\r\n";
+	content.value += "<p>Vide autem eum id. Docendi singulis gubergren est ne, ne sed augue impedit. Ne partem accumsan usu, sed posse dicant accusata ea, te idque graeco mnesarchum eos.</p>\r\n";
+	content.value += "<p>Civibus repudiandae vis ut. Duo eu brute praesent mnesarchum. Ne putent legendos voluptaria sit, in tritani vivendum eam, animal inermis percipitur ad vix.</p>";
+	content.value += "<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce et erat ligula, vel posuere lectus. Pellentesque habitant morbi tristique senectus et netus.</p>";
+	settings["content"].Update();
+	
+	document.getElementById("textAlignment").selectedIndex = 0;
+	settings["text"].Update();
+	
+	if (current.Element.offsetWidth < 600)
+		current.Element.style.width = "600px";
+	if (current.Element.offsetHeight < 375)
+		current.Element.style.height = "375px";
+}
+</script>
+</head>
+<body class="tundra">
+	<div id="Msg" style="position: absolute; top: 0px; left: 0px; background-color: yellow; z-index: 100;"></div>
+	<div class="body" id="container" dojoType="dijit.layout.BorderContainer" design="sidebar" style="opacity: 0;">
+		<div class="toolbox" id="tools" dojoType="dijit.layout.ContentPane" region="left" splitter="true" style="padding: 0px; border: none;">
+			<div id="toolboxContainer" dojoType="dijit.layout.AccordionContainer">
+				<div dojoType="dijit.layout.AccordionPane" title="CSS3 Radius and Box Shadow" id="RadiusPanel">
+					<div class="fieldTitle">Border Radius</div>
+					<div class="fieldNumber"><input id="borderRadiusText" name="borderRadiusText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="borderRadiusSlider"></div>
+					<div class="fieldTitle">Box Shadow Offset</div>
+					<div class="fieldNumber"><input id="boxShadowOffsetText" id="boxShadowOffsetText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="boxShadowOffsetSlider"></div>
+					<div class="fieldTitle">Box Shadow Blur</div>
+					<div class="fieldNumber"><input id="boxShadowBlurText" name="boxShadowBlurText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="boxShadowBlurSlider"></div>
+					<div class="fieldTitle">Box Shadow Color</div>
+					<div class="fieldNumber"><input id="boxShadowColorText" name="boxShadowColorText" type="text" style="width: 100px;" value="#000000" /></div>
+					<div class="fieldPalette" id="boxShadowColorPalette"></div>
+				</div>
+				<div dojoType="dijit.layout.AccordionPane" title="CSS3 Text Shadow" id="TextShadowPanel">
+					<div class="fieldTitle">Text Shadow Offset</div>
+					<div class="fieldNumber"><input id="textShadowOffsetText" id="textShadowOffsetText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="textShadowOffsetSlider"></div>
+					<div class="fieldTitle">Text Shadow Blur</div>
+					<div class="fieldNumber"><input id="textShadowBlurText" name="textShadowBlurText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="textShadowBlurSlider"></div>
+					<div class="fieldTitle">Text Shadow Color</div>
+					<div class="fieldNumber"><input id="textShadowColorText" name="textShadowColorText" type="text" style="width: 100px;" value="#000000" /></div>
+					<div class="fieldPalette" id="textShadowColorPalette"></div>
+				</div>
+				<div dojoType="dijit.layout.AccordionPane" title="CSS3 Transforms" id="TransformPanel">
+					<div class="fieldTitle">Rotate</div>
+					<div class="fieldNumber"><input id="transformRotateText" name="transformRotateText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="transformRotateSlider"></div>
+					<div class="fieldTitle">Scale</div>
+					<div class="fieldNumber"><input id="transformScaleText" name="transformScaleText" type="text" style="width: 40px;" value="1.0" /></div>
+					<div class="fieldSlider" id="transformScaleSlider"></div>
+					<div class="fieldTitle">Skew X/Horizontal</div>
+					<div class="fieldNumber"><input id="transformSkewText" name="transformSkewText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="transformSkewSlider"></div>
+					<div class="fieldTitle">Skew Y/Vertical</div>
+					<div class="fieldNumber"><input id="transformSkewYText" name="transformSkewYText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="transformSkewYSlider"></div>
+				</div>
+				<div dojoType="dijit.layout.AccordionPane" title="CSS3 Columns" id="ColumnPanel">
+					<div>
+						<input type="button" value="Set size and text for testing" onclick="SetLongText();" />
+					</div>
+					<div class="fieldTitle">Columns</div>
+					<div class="fieldNumber"><input id="columnCountText" type="text" style="width: 40px;" value="1" /></div>
+					<div class="fieldSlider" id="columnCountSlider"></div>
+					<div class="fieldTitle">Gap</div>
+					<div class="fieldNumber"><input id="columnGapText" type="text" style="width: 40px;" value="5" /></div>
+					<div class="fieldSlider" id="columnGapSlider"></div>
+					<div class="fieldTitle">Rule Thickness</div>
+					<div class="fieldNumber"><input id="columnRuleWidthText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="columnRuleWidthSlider"></div>
+					<div class="fieldTitle">Rule Color</div>
+					<div class="fieldNumber"><input id="columnRuleColorText" type="text" style="width: 100px;" value="#000000" /></div>
+					<div class="fieldPalette" id="columnRuleColorPalette"></div>
+				</div>
+				<div dojoType="dijit.layout.AccordionPane" title="CSSx Gradient Background" id="GradientPanel">
+					<h6>Not part of the CSS3 specification.</h6>
+					<div class="fieldTitle">Direction</div>
+					<div class="fieldList">
+						<select id="bkgndDirection">
+							<option selected="selected">None</option>
+							<option>Horizontal</option>
+							<option>Vertical</option>
+							<option>Diagonal from Top Left</option>
+							<option>Diagonal from Top Right</option>
+						</select>
+					</div>
+					<div class="fieldTitle">From Color</div>
+					<div class="fieldNumber"><input id="bkgndFromColorText" type="text" style="width: 100px;" value="#6666FF" /></div>
+					<div class="fieldPalette" id="bkgndFromColorPalette"></div>
+					<div class="fieldTitle">From Position (relative)</div>
+					<div class="fieldNumber"><input id="bkgndFromPositionText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="bkgndFromPositionSlider"></div>
+					<div class="fieldTitle">To Color</div>
+					<div class="fieldNumber"><input id="bkgndToColorText" type="text" style="width: 100px;" value="#FFFF66" /></div>
+					<div class="fieldPalette" id="bkgndToColorPalette"></div>
+					<div class="fieldTitle">To Position (relative)</div>
+					<div class="fieldNumber"><input id="bkgndToPositionText" type="text" style="width: 40px;" value="100" /></div>
+					<div class="fieldSlider" id="bkgndToPositionSlider"></div>
+				</div>
+				<div dojoType="dijit.layout.AccordionPane" title="Border and Outline" id="BorderPanel">
+					<div class="fieldTitle">Border Thickness</div>
+					<div class="fieldNumber"><input id="borderWidthText" name="borderWidthText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="borderWidthSlider"></div>
+					<div class="fieldTitle">Border Color</div>
+					<div class="fieldNumber"><input id="borderColorText" name="borderColorText" type="text" style="width: 100px;" value="" /></div>
+					<div class="fieldPalette" id="borderColorPalette"></div>
+					<div class="fieldTitle">Outline Thickness</div>
+					<div class="fieldNumber"><input id="outlineWidthText" name="outlineWidthText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="outlineWidthSlider"></div>
+					<div class="fieldTitle">Outline Offset</div>
+					<div class="fieldNumber"><input id="outlineOffsetText" name="outlineOffsetText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="outlineOffsetSlider"></div>
+					<div class="fieldTitle">Outline Color</div>
+					<div class="fieldNumber"><input id="outlineColorText" name="outlineColorText" type="text" style="width: 100px;" value="" /></div>
+					<div class="fieldPalette" id="outlineColorPalette"></div>
+				</div>
+				<div dojoType="dijit.layout.AccordionPane" title="Background+" id="BackgroundPanel">
+					<div class="fieldTitle">Background Color</div>
+					<div class="fieldNumber"><input id="backgroundColorText" name="backgroundColorText" type="text" style="width: 100px;" value="#DDDDDD" /></div>
+					<div class="fieldPalette" id="backgroundColorPalette"></div>
+					<div class="fieldTitle">Opacity (0.0 = fully transparent)</div>
+					<div class="fieldNumber"><input id="opacityText" name="opacityText" type="text" style="width: 40px;" value="1.0" /></div>
+					<div class="fieldSlider" id="opacitySlider"></div>
+					<div class="fieldTitle">Z-index</div>
+					<div class="fieldNumber"><input id="zIndexText" name="zIndexText" type="text" style="width: 40px;" value="0" /></div>
+					<div class="fieldSlider" id="zIndexSlider"></div>
+				</div>
+				<div dojoType="dijit.layout.AccordionPane" title="Content and Text" id="ContentPanel">
+					<div class="fieldTitle">Content</div>
+					<div><textarea id="contentText" name="contentText" style="width: 90%; height: 150px;">Drag me around and use the controls to the left to change my appearance. Watch the styles change below, as you adjust the controls. Add more of me with + button in upper right corner.</textarea></div>
+					<div class="fieldTitle">Padding</div>
+					<div class="fieldNumber"><input id="paddingText" name="paddingText" type="text" style="width: 40px;" value="10" /></div>
+					<div class="fieldSlider" id="paddingSlider"></div>
+					<div class="fieldTitle">Text Size</div>
+					<div class="fieldNumber"><input id="textSizeText" name="textSizeText" type="text" style="width: 40px;" value="12" /></div>
+					<div class="fieldSlider" id="textSizeSlider"></div>
+					<div class="fieldTitle">Font</div>
+					<!--div class="fieldList"><input id="fontText" name="fontText" type="text" style="width: 90%;" value="" /></div-->
+					<div class="fieldList">
+						<select id="textFont" name="textFont" style="width: 90%;">
+							<option>Verdana, Geneva, sans-serif</option>
+							<option>"Gill Sans", "Gill Sans MT", Calibri, sans-serif</option>
+							<option>Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif</option>
+							<option>"Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif</option>
+							<option>"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif</option>
+						</select>
+					</div>
+					<div class="fieldList" style="padding-top: 4px;">
+						<input id="textBold" type="checkbox"> <label for="textBold">Bold</label>
+						<input id="textItalic" type="checkbox"> <label for="textItalic">Italic</label>
+					</div>
+					<div class="fieldTitle">Text Color</div>
+					<div class="fieldNumber"><input id="textColorText" name="textColorText" type="text" style="width: 100px;" value="#888888" /></div>
+					<div class="fieldPalette" id="textColorPalette"></div>
+					<div class="fieldTitle">Alignment</div>
+					<div class="fieldList">
+						<select id="textAlignment" name="textAlignment">
+							<option>Left</option>
+							<option selected="selected">Center</option>
+							<option>Right</option>
+							<option>Justify</option>
+						</select>
+					</div>
+				</div>
+				<div dojoType="dijit.layout.AccordionPane" title="About" id="AboutPanel">
+					<script type="text/javascript">
+						var flattr_url = 'http://css3.mikeplate.com';
+						var flattr_btn='compact';
+					</script>
+					<iframe src="http://www.facebook.com/plugins/likebox.php?id=148212521870878&amp;width=256&amp;connections=0&amp;stream=false&amp;header=false&amp;height=68" scrolling="no" frameborder="0" 
+						style="border:none; overflow:hidden; width:256px; height:68px;" allowTransparency="true"></iframe>
+					<p class="desc">
+						<script src="http://api.flattr.com/button/load.js" type="text/javascript"></script>
+					</p>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+						<p class="desc">
+							<input type="hidden" name="cmd" value="_s-xclick">
+							<input type="hidden" name="hosted_button_id" value="VXT3AFKCB9VSE">
+							<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+							<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</p>
+					</form>
+					<h6>Version 1.4. Made by <a href="http://www.mikeplate.com">Mike Plate</a> <a href="http://twitter.com/mikeplate">@mikeplate</a></h6>
+					<h6>Source code on <a href="http://github.com/mikeplate/CSS3-Playground">GitHub</a></h6>
+					<h6>User interface made with <a href="http://www.dojotoolkit.org/">Dojo</a></h6>
+					<h6>Reference of CSS3 capabilites from <a href="http://www.caniuse.com/">Where can I use</a> and <a href="http://www.quirksmode.org/">QuirksMode</a></h6>
+					<h6>Icons from <a href="http://www.fatcow.com/free-icons/index.bml">Farm-Fresh Web Icons</a></h6>
+					<h6>Font stacks selected from <a href="http://www.awayback.com/revised-font-stack/">A Way Back</a></h6>
+					<h6>Clipboard copying with <a href="http://code.google.com/p/zeroclipboard/">Zero Clipboard</a></h6>
+					<h6>No copyright. Use everything in any way you like.</h6>
+					<p class="desc">
+						Use this web application to experiment and learn about new css3 capabilities. The styles applied when changing the different settings
+						should follow the principles of progressive enhancements and will work in all browsers that support the setting.
+						Just change the settings and see how the rectangular box changes according to your changes. 
+					</p>
+					<p class="desc">
+						Run the site in different browser to see what the differences are. This site will work in Firefox, Chrome, Opera, Safari and Internet Explorer
+						but some properties will not have an effect when changed depending on the browser capabilities. Actually almost everything works in all
+						browsers except Internet Explorer 8 and older versions of that browser.
+					</p>
+					<p class="desc">
+						Since version 1.4, touch devices such as iPhone, iPad and Android are supported. You can use your finger to move and size the box,
+						although the sizing handle can be a bit hard to touch correctly. The slider controls also work with touch. You can scroll panels 
+						and the styles at the bottom by dragging the background with your finger.
+					</p>
+					<p class="desc">
+						Copy the styles under "Style to use in html/css file" and paste inside your own html or css files to repeat the appearance for your own objects.
+						Please give feedback by commenting on the <a href="http://www.mikeplate.com/css3-playground/">blog post</a> about this application.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="canvas" id="content" dojoType="dijit.layout.ContentPane" region="center" style="position: relative;">
+			<div id="buttonBar">
+				<input type="image" src="add.png" title="Add new preview box" onclick="AddBox();" />
+				<input id="deleteButton" type="image" src="delete.png" title="Delete selected preview box" onclick="DeleteBox();" />
+			</div>
+		</div>
+		<div class="text" dojoType="dijit.layout.ContentPane" region="bottom" splitter="true" id="SourcePanel">
+			<div style="float: left; width: 50%;">
+				<div style="float: right; margin-right: 20px;">
+					<input id="CopyToClipboard" type="image" src="copy.png" title="Copy style instructions to clipboard" />
+				</div>
+				<div class="toolTitle">Style to use in html/css file</div>
+				<div class="styleSource" id="htmlSourceSet"></div>
+			</div>
+			<div style="float: left; width: 50%;">
+				<div class="toolTitle" style="padding-left: 5px;border-left: solid 1px #EEE;" title="Don't use these styles. They are only displayed as an indication of how the current browser interprets the styles.">Style as read from browser<superscript>*</superscript></div>
+				<div class="styleSource" style="padding-left: 5px;border-left: solid 1px #EEE;" id="htmlSource"></div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11107500-2']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</body>
+</html>

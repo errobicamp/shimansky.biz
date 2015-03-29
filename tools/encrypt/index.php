@@ -19,8 +19,8 @@ ob_start();
 $a_inc = array(
 	'lib/entities.class.php',
 	'lib/translit.class.php',
-	'inc/regional.inc',
-	'inc/adminauth.inc'
+	'inc/regional.inc'/* ,
+	'inc/adminauth.inc' */
 );
 
 foreach ($a_inc as $v) {
@@ -383,7 +383,7 @@ $page_title = 'Шифрование';
 						?></textarea></p>
 				</form>
 			</fieldset>
-<p><a href="./charref.html">Character Entity Reference Chart</a></p>
+<p><a href="../charref/">Character Entity Reference Chart</a></p>
 <h3>Special Characters</h3>
 <table class="entities_num">
 <tbody>

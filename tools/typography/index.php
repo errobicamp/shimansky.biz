@@ -19,8 +19,8 @@ ob_start();
 $a_inc = array(
 	'lib/swamper.class.php',
 	'lib/entities.class.php',
-	'inc/regional.inc',
-	'inc/adminauth.inc'
+	'inc/regional.inc'/* ,
+	'inc/adminauth.inc' */
 );
 
 foreach ($a_inc as $v) {
@@ -481,7 +481,7 @@ textarea{width:98%;}
 			<div class="row">
 				<div class="col span_12">
 <div style="float:left;margin:0 1em 1em 0;">
-<p><a href="./charref.html">Character Entity Reference Chart</a></p>
+<p><a href="../charref/">Character Entity Reference Chart</a></p>
 <h3>Alt+Numpad</h3>
 <table class="entities_num">
 <tr>

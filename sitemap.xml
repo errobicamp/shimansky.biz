@@ -289,12 +289,6 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://englishextra.github.io/pages/grammar/grammar_irregular_verbs.html</loc>
-  <lastmod>2015-03-06T16:54:45+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://englishextra.github.io/pages/grammar/grammar_world_capitals.html</loc>
   <lastmod>2015-03-06T16:54:45+00:00</lastmod>
   <changefreq>weekly</changefreq>
@@ -326,6 +320,12 @@
 </url>
 <url>
   <loc>https://englishextra.github.io/pages/reading/reading_the_man_with_the_scar.html</loc>
+  <lastmod>2015-03-06T16:54:45+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://englishextra.github.io/pages/reading/reading_russia_ukraine_war_conflict_vocabulary.html</loc>
   <lastmod>2015-03-06T16:54:45+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
