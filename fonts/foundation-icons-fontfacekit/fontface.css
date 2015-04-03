@@ -4,14 +4,14 @@
  * MIT License
  */
 @font-face {
-  font-family: 'foundation-icons';
-  src: url(foundation-icons.eot);
-  src: url(foundation-icons.eot?#iefix) format('embedded-opentype'),
-       url(foundation-icons.svg#fontcustom) format('svg'),
-       url(foundation-icons.woff) format('woff'),
-       url(foundation-icons.ttf) format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family:"foundation-icons";
+	src:url(foundation-icons.eot);
+	src:url(foundation-icons.eot?#iefix) format("embedded-opentype"),
+	url(foundation-icons.svg#fontcustom) format("svg"),
+	url(foundation-icons.woff) format("woff"),
+	url(foundation-icons.ttf) format("truetype");
+	font-weight:normal;
+	font-style:normal;
 }
 .fi-address-book:before,
 .fi-alert:before,
@@ -296,15 +296,15 @@
 .fi-yen:before,
 .fi-zoom-in:before,
 .fi-zoom-out:before {
-  font-family: "foundation-icons";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  text-decoration: inherit;
+ font-family:"foundation-icons";
+ font-style:normal;
+ font-weight:normal;
+ font-variant: normal;
+ text-transform: none;
+ line-height: 1;
+ -webkit-font-smoothing: antialiased;
+ display: inline-block;
+ text-decoration: inherit;
 }
 .fi-address-book:before { content: "\f100"; }
 .fi-alert:before { content: "\f101"; }
@@ -589,9 +589,12 @@
 .fi-yen:before { content: "\f218"; }
 .fi-zoom-in:before { content: "\f219"; }
 .fi-zoom-out:before { content: "\f21a"; }
+/**
+ * fix
+ */
 [class^="fi-"],
 [class*=" fi-"] {
-	font-style: normal;
-	font-family: foundation-icons !important;
-  -webkit-font-smoothing: antialiased;
+	font-style:normal;
+	font-family:"foundation-icons" !important;
+	-webkit-font-smoothing: antialiased;
 }

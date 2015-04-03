@@ -1,14 +1,14 @@
-/* @font-face {font-family: 'Open Sans';src: url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.eot);src: url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.eot?#iefix) format('embedded-opentype'),url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.svg#open_sanslight) format('svg'),url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.woff) format('woff'),url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.ttf) format('truetype');font-weight: 300;font-style: normal;}
-@font-face {font-family: 'Open Sans';src: url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot);src: url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.svg#open_sansregular) format('svg'),url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.woff) format('woff'),url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.ttf) format('truetype');font-weight: 400;font-style: normal;}
+/* @font-face {font-family: "Open Sans";src:url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.eot);src:url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.eot?#iefix) format("embedded-opentype"),url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.svg#open_sanslight) format("svg"),url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.woff) format("woff"),url(/fonts/open-sans-fontfacekit/OpenSans-Light-webfont.ttf) format("truetype");font-weight: 300;font-style: normal;}
+@font-face {font-family: "Open Sans";src:url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot);src:url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot?#iefix) format("embedded-opentype"),url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.svg#open_sansregular) format("svg"),url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.woff) format("woff"),url(/fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.ttf) format("truetype");font-weight: 400;font-style: normal;}
  */
 @font-face{
 	font-family:'Segoe UI Light';
 	src:url(/fonts/segoe-ui-fontfacekit/segoeuil.eot);
 	src:local("Segoe UI Light"),
 	local("Segoe WP Light"),
-	url(/fonts/segoe-ui-fontfacekit/segoeuil.eot?#iefix) format('embedded-opentype'),
-	url(/fonts/segoe-ui-fontfacekit/segoeuil.svg#SegoeUILight) format('svg'),
-	url(/fonts/segoe-ui-fontfacekit/segoeuil.woff) format('woff');
+	url(/fonts/segoe-ui-fontfacekit/segoeuil.eot?#iefix) format("embedded-opentype"),
+	url(/fonts/segoe-ui-fontfacekit/segoeuil.svg#SegoeUILight) format("svg"),
+	url(/fonts/segoe-ui-fontfacekit/segoeuil.woff) format("woff");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -52,7 +52,7 @@ blockquote, q {
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
+	content: "";
 	content: none;
 }
 table {

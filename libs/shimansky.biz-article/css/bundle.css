@@ -1,12 +1,14 @@
 @font-face{font-family:"PT Serif";src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format("truetype");font-weight:400;font-style:normal;}
-@font-face{font-family:"Source Sans Pro";font-weight:300;font-style:normal;font-stretch:normal;src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Light.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Light.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Light.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Light.ttf) format("truetype");}
-@font-face{font-family:"Source Sans Pro";font-weight:300;font-style:italic;font-stretch:normal;src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-LightIt.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-LightIt.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-LightIt.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-LightIt.ttf) format("truetype");}
-@font-face{font-family:"Source Sans Pro";font-weight:400;font-style:normal;font-stretch:normal;src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.ttf) format("truetype");}
-@font-face{font-family:"Source Sans Pro";font-weight:700;font-style:normal;font-stretch:normal;src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.ttf) format("truetype");}
+@font-face{font-family:"Source Sans Pro";src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.ttf) format("truetype");font-weight:400;font-style:normal;font-stretch:normal;}
+@font-face{font-family:"Source Sans Pro";src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-It.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-It.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-It.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-It.ttf) format("truetype");font-weight:400;font-style:italic;font-stretch:normal;}
+@font-face{font-family:"Source Sans Pro";src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.ttf) format("truetype");font-weight:700;font-style:normal;font-stretch:normal;}
 @font-face{font-family:"Voces";src:url(../../../fonts/voces-fontfacekit/Voces-Regular.eot);src:url(../../../fonts/voces-fontfacekit/Voces-Regular.eot?iefix) format("embedded-opentype"),url(../../../fonts/voces-fontfacekit/Voces-Regular.svg#Voces) format("svg"),url(../../../fonts/voces-fontfacekit/Voces-Regular.woff) format("woff"),url(../../../fonts/voces-fontfacekit/Voces-Regular.ttf) format("truetype");font-weight:400;font-style:normal;}
 /*!
  * normalize.css v3.0.0 | MIT License | git.io/normalize
  */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}body{margin:0;}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}audio,canvas,progress,video{display:inline-block;vertical-align:baseline;}audio:not([controls]){display:none;height:0;}[hidden],template{display:none;}a{background:transparent;}a:active,a:hover{outline:0;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:bold;}dfn{font-style:italic;}h1{font-size:2em;margin:0.67em 0;}mark{background:#ff0;color:#000;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}img{border:0;}svg:not(:root){overflow:hidden;}figure{margin:1em 40px;}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}pre{overflow:auto;}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0;}button{overflow:visible;}button,select{text-transform:none;}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}button[disabled],html input[disabled]{cursor:default;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}input{line-height:normal;}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto;}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}legend{border:0;padding:0;}textarea{overflow:auto;}optgroup{font-weight:bold;}table{border-collapse:collapse;border-spacing:0;}td,th{padding:0;}
+/*!
+ * custom
+ */
 html,
 body {
 	height: 100%;
@@ -16,9 +18,10 @@ html {
 }
 body {
 	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 11.0pt;
 	line-height: 1.5;
+	width: 100%;
 	color: #000;
 	background: #663399;
 	-webkit-touch-callout: none;
@@ -136,7 +139,7 @@ pre.prettyprint {
 }
 .col h2 {
 	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 20.0pt;
 	line-height: 1.2;
 	color: #000;
@@ -161,9 +164,9 @@ pre.prettyprint {
 	margin-bottom: 0;
 }
 .col h5 {
-	font-family: "Cambria","PT Serif",serif;
+	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
 	font-weight: 400;
-	font-size: 12.0pt;
+	font-size: 11.0pt;
 	line-height: 1.2;
 	text-decoration: underline;
 	color: inherit;
@@ -171,7 +174,7 @@ pre.prettyprint {
 }
 .col p {
 	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 11.0pt;
 }
 .col b,
@@ -232,7 +235,7 @@ pre.prettyprint {
 }
 .col table td {
 	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	border: none;
 	border-bottom-width: 0.75pt;
 	border-bottom-style: solid;
@@ -326,7 +329,7 @@ pre.prettyprint {
 	text-align: center;
 }
 .col .phonetic {
-	font-family: "Segoe UI","Calibri","Voces","Judson","ConstructiumRegular";
+	font-family: "Segoe Pro","Segoe UI","Calibri","Voces","Judson","ConstructiumRegular",sans-serif;
 }
 .topbanner {
 	width: 100%;
@@ -371,11 +374,10 @@ pre.prettyprint {
 	background: transparent url(../../../cdn/materialdesignicons/menu-circle-outline-hover.png) left top no-repeat;
 	background-size: 3.0000em 3.0000em;
 }
-.leftnavbtn:hover,
-.leftnavbtn:active/* ,
-.leftnavbtn:focus */ {
-	/* opacity: 0.5 !important; */
-}
+/* .leftnavbtn:hover,
+.leftnavbtn:active {
+	opacity: 0.5 !important;
+} */
 .navbtn_more {
 	display: inline-block;
 	width: 3.0000em;
@@ -522,6 +524,9 @@ pre.prettyprint {
 	color: #FFF;
 	background: #A0A0A0;
 }
+/*!
+ * custom
+ */
 html > body > .ui-pnotify {
 	position: fixed;
 }
@@ -1281,6 +1286,6 @@ html > body > .ui-pnotify {
 		color: inherit;
 	}
 	.phonetic,.col .phonetic {
-		font-family: "Segoe Pro","Segoe UI","Calibri","Voces","Judson","ConstructiumRegular";
+		font-family: "Segoe Pro","Segoe UI","Calibri","Voces","Judson","ConstructiumRegular",sans-serif;
 	}
 }

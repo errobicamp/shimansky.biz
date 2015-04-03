@@ -1,8 +1,7 @@
 @font-face{font-family:"PT Serif";src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format("truetype");font-weight:400;font-style:normal;}
-@font-face{font-family:"Source Sans Pro";font-weight:300;font-style:normal;font-stretch:normal;src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Light.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Light.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Light.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Light.ttf) format("truetype");}
-@font-face{font-family:"Source Sans Pro";font-weight:300;font-style:italic;font-stretch:normal;src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-LightIt.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-LightIt.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-LightIt.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-LightIt.ttf) format("truetype");}
-@font-face{font-family:"Source Sans Pro";font-weight:400;font-style:normal;font-stretch:normal;src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.ttf) format("truetype");}
-@font-face{font-family:"Source Sans Pro";font-weight:700;font-style:normal;font-stretch:normal;src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.ttf) format("truetype");}
+@font-face{font-family:"Source Sans Pro";src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.ttf) format("truetype");font-weight:400;font-style:normal;font-stretch:normal;}
+@font-face{font-family:"Source Sans Pro";src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-It.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-It.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-It.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-It.ttf) format("truetype");font-weight:400;font-style:italic;font-stretch:normal;}
+@font-face{font-family:"Source Sans Pro";src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.ttf) format("truetype");font-weight:700;font-style:normal;font-stretch:normal;}
 @font-face{font-family:"Voces";src:url(../../../fonts/voces-fontfacekit/Voces-Regular.eot);src:url(../../../fonts/voces-fontfacekit/Voces-Regular.eot?iefix) format("embedded-opentype"),url(../../../fonts/voces-fontfacekit/Voces-Regular.svg#Voces) format("svg"),url(../../../fonts/voces-fontfacekit/Voces-Regular.woff) format("woff"),url(../../../fonts/voces-fontfacekit/Voces-Regular.ttf) format("truetype");font-weight:400;font-style:normal;}
 /* http://meyerweb.com/eric/tools/css/reset/
  v2.0 | 20110126
@@ -11,18 +10,19 @@
 /*!
  * custom
  */
-html {
-	font-size: 100%;
-}
 html,
 body {
 	height: 100%;
 }
+html {
+	font-size: 100%;
+}
 body {
 	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 11.0pt;
 	line-height: 1.5;
+	width: 100%;
 	color: #000;
 	background: #663399;
 	-webkit-touch-callout: none;
@@ -112,10 +112,11 @@ pre.prettyprint {
 	width: 100%;
 	height: 100%;
 	opacity: 0;
- -webkit-transition: opacity 0.5s linear;
- -moz-transition: opacity 0.5s linear;
- -o-transition: opacity 0.5s linear;
- transition: opacity 0.5s linear;
+	-webkit-transition: opacity 0.5s linear;
+	-moz-transition: opacity 0.5s linear;
+	-o-transition: opacity 0.5s linear;
+	transition: opacity 0.5s linear;
+
 }
 .container {
 	visibility: hidden;
@@ -157,11 +158,10 @@ pre.prettyprint {
 	background: transparent url(../../../cdn/materialdesignicons/arrow-left-bold-circle-outline-hover.png) left top no-repeat;
 	background-size: 3.0000em 3.0000em;
 }
-.leftnavbtn:hover,
-.leftnavbtn:active/* ,
-.leftnavbtn:focus */ {
-	/* opacity: 0.5 !important; */
-}
+/* .leftnavbtn:hover,
+.leftnavbtn:active {
+	opacity: 0.5 !important;
+} */
 .navbtn_more {
 	display: inline-block;
 	width: 3.0000em;
@@ -272,15 +272,15 @@ pre.prettyprint {
 	font-family: "Cambria","PT Serif",serif;
 	font-weight: 400;
 	font-size: 1.429rem;
-	line-height: 1.200;
+	line-height: 1.2;
 	margin: 0;
 	padding: 0 0 0.357rem 0;
 }
 .grid-gallery .figcaption p {
-	font-size: 0.929rem;
 	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
-	font-weight: 300;
-	line-height: 1.500;
+	font-weight: 400;
+	font-size: 0.929rem;
+	line-height: 1.5;
 	margin: 0;
 }
 .grid-wrap {
@@ -322,26 +322,14 @@ pre.prettyprint {
 .grid .figcaption p {
 	width: 100%;
 }
-.grid .figcaption:hover {
-	color: #FFF;
-	background: none #8E44AD;
-}
-.grid .figcaption.card_general {@font-face{font-family:"PT Serif";src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format("truetype");font-weight:400;font-style:normal;}
-; border-top: 0.286em solid #8E44AD;}
-.grid .figcaption.card_aids {@font-face{font-family:"PT Serif";src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format("truetype");font-weight:400;font-style:normal;}
-; border-top: 0.286em solid #4183D7;}
-.grid .figcaption.card_articles {@font-face{font-family:"PT Serif";src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format("truetype");font-weight:400;font-style:normal;}
-; border-top: 0.286em solid #4183D7;}
-.grid .figcaption.card_grammar {@font-face{font-family:"PT Serif";src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format("truetype");font-weight:400;font-style:normal;}
-; border-top: 0.286em solid #4183D7;}
-.grid .figcaption.card_more {@font-face{font-family:"PT Serif";src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format("truetype");font-weight:400;font-style:normal;}
-; border-top: 0.286em solid #F2784B;}
-.grid .figcaption.card_reading {@font-face{font-family:"PT Serif";src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format("truetype");font-weight:400;font-style:normal;}
-; border-top: 0.286em solid #4183D7;}
-.grid .figcaption.card_tests {@font-face{font-family:"PT Serif";src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format("truetype");font-weight:400;font-style:normal;}
-; border-top: 0.286em solid #D2527F;}
-.grid .figcaption.card_transcripts {@font-face{font-family:"PT Serif";src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format("truetype");font-weight:400;font-style:normal;}
-; border-top: 0.286em solid #1BBC9B;}
+.grid .figcaption.card_general {border-top: 0.286em solid #8E44AD;}
+.grid .figcaption.card_aids {border-top: 0.286em solid #4183D7;}
+.grid .figcaption.card_articles {border-top: 0.286em solid #4183D7;}
+.grid .figcaption.card_grammar {border-top: 0.286em solid #4183D7;}
+.grid .figcaption.card_more {border-top: 0.286em solid #F2784B;}
+.grid .figcaption.card_reading {border-top: 0.286em solid #4183D7;}
+.grid .figcaption.card_tests {border-top: 0.286em solid #D2527F;}
+.grid .figcaption.card_transcripts {border-top: 0.286em solid #1BBC9B;}
 .grid .figcaption.card_general:hover,
 .grid .figcaption.card_aids:hover,
 .grid .figcaption.card_articles:hover,
@@ -841,6 +829,9 @@ pre.prettyprint {
 	color: #FFF;
 	background: #A0A0A0;
 }
+/*!
+ * custom
+ */
 html > body > .ui-pnotify {
 	position: fixed;
 }
@@ -1145,6 +1136,6 @@ html > body > .ui-pnotify {
 		color: inherit;
 	}
 	.phonetic,.col .phonetic {
-		font-family: "Segoe Pro","Segoe UI","Calibri","Voces","Judson","ConstructiumRegular";
+		font-family: "Segoe Pro","Segoe UI","Calibri","Voces","Judson","ConstructiumRegular",sans-serif;
 	}
 }

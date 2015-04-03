@@ -68,7 +68,7 @@
 		</div>
 		<div class="menu_more_holder" id="menu_more_holder">
 			<ul class="menu_more" id="menu_more">
-				<li><span id="qr_code"></span></li>
+				<li>&#160;&#160;&#160;&#160;&#160;&#160;<span class="bolder" id="qr_code"></span></li>
 				<li>&#160;&#160;&#160;&#160;&#160;&#160;<span class="bolder">На&#160;этой странице:</span></li>
 				<li><a href="#a0">Содержание этого документа</a></li>
 				<li>&#160;&#160;&#160;&#160;&#160;&#160;<span class="bolder">Другие страницы:</span></li>
@@ -234,7 +234,7 @@
 						},{media:"all"},5E3);
 					},{media:"all"},5E3);
 					(function(a,b){b&&(b.onchange=function(){a.location.href=this.value})})(document,document.getElementById("select")||"");
-					("undefined"!==typeof earlyDeviceType&&"desktop"==earlyDeviceType)&&(function(b,c,d,a){if(!b&&c&&d){b=a.createElement("img");var e=a.createElement("br"),f=a.createTextNode("\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u044d\u0442\u0443 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443:");a=a.title&&"\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 \u00ab"+a.title.replace(/\[[^\]]*?\]/g,"")+"\u00bb"||"";b.setAttribute("src","//chart.googleapis.com/chart?cht=qr&chld=M|4&choe=UTF-8&chs=300x300&chl="+encodeURIComponent(d));b.setAttribute("style","width:150px;height:150px;background:transparent;background-size:150px 150px;border:0;vertical-align:bottom;padding:0;margin:0;");b.setAttribute("title",a);b.setAttribute("alt",a);c.appendChild(f);c.appendChild(e);c.appendChild(b)}})(earlyIsMobileBrowser||"",document.getElementById("qr_code")||"",document.location.href||"",document);
+					("undefined"!==typeof earlyDeviceType&&"desktop"==earlyDeviceType)&&(function(b,c,d,a){if(!b&&c&&d){b=a.createElement("img");var e=a.createElement("br"),f=a.createTextNode("\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u044d\u0442\u0443 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443:"),g=a.createTextNode("\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0");a=a.title&&"\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 \u00ab"+a.title.replace(/\[[^\]]*?\]/g,"")+"\u00bb"||"";b.setAttribute("src","//chart.googleapis.com/chart?cht=qr&chld=M|4&choe=UTF-8&chs=300x300&chl="+encodeURIComponent(d));b.setAttribute("style","width:150px;height:150px;background:transparent;background-size:150px 150px;border:0;vertical-align:bottom;padding:0;margin:0;");b.setAttribute("title",a);b.setAttribute("alt",a);c.appendChild(f);c.appendChild(e);c.appendChild(g);c.appendChild(b)}})(earlyIsMobileBrowser||"",document.getElementById("qr_code")||"",document.location.href||"",document);
 					(function(b,a){b&&a&&addEvent(b,"click",function(){a.style.display="none"},!1)})(document.getElementById("container")||"",document.getElementById("menu_more_holder")||"");
 					(function(b,a){b&&a&&addEvent(b,"click",function(){a.style.display="none"==a.style.display||""==a.style.display?"inline-block":"none"},!1)})(document.getElementById("navbtnmore")||"",document.getElementById("menu_more_holder")||"");
 					(function(c,e){c&&e&&function(a){a=a.getElementsByTagName("li");for(var b=0;b<a.length;b++)d=a[b],addEvent(d,"click",function(){c.setAttribute("style","display:none;")},!1)}(e)})(document.getElementById("menu_more_holder")||"",document.getElementById("menu_more")||"");					

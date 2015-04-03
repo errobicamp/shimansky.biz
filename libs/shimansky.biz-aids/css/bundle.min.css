@@ -1,36 +1,11 @@
-/*!
- * PT Sans
- * rename font-family
- * fix font-weight and font-style
- * put svg fonts above woff for Chrome browser
- */
-@font-face {font-family: 'PT Sans';src: url(../../../fonts/pt-sans-fontfacekit/PTS55F-webfont.eot);src: url(../../../fonts/pt-sans-fontfacekit/PTS55F-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/pt-sans-fontfacekit/PTS55F-webfont.svg#open_sansregular) format('svg'),url(../../../fonts/pt-sans-fontfacekit/PTS55F-webfont.woff) format('woff'),url(../../../fonts/pt-sans-fontfacekit/PTS55F-webfont.ttf) format('truetype');font-weight: 400;font-style: normal;}
-@font-face {font-family: 'PT Sans';src: url(../../../fonts/pt-sans-fontfacekit/PTS56F-webfont.eot);src: url(../../../fonts/pt-sans-fontfacekit/PTS56F-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/pt-sans-fontfacekit/PTS56F-webfont.svg#open_sansitalic) format('svg'),url(../../../fonts/pt-sans-fontfacekit/PTS56F-webfont.woff) format('woff'),url(../../../fonts/pt-sans-fontfacekit/PTS56F-webfont.ttf) format('truetype');font-weight: 400;font-style: italic;}
-@font-face {font-family: 'PT Sans';src: url(../../../fonts/pt-sans-fontfacekit/PTS75F-webfont.eot);src: url(../../../fonts/pt-sans-fontfacekit/PTS75F-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/pt-sans-fontfacekit/PTS75F-webfont.svg#open_sansbold) format('svg'),url(../../../fonts/pt-sans-fontfacekit/PTS75F-webfont.woff) format('woff'),url(../../../fonts/pt-sans-fontfacekit/PTS75F-webfont.ttf) format('truetype');font-weight: 700;font-style: normal;}
-@font-face {font-family: 'PT Sans';src: url(../../../fonts/pt-sans-fontfacekit/PTS76F-webfont.eot);src: url(../../../fonts/pt-sans-fontfacekit/PTS76F-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/pt-sans-fontfacekit/PTS76F-webfont.svg#open_sanssemibold_italic) format('svg'),url(../../../fonts/pt-sans-fontfacekit/PTS76F-webfont.woff) format('woff'),url(../../../fonts/pt-sans-fontfacekit/PTS76F-webfont.ttf) format('truetype');font-weight: 700;font-style: italic;}
-/*!
- * PT Serif
- * rename font-family
- * fix font-weight and font-style
- * put svg fonts above woff for Chrome browser
- */
-@font-face {font-family: 'PT Serif';src: url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src: url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format('svg'),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format('woff'),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format('truetype');font-weight: 400;font-style: normal;}
-@font-face {font-family: 'PT Serif';src: url(../../../fonts/pt-serif-fontfacekit/PTF56F-webfont.eot);src: url(../../../fonts/pt-serif-fontfacekit/PTF56F-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/pt-serif-fontfacekit/PTF56F-webfont.svg#open_sansitalic) format('svg'),url(../../../fonts/pt-serif-fontfacekit/PTF56F-webfont.woff) format('woff'),url(../../../fonts/pt-serif-fontfacekit/PTF56F-webfont.ttf) format('truetype');font-weight: 400;font-style: italic;}
-/*!
- * Open Sans
- * rename font-family
- * fix font-weight and font-style
- * put svg fonts above woff for Chrome browser
- */
-@font-face {font-family: 'Open Sans';src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot);src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.svg#open_sansregular) format('svg'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.woff) format('woff'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.ttf) format('truetype');font-weight: 400;font-style: normal;}
-/*@font-face {font-family: 'Open Sans';src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Bold-webfont.eot);src: url(../../../fonts/open-sans-fontfacekit/OpenSans-Bold-webfont.eot?#iefix) format('embedded-opentype'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Bold-webfont.svg#open_sansbold) format('svg'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Bold-webfont.woff) format('woff'),url(../../../fonts/open-sans-fontfacekit/OpenSans-Bold-webfont.ttf) format('truetype');font-weight: 700;font-style: normal;}*/
-/*!
- * Voces
- * rename font-family
- * fix font-weight and font-style
- * put svg fonts above woff for Chrome browser
- */
-@font-face {font-family: 'Voces';src: url(../../../fonts/voces-fontfacekit/Voces-Regular.eot);src: url(../../../fonts/voces-fontfacekit/Voces-Regular.eot?iefix) format('embedded-opentype'),url(../../../fonts/voces-fontfacekit/Voces-Regular.svg#Voces) format('svg'),url(../../../fonts/voces-fontfacekit/Voces-Regular.woff) format('woff'),url(../../../fonts/voces-fontfacekit/Voces-Regular.ttf) format('truetype');font-weight: 400;font-style: normal;}
+@font-face {font-family: 'PT Sans';src:url(../../../fonts/pt-sans-fontfacekit/PTS55F-webfont.eot);src:url(../../../fonts/pt-sans-fontfacekit/PTS55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-sans-fontfacekit/PTS55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-sans-fontfacekit/PTS55F-webfont.woff) format("woff"),url(../../../fonts/pt-sans-fontfacekit/PTS55F-webfont.ttf) format("truetype");font-weight: 400;font-style: normal;}
+@font-face {font-family: 'PT Sans';src:url(../../../fonts/pt-sans-fontfacekit/PTS56F-webfont.eot);src:url(../../../fonts/pt-sans-fontfacekit/PTS56F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-sans-fontfacekit/PTS56F-webfont.svg#open_sansitalic) format("svg"),url(../../../fonts/pt-sans-fontfacekit/PTS56F-webfont.woff) format("woff"),url(../../../fonts/pt-sans-fontfacekit/PTS56F-webfont.ttf) format("truetype");font-weight: 400;font-style: italic;}
+@font-face {font-family: 'PT Sans';src:url(../../../fonts/pt-sans-fontfacekit/PTS75F-webfont.eot);src:url(../../../fonts/pt-sans-fontfacekit/PTS75F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-sans-fontfacekit/PTS75F-webfont.svg#open_sansbold) format("svg"),url(../../../fonts/pt-sans-fontfacekit/PTS75F-webfont.woff) format("woff"),url(../../../fonts/pt-sans-fontfacekit/PTS75F-webfont.ttf) format("truetype");font-weight: 700;font-style: normal;}
+@font-face {font-family: 'PT Sans';src:url(../../../fonts/pt-sans-fontfacekit/PTS76F-webfont.eot);src:url(../../../fonts/pt-sans-fontfacekit/PTS76F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-sans-fontfacekit/PTS76F-webfont.svg#open_sanssemibold_italic) format("svg"),url(../../../fonts/pt-sans-fontfacekit/PTS76F-webfont.woff) format("woff"),url(../../../fonts/pt-sans-fontfacekit/PTS76F-webfont.ttf) format("truetype");font-weight: 700;font-style: italic;}
+@font-face {font-family: 'PT Serif';src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format("truetype");font-weight: 400;font-style: normal;}
+@font-face {font-family: 'PT Serif';src:url(../../../fonts/pt-serif-fontfacekit/PTF56F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF56F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF56F-webfont.svg#open_sansitalic) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF56F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF56F-webfont.ttf) format("truetype");font-weight: 400;font-style: italic;}
+@font-face {font-family: "Open Sans";src:url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot);src:url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.woff) format("woff"),url(../../../fonts/open-sans-fontfacekit/OpenSans-Regular-webfont.ttf) format("truetype");font-weight: 400;font-style: normal;}
+@font-face {font-family: "Voces";src:url(../../../fonts/voces-fontfacekit/Voces-Regular.eot);src:url(../../../fonts/voces-fontfacekit/Voces-Regular.eot?iefix) format("embedded-opentype"),url(../../../fonts/voces-fontfacekit/Voces-Regular.svg#Voces) format("svg"),url(../../../fonts/voces-fontfacekit/Voces-Regular.woff) format("woff"),url(../../../fonts/voces-fontfacekit/Voces-Regular.ttf) format("truetype");font-weight: 400;font-style: normal;}
 /*! http://meyerweb.com/eric/tools/css/reset/
  v2.0 | 20110126
  License: none (public domain)
@@ -454,15 +429,11 @@ body {
 }
 body {
 	width: 100%;
-	/*!
-	 * dont use
-	 * position: relative;
-	 */
 	font-size: 100%;
 	font-family: PT Sans, sans-serif;
 	font-weight: normal;
-	line-height: 1.500;
-	color: #2D2F2C;
+	line-height: 1.5;
+	color: #000;
 	background: #FFF;
 	background-size: 100% 100%;
 	-webkit-touch-callout: none;
@@ -521,11 +492,11 @@ em,
 }
 ::selection {
 	color: #FFF;
-	background: #67737C;
+	background: #094AB2;
 }
 ::-moz-selection {
 	color: #FFF;
-	background: #67737C;
+	background: #094AB2;
 }
 i.fa {
 	font-style: normal;
@@ -584,8 +555,7 @@ pre.prettyprint {
 	background-size: 64px 64px;
 }
 .leftnavbtn:hover,
-.leftnavbtn:active,
-.leftnavbtn:focus {
+.leftnavbtn:active {
 	opacity: 0.5 !important;
 }
 .ccbynd {
@@ -673,7 +643,7 @@ pre.prettyprint {
 }
 .col table th {
 	font-size: 0.875rem;
-	line-height: 1.200;
+	line-height: 1.2;
 	font-weight: normal;
 	background-color: transparent;
 }
@@ -831,7 +801,7 @@ pre.prettyprint {
 .ui-pnotify-text {
 	font-family: Open Sans, sans-serif;
 	font-size: 1rem;
-	line-height: 1.500;
+	line-height: 1.5;
 }
 /*!
  * overrides to circularG

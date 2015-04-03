@@ -1,5 +1,5 @@
-@font-face{font-family:"Source Sans Pro";font-weight:400;font-style:normal;font-stretch:normal;src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.ttf) format("truetype");}
-@font-face{font-family:"Source Sans Pro";font-weight:700;font-style:normal;font-stretch:normal;src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.ttf) format("truetype");}
+@font-face{font-family:"PT Serif";src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot);src:url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.eot?#iefix) format("embedded-opentype"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.svg#open_sansregular) format("svg"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.woff) format("woff"),url(../../../fonts/pt-serif-fontfacekit/PTF55F-webfont.ttf) format("truetype");font-weight:400;font-style:normal;}
+@font-face{font-family:"Source Sans Pro";src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.ttf) format("truetype");font-weight:400;font-style:normal;font-stretch:normal;}
 /* http://meyerweb.com/eric/tools/css/reset/
  v2.0 | 20110126
  License: none (public domain)
@@ -7,18 +7,19 @@
 /*!
  * custom
  */
-html {
-	font-size: 100%;
-}
 html,
 body {
 	height: 100%;
 }
+html {
+	font-size: 100%;
+}
 body {
 	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 11.0pt;
 	line-height: 1.5;
+	width: 100%;
 	color: #FFF;
 	background: #663399;
 	-webkit-touch-callout: none;
@@ -131,7 +132,7 @@ pre.prettyprint {
 }
 .grid li a {
 	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 13.0pt;
 }
 .grid li:before {

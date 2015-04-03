@@ -1,44 +1,4 @@
-@font-face {
-   font-family: 'Jura';
-    src: url('../../fonts/jura-fontfacekit/jura-demibold.eot');
-    src: url('../../fonts/jura-fontfacekit/jura-demibold.eot') format('embedded-opentype'),
-         url('../../fonts/jura-fontfacekit/jura-demibold.svg#JuraDemiBold') format('svg'),
-         url('../../fonts/jura-fontfacekit/jura-demibold.woff2') format('woff2'),
-         url('../../fonts/jura-fontfacekit/jura-demibold.woff') format('woff'),
-         url('../../fonts/jura-fontfacekit/jura-demibold.ttf') format('truetype');
-		 font-weight: 600;
-		 font-style: normal;
-}
-@font-face {
-   font-family: 'Jura';
-    src: url('../../fonts/jura-fontfacekit/jura-light.eot');
-    src: url('../../fonts/jura-fontfacekit/jura-light.eot') format('embedded-opentype'),
-         url('../../fonts/jura-fontfacekit/jura-light.svg#JuraLight') format('svg'),
-         url('../../fonts/jura-fontfacekit/jura-light.woff2') format('woff2'),
-         url('../../fonts/jura-fontfacekit/jura-light.woff') format('woff'),
-         url('../../fonts/jura-fontfacekit/jura-light.ttf') format('truetype');
-		 font-weight: 300;
-		 font-style: normal;
-}
-@font-face {
-   font-family: 'Jura';
-    src: url('../../fonts/jura-fontfacekit/jura-medium.eot');
-    src: url('../../fonts/jura-fontfacekit/jura-medium.eot') format('embedded-opentype'),
-         url('../../fonts/jura-fontfacekit/jura-medium.svg#JuraMedium') format('svg'),
-         url('../../fonts/jura-fontfacekit/jura-medium.woff2') format('woff2'),
-         url('../../fonts/jura-fontfacekit/jura-medium.woff') format('woff'),
-         url('../../fonts/jura-fontfacekit/jura-medium.ttf') format('truetype');
-		 font-weight: 500;
-		 font-style: normal;
-}
-@font-face {
-  font-family: 'Jura';
-    src: url('../../fonts/jura-fontfacekit/jura-regular.eot');
-    src: url('../../fonts/jura-fontfacekit/jura-regular.eot') format('embedded-opentype'),
-         url('../../fonts/jura-fontfacekit/jura-regular.svg#JuraBook') format('svg'),
-         url('../../fonts/jura-fontfacekit/jura-regular.woff2') format('woff2'),
-         url('../../fonts/jura-fontfacekit/jura-regular.woff') format('woff'),
-         url('../../fonts/jura-fontfacekit/jura-regular.ttf') format('truetype');
-		 font-weight: normal;
-		 font-style: normal;
-}
+@font-face{font-family:"Jura";src:url(jura-fontfacekit/jura-demibold.eot);src:url(jura-fontfacekit/jura-demibold.eot) format("embedded-opentype"),url(jura-fontfacekit/jura-demibold.svg#JuraDemiBold) format("svg"),url(jura-fontfacekit/jura-demibold.woff2) format("woff2"),url(jura-fontfacekit/jura-demibold.woff) format("woff"),url(jura-fontfacekit/jura-demibold.ttf) format("truetype");font-weight:600;font-style:normal;}
+@font-face{font-family:"Jura";src:url(jura-fontfacekit/jura-light.eot);src:url(jura-fontfacekit/jura-light.eot) format("embedded-opentype"),url(jura-fontfacekit/jura-light.svg#JuraLight) format("svg"),url(jura-fontfacekit/jura-light.woff2) format("woff2"),url(jura-fontfacekit/jura-light.woff) format("woff"),url(jura-fontfacekit/jura-light.ttf) format("truetype");font-weight:300;font-style:normal;}
+@font-face{font-family:"Jura";src:url(jura-fontfacekit/jura-medium.eot);src:url(jura-fontfacekit/jura-medium.eot) format("embedded-opentype"),url(jura-fontfacekit/jura-medium.svg#JuraMedium) format("svg"),url(jura-fontfacekit/jura-medium.woff2) format("woff2"),url(jura-fontfacekit/jura-medium.woff) format("woff"),url(jura-fontfacekit/jura-medium.ttf) format("truetype");font-weight:500;font-style:normal;}
+@font-face{font-family:"Jura";src:url(jura-fontfacekit/jura-regular.eot);src:url(jura-fontfacekit/jura-regular.eot) format("embedded-opentype"),url(jura-fontfacekit/jura-regular.svg#JuraBook) format("svg"),url(jura-fontfacekit/jura-regular.woff2) format("woff2"),url(jura-fontfacekit/jura-regular.woff) format("woff"),url(jura-fontfacekit/jura-regular.ttf) format("truetype");font-weight:normal;font-style:normal;}

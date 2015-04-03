@@ -1,5 +1,5 @@
-@font-face{font-family:"Source Sans Pro";font-weight:400;font-style:normal;font-stretch:normal;src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.ttf) format("truetype");}
-@font-face{font-family:"Source Sans Pro";font-weight:700;font-style:normal;font-stretch:normal;src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.ttf) format("truetype");}
+@font-face{font-family:"Source Sans Pro";src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Regular.ttf) format("truetype");font-weight:400;font-style:normal;font-stretch:normal;}
+@font-face{font-family:"Source Sans Pro";src:url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.eot) format("embedded-opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf.woff) format("woff"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.otf) format("opentype"),url(../../../fonts/source-sans-pro-fontfacekit/SourceSansPro-Bold.ttf) format("truetype");font-weight:700;font-style:normal;font-stretch:normal;}
 /* http://meyerweb.com/eric/tools/css/reset/
  v2.0 | 20110126
  License: none (public domain)
@@ -7,18 +7,19 @@
 /*!
  * custom
  */
-html {
-	font-size: 100%;
-}
 html,
 body {
 	height: 100%;
 }
+html {
+	font-size: 100%;
+}
 body {
 	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 11.0pt;
 	line-height: 1.5;
+	width: 100%;
 	color: #FFF;
 	background: #663399;
 	-webkit-touch-callout: none;
@@ -156,7 +157,7 @@ pre.prettyprint {
 	/* font-family: "Cambria","PT Serif",serif;
 	font-weight: 400; */
 	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	/* text-shadow: 0.071em 0.071em 0.143em rgba(0, 0, 0, 0.92); */
 	color: #663399;
 	font-size: 4rem;
@@ -168,7 +169,7 @@ pre.prettyprint {
 .site_slogan {
 	display: inline-block;
 	font-family: "Segoe UI","Source Sans Pro","PT Sans",sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	/* text-shadow: 0.071em 0.071em 0.143em rgba(0, 0, 0, 0.92); */
 	color: #663399;
 	font-size: 2rem;
@@ -583,8 +584,7 @@ pre.prettyprint {
 	background-size: 3.0000em 3.0000em;
 } */
 .leftnavbtn:hover,
-.leftnavbtn:active/* ,
-.leftnavbtn:focus */ {
+.leftnavbtn:active {
 	opacity: 0.5 !important;
 }
 .navbtn_more {
@@ -784,6 +784,9 @@ pre.prettyprint {
 	color: #FFF;
 	background: #A0A0A0;
 }
+/*!
+ * custom
+ */
 html > body > .ui-pnotify {
 	position: fixed;
 }
@@ -1031,6 +1034,6 @@ html > body > .ui-pnotify {
 		color: inherit;
 	}
 	.phonetic,.col .phonetic {
-		font-family: "Segoe Pro","Segoe UI","Calibri","Voces","Judson","ConstructiumRegular";
+		font-family: "Segoe Pro","Segoe UI","Calibri","Voces","Judson","ConstructiumRegular",sans-serif;
 	}
 }

@@ -1,7 +1,0 @@
-/*!
- * Liberation Serif
- * rename font-family
- * fix font-weight and font-style
- * put svg fonts above woff for Chrome browser
- */
-@font-face {font-family: 'Liberation Serif';src: url(LiberationSerif-Italic-webfont.eot);src: url(LiberationSerif-Italic-webfont.eot?#iefix) format('embedded-opentype'),url(LiberationSerif-Italic-webfont.svg#liberation_serifitalic) format('svg'),url(LiberationSerif-Italic-webfont.woff) format('woff'),url(LiberationSerif-Italic-webfont.ttf) format('truetype');font-weight: 400;font-style: italic;}
